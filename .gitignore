@@ -5,6 +5,7 @@
 ## Build generated
 build/
 DerivedData/
+EventbriteCredentials.plist
 
 ## Various settings
 *.pbxuser
@@ -51,9 +52,9 @@ playground.xcworkspace
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
+Carthage/Checkouts
 Carthage/Build
+Vendor/Carthage
 
 # fastlane
 #
