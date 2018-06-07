@@ -12,6 +12,13 @@
 		A40C820E20C979E10034681C /* Networker.h in Headers */ = {isa = PBXBuildFile; fileRef = A40C820020C979E10034681C /* Networker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A49C3AF620C97EEE004A195D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49C3AF520C97EEE004A195D /* Alamofire.framework */; };
 		A49C3AF920C97FA7004A195D /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A49C3AF520C97EEE004A195D /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B23303DA20C996E4009B9ACC /* EventbriteBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23303D820C996E4009B9ACC /* EventbriteBaseRequest.swift */; };
+		B23303DB20C996E4009B9ACC /* EventbriteEventsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23303D920C996E4009B9ACC /* EventbriteEventsRequest.swift */; };
+		B23303DD20C996EB009B9ACC /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23303DC20C996EB009B9ACC /* BaseRequest.swift */; };
+		B23303E020C996F5009B9ACC /* EventbriteCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = B23303DE20C996F5009B9ACC /* EventbriteCredentials.plist */; };
+		B23303E120C996F5009B9ACC /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23303DF20C996F5009B9ACC /* CredentialsManager.swift */; };
+		B23303E420C996FD009B9ACC /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23303E220C996FD009B9ACC /* RequestManager.swift */; };
+		B23303E520C996FD009B9ACC /* DataRetrivalResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23303E320C996FD009B9ACC /* DataRetrivalResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +52,13 @@
 		A40C820B20C979E10034681C /* NetworkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkerTests.swift; sourceTree = "<group>"; };
 		A40C820D20C979E10034681C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A49C3AF520C97EEE004A195D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Vendor/Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		B23303D820C996E4009B9ACC /* EventbriteBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventbriteBaseRequest.swift; sourceTree = "<group>"; };
+		B23303D920C996E4009B9ACC /* EventbriteEventsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventbriteEventsRequest.swift; sourceTree = "<group>"; };
+		B23303DC20C996EB009B9ACC /* BaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		B23303DE20C996F5009B9ACC /* EventbriteCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EventbriteCredentials.plist; sourceTree = "<group>"; };
+		B23303DF20C996F5009B9ACC /* CredentialsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsManager.swift; sourceTree = "<group>"; };
+		B23303E220C996FD009B9ACC /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		B23303E320C996FD009B9ACC /* DataRetrivalResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRetrivalResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +103,11 @@
 		A40C81FF20C979E10034681C /* Networker */ = {
 			isa = PBXGroup;
 			children = (
-				A40C820020C979E10034681C /* Networker.h */,
-				A40C820120C979E10034681C /* Info.plist */,
+				B23303E320C996FD009B9ACC /* DataRetrivalResult.swift */,
+				B23303E220C996FD009B9ACC /* RequestManager.swift */,
+				B23303D520C996C6009B9ACC /* Requests */,
+				B23303E620C9970C009B9ACC /* Resources */,
+				B23303D620C996CE009B9ACC /* Utils */,
 			);
 			path = Networker;
 			sourceTree = "<group>";
@@ -110,6 +127,42 @@
 				A49C3AF520C97EEE004A195D /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B23303D520C996C6009B9ACC /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				B23303DC20C996EB009B9ACC /* BaseRequest.swift */,
+				B23303D720C996D5009B9ACC /* EventbriteRequests */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		B23303D620C996CE009B9ACC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B23303DF20C996F5009B9ACC /* CredentialsManager.swift */,
+				B23303DE20C996F5009B9ACC /* EventbriteCredentials.plist */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B23303D720C996D5009B9ACC /* EventbriteRequests */ = {
+			isa = PBXGroup;
+			children = (
+				B23303D820C996E4009B9ACC /* EventbriteBaseRequest.swift */,
+				B23303D920C996E4009B9ACC /* EventbriteEventsRequest.swift */,
+			);
+			path = EventbriteRequests;
+			sourceTree = "<group>";
+		};
+		B23303E620C9970C009B9ACC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A40C820120C979E10034681C /* Info.plist */,
+				A40C820020C979E10034681C /* Networker.h */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B23303E020C996F5009B9ACC /* EventbriteCredentials.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B23303E420C996FD009B9ACC /* RequestManager.swift in Sources */,
+				B23303E120C996F5009B9ACC /* CredentialsManager.swift in Sources */,
+				B23303DB20C996E4009B9ACC /* EventbriteEventsRequest.swift in Sources */,
+				B23303E520C996FD009B9ACC /* DataRetrivalResult.swift in Sources */,
+				B23303DA20C996E4009B9ACC /* EventbriteBaseRequest.swift in Sources */,
+				B23303DD20C996EB009B9ACC /* BaseRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,12 +431,12 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = YDABZ672Z5;
+				DEVELOPMENT_TEAM = Z2EVZ5Y6JY;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Vendor/Carthage/Build/iOS";
-				INFOPLIST_FILE = Networker/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Networker/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -399,12 +459,12 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = YDABZ672Z5;
+				DEVELOPMENT_TEAM = Z2EVZ5Y6JY;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Vendor/Carthage/Build/iOS";
-				INFOPLIST_FILE = Networker/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Networker/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -422,6 +482,7 @@
 		A40C821520C979E10034681C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDABZ672Z5;
 				INFOPLIST_FILE = NetworkerTests/Info.plist;
@@ -440,6 +501,7 @@
 		A40C821620C979E10034681C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDABZ672Z5;
 				INFOPLIST_FILE = NetworkerTests/Info.plist;
