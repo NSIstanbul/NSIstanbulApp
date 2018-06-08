@@ -19,6 +19,11 @@
 		B23303E120C996F5009B9ACC /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23303DF20C996F5009B9ACC /* CredentialsManager.swift */; };
 		B23303E420C996FD009B9ACC /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23303E220C996FD009B9ACC /* RequestManager.swift */; };
 		B23303E520C996FD009B9ACC /* DataRetrivalResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23303E320C996FD009B9ACC /* DataRetrivalResult.swift */; };
+		B23303E920C9F626009B9ACC /* EventbriteEndpointToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23303E820C9F626009B9ACC /* EventbriteEndpointToken.swift */; };
+		B23303EF20C9F777009B9ACC /* CredentialsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23303EE20C9F777009B9ACC /* CredentialsFile.swift */; };
+		B23303F220C9FC3E009B9ACC /* CredentialsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23303F120C9FC3E009B9ACC /* CredentialsManagerTests.swift */; };
+		B23303F520CA02E7009B9ACC /* EventbriteVenueDetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23303F420CA02E7009B9ACC /* EventbriteVenueDetailsRequest.swift */; };
+		B23303F720CA0652009B9ACC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23303F620CA0652009B9ACC /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		B23303DF20C996F5009B9ACC /* CredentialsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsManager.swift; sourceTree = "<group>"; };
 		B23303E220C996FD009B9ACC /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		B23303E320C996FD009B9ACC /* DataRetrivalResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRetrivalResult.swift; sourceTree = "<group>"; };
+		B23303E820C9F626009B9ACC /* EventbriteEndpointToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventbriteEndpointToken.swift; sourceTree = "<group>"; };
+		B23303EE20C9F777009B9ACC /* CredentialsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsFile.swift; sourceTree = "<group>"; };
+		B23303F120C9FC3E009B9ACC /* CredentialsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsManagerTests.swift; sourceTree = "<group>"; };
+		B23303F420CA02E7009B9ACC /* EventbriteVenueDetailsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventbriteVenueDetailsRequest.swift; sourceTree = "<group>"; };
+		B23303F620CA0652009B9ACC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +113,7 @@
 		A40C81FF20C979E10034681C /* Networker */ = {
 			isa = PBXGroup;
 			children = (
+				B23303EC20C9F75C009B9ACC /* Models */,
 				B23303E320C996FD009B9ACC /* DataRetrivalResult.swift */,
 				B23303E220C996FD009B9ACC /* RequestManager.swift */,
 				B23303D520C996C6009B9ACC /* Requests */,
@@ -115,6 +126,7 @@
 		A40C820A20C979E10034681C /* NetworkerTests */ = {
 			isa = PBXGroup;
 			children = (
+				B23303F320C9FD98009B9ACC /* CredentialsManager */,
 				A40C820B20C979E10034681C /* NetworkerTests.swift */,
 				A40C820D20C979E10034681C /* Info.plist */,
 			);
@@ -143,6 +155,7 @@
 			children = (
 				B23303DF20C996F5009B9ACC /* CredentialsManager.swift */,
 				B23303DE20C996F5009B9ACC /* EventbriteCredentials.plist */,
+				B23303F620CA0652009B9ACC /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -152,6 +165,7 @@
 			children = (
 				B23303D820C996E4009B9ACC /* EventbriteBaseRequest.swift */,
 				B23303D920C996E4009B9ACC /* EventbriteEventsRequest.swift */,
+				B23303F420CA02E7009B9ACC /* EventbriteVenueDetailsRequest.swift */,
 			);
 			path = EventbriteRequests;
 			sourceTree = "<group>";
@@ -163,6 +177,31 @@
 				A40C820020C979E10034681C /* Networker.h */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B23303EC20C9F75C009B9ACC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B23303ED20C9F761009B9ACC /* Shared */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B23303ED20C9F761009B9ACC /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B23303E820C9F626009B9ACC /* EventbriteEndpointToken.swift */,
+				B23303EE20C9F777009B9ACC /* CredentialsFile.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B23303F320C9FD98009B9ACC /* CredentialsManager */ = {
+			isa = PBXGroup;
+			children = (
+				B23303F120C9FC3E009B9ACC /* CredentialsManagerTests.swift */,
+			);
+			path = CredentialsManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,10 +315,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B23303F520CA02E7009B9ACC /* EventbriteVenueDetailsRequest.swift in Sources */,
 				B23303E420C996FD009B9ACC /* RequestManager.swift in Sources */,
 				B23303E120C996F5009B9ACC /* CredentialsManager.swift in Sources */,
 				B23303DB20C996E4009B9ACC /* EventbriteEventsRequest.swift in Sources */,
 				B23303E520C996FD009B9ACC /* DataRetrivalResult.swift in Sources */,
+				B23303F720CA0652009B9ACC /* Constants.swift in Sources */,
+				B23303E920C9F626009B9ACC /* EventbriteEndpointToken.swift in Sources */,
+				B23303EF20C9F777009B9ACC /* CredentialsFile.swift in Sources */,
 				B23303DA20C996E4009B9ACC /* EventbriteBaseRequest.swift in Sources */,
 				B23303DD20C996EB009B9ACC /* BaseRequest.swift in Sources */,
 			);
@@ -289,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B23303F220C9FC3E009B9ACC /* CredentialsManagerTests.swift in Sources */,
 				A40C820C20C979E10034681C /* NetworkerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
