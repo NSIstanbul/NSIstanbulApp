@@ -11,16 +11,10 @@ import XCTest
 
 class CredentialsManagerTests: XCTestCase {
     // MARK: Properties
-    var requestManager: RequestManager?
+    var requestManager = RequestManager()
     let plistFile = CredentialsFile.eventbrite
     let standardTokenType = EventbriteEndpointToken.standard.rawValue
     let personalTokenType = EventbriteEndpointToken.personal.rawValue
-    
-    // MARK: Lifecycle
-    override func setUp() {
-        super.setUp()
-        requestManager = RequestManager()
-    }
     
     // MARK: Tests
     func testReadingFromPlistFile() {
