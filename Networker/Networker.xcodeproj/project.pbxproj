@@ -113,9 +113,8 @@
 		A40C81FF20C979E10034681C /* Networker */ = {
 			isa = PBXGroup;
 			children = (
-				B23303EC20C9F75C009B9ACC /* Models */,
-				B23303E320C996FD009B9ACC /* DataRetrivalResult.swift */,
 				B23303E220C996FD009B9ACC /* RequestManager.swift */,
+				B23303EC20C9F75C009B9ACC /* Models */,
 				B23303D520C996C6009B9ACC /* Requests */,
 				B23303E620C9970C009B9ACC /* Resources */,
 				B23303D620C996CE009B9ACC /* Utils */,
@@ -190,6 +189,7 @@
 		B23303ED20C9F761009B9ACC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B23303E320C996FD009B9ACC /* DataRetrivalResult.swift */,
 				B23303E820C9F626009B9ACC /* EventbriteEndpointToken.swift */,
 				B23303EE20C9F777009B9ACC /* CredentialsFile.swift */,
 			);

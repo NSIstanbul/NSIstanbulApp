@@ -11,7 +11,6 @@ import Foundation
 public struct EventbriteVenueDetailsRequest: EventbriteBaseRequest {
     // MARK: Properties
     private let venueID: String
-    private let credentialsManager = CredentialsManager.current
     
     // MARK: Lifecycle
     public init(venueID: String) {
