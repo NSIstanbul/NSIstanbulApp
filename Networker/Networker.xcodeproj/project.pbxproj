@@ -152,9 +152,9 @@
 		B23303D620C996CE009B9ACC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B23303F620CA0652009B9ACC /* Constants.swift */,
 				B23303DF20C996F5009B9ACC /* CredentialsManager.swift */,
 				B23303DE20C996F5009B9ACC /* EventbriteCredentials.plist */,
-				B23303F620CA0652009B9ACC /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";

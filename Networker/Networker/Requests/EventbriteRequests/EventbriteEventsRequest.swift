@@ -16,6 +16,6 @@ public struct EventbriteEventsRequest: EventbriteBaseRequest {
     var token: String? {
         return nil
     }
-    public var path: String = "/organizers/\(Constants.organizationID)/events/"
+    public var path: String = "/organizers/\(Constants.Eventbrite.organizationID)/events/"
 }
 

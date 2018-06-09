@@ -8,6 +8,9 @@
 
 import Foundation
 
-struct Constants {
-    static let organizationID: String = "13871494483"
+enum Constants {
+    // MARK: Eventbrite constants
+    enum Eventbrite {
+        static let organizationID: String = "13871494483"
+    }
 }
