@@ -12,8 +12,5 @@ import Foundation
 enum Constants {
     
     // MARK: StoryboardName
-    enum StoryboardName {
-        static let root = "Root"
-        static let events = "Events"
-    }
+    enum StoryboardName {}
 }

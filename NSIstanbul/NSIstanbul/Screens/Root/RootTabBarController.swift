@@ -26,3 +26,8 @@ final class RootTabBarController: UITabBarController, StoryboardLoadable, Instan
         viewControllers = [eventsViewController]
     }
 }
+
+// Constants.StoryboardName Extension
+extension Constants.StoryboardName {
+    static let root = "Root"
+}

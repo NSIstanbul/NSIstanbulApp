@@ -18,3 +18,8 @@ final class EventsController: UIViewController, StoryboardLoadable, Instantiatab
         super.viewDidLoad()
     }
 }
+
+// Constants.StoryboardName Extension
+extension Constants.StoryboardName {
+    static let events = "Events"
+}
