@@ -13,9 +13,9 @@
 		A40C81E920C979310034681C /* NSIstanbulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C81E820C979310034681C /* NSIstanbulTests.swift */; };
 		A49C3AF020C97BCA004A195D /* Networker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49C3AEA20C97BBF004A195D /* Networker.framework */; };
 		A49C3AF120C97BCA004A195D /* Networker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A49C3AEA20C97BBF004A195D /* Networker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B23E042420CC230C0045D9B6 /* ApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23E042320CC230C0045D9B6 /* ApplicationRouter.swift */; };
 		B2383E9620CC3262009215D3 /* PluggableApplicationDelegate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2383E9520CC3261009215D3 /* PluggableApplicationDelegate.framework */; };
 		B2383E9720CC3262009215D3 /* PluggableApplicationDelegate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2383E9520CC3261009215D3 /* PluggableApplicationDelegate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B23E042420CC230C0045D9B6 /* RoutingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23E042320CC230C0045D9B6 /* RoutingService.swift */; };
 		B23E042620CC233F0045D9B6 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23E042520CC233F0045D9B6 /* RootTabBarController.swift */; };
 		B23E042820CC23470045D9B6 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23E042720CC23470045D9B6 /* Root.storyboard */; };
 		B23E042A20CC23AF0045D9B6 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23E042920CC23AF0045D9B6 /* EventsController.swift */; };
@@ -82,8 +82,8 @@
 		A40C81E820C979310034681C /* NSIstanbulTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSIstanbulTests.swift; sourceTree = "<group>"; };
 		A40C81EA20C979310034681C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A49C3AE120C97BBF004A195D /* Networker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Networker.xcodeproj; sourceTree = "<group>"; };
-		B23E042320CC230C0045D9B6 /* ApplicationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRouter.swift; sourceTree = "<group>"; };
 		B2383E9520CC3261009215D3 /* PluggableApplicationDelegate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PluggableApplicationDelegate.framework; path = ../../../Vendor/Carthage/Build/iOS/PluggableApplicationDelegate.framework; sourceTree = "<group>"; };
+		B23E042320CC230C0045D9B6 /* RoutingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingService.swift; sourceTree = "<group>"; };
 		B23E042520CC233F0045D9B6 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		B23E042720CC23470045D9B6 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		B23E042920CC23AF0045D9B6 /* EventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
@@ -144,6 +144,7 @@
 				B23E041B20CC20220045D9B6 /* Protocols */,
 				B23E041C20CC20280045D9B6 /* Resources */,
 				B23E041D20CC20310045D9B6 /* Screens */,
+				B23E043F20CC2DE90045D9B6 /* Services */,
 			);
 			path = NSIstanbul;
 			sourceTree = "<group>";
@@ -195,7 +196,6 @@
 			isa = PBXGroup;
 			children = (
 				A40C81D320C979300034681C /* AppDelegate.swift */,
-				B23E042320CC230C0045D9B6 /* ApplicationRouter.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -291,6 +291,14 @@
 			children = (
 			);
 			path = About;
+			sourceTree = "<group>";
+		};
+		B23E043F20CC2DE90045D9B6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B23E042320CC230C0045D9B6 /* RoutingService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,7 +457,7 @@
 				B23E042620CC233F0045D9B6 /* RootTabBarController.swift in Sources */,
 				B23E042A20CC23AF0045D9B6 /* EventsController.swift in Sources */,
 				B23E043220CC24020045D9B6 /* StoryboardLoadable.swift in Sources */,
-				B23E042420CC230C0045D9B6 /* ApplicationRouter.swift in Sources */,
+				B23E042420CC230C0045D9B6 /* RoutingService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

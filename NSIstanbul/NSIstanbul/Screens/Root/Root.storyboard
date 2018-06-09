@@ -12,7 +12,7 @@
         <!--Root Tab Bar Controller-->
         <scene sceneID="Mso-O7-EuJ">
             <objects>
-                <tabBarController storyboardIdentifier="RootTabBarController" id="HGV-UJ-eyj" customClass="RootTabBarController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="RootTabBarController" id="HGV-UJ-eyj" customClass="RootTabBarController" customModule="NSIstanbul" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jGi-5n-FFU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -13,7 +13,7 @@
         <!--Events Controller-->
         <scene sceneID="GXw-xK-Req">
             <objects>
-                <viewController storyboardIdentifier="EventsController" id="Fm8-TR-YbX" customClass="EventsController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventsController" id="Fm8-TR-YbX" customClass="EventsController" customModule="NSIstanbul" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DOg-T9-jCt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

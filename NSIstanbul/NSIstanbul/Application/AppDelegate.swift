@@ -7,16 +7,17 @@
 //
 
 import UIKit
+import PluggableApplicationDelegate
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var window: UIWindow?
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+class AppDelegate: PluggableApplicationDelegate {
+    // MARK: Properties
+    private var mainWindow: UIWindow = UIWindow(frame: UIScreen.main.bounds)
+    
+    override var services: [ApplicationService] {
+        return [
+            RoutingService(window: mainWindow)
+        ]
     }
-
 }
 
