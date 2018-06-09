@@ -9,7 +9,9 @@
 import Foundation
 import Alamofire
 
-protocol EventbriteBaseRequest: BaseRequest { }
+protocol EventbriteBaseRequest: BaseRequest {
+    var token: String? { get }
+}
 
 extension EventbriteBaseRequest {
 
@@ -27,8 +29,8 @@ extension EventbriteBaseRequest {
             fatalError("API URL cannot be resolved! Check API URL and/or path for this request.")
         }
 
-        // Create a api query Item
-        let apiKeyItem = URLQueryItem(name: "api_key", value: CredentialsManager.current.eventbriteToken)
+        // Create an api query Item
+        let apiKeyItem = resolveAPIKey()
 
         // Add APIKey to query Items
         var queryItems = components.queryItems ?? []
@@ -50,4 +52,24 @@ extension EventbriteBaseRequest {
         }
     }
 
+    // MARK: Private
+    private func resolveAPIKey() -> URLQueryItem {
+        
+        // Definitions
+        let apiKey = "api_key"
+        let apiKeyToken: String?
+        let credentialsFile = CredentialsFile.eventbrite
+        
+        // Resolving token for the request
+        if let token = token {
+            // If we have a specific token for the request
+            apiKeyToken = CredentialsManager.current.token(named: token, in: credentialsFile)
+        } else {
+            // If we don't have a specific token for the request falling back
+            apiKeyToken = CredentialsManager.current.token(named: EventbriteEndpointToken.standard.rawValue,
+                                                           in: credentialsFile)
+        }
+        
+        return URLQueryItem(name: apiKey, value: apiKeyToken ?? "")
+    }
 }

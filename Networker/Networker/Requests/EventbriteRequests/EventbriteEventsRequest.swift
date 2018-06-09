@@ -9,7 +9,13 @@
 import Foundation
 
 public struct EventbriteEventsRequest: EventbriteBaseRequest {
+    // MARK: Lifecycle
     public init() {}
-    public var path: String = "/organizers/13871494483/events/"
+    
+    // MARK: EventbriteBaseRequest
+    var token: String? {
+        return nil
+    }
+    public var path: String = "/organizers/\(Constants.organizationID)/events/"
 }
 
