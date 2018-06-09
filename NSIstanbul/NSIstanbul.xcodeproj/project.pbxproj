@@ -117,12 +117,14 @@
 		A40C81D220C979300034681C /* NSIstanbul */ = {
 			isa = PBXGroup;
 			children = (
-				A40C81D320C979300034681C /* AppDelegate.swift */,
+				B23E041620CC20030045D9B6 /* Application */,
+				B23E041820CC200B0045D9B6 /* Constants */,
+				B23E041920CC20130045D9B6 /* Extensions */,
+				B23E041A20CC20190045D9B6 /* Models */,
+				B23E041B20CC20220045D9B6 /* Protocols */,
+				B23E041C20CC20280045D9B6 /* Resources */,
+				B23E041D20CC20310045D9B6 /* Screens */,
 				A40C81D520C979300034681C /* ViewController.swift */,
-				A40C81D720C979300034681C /* Main.storyboard */,
-				A40C81DA20C979310034681C /* Assets.xcassets */,
-				A40C81DC20C979310034681C /* LaunchScreen.storyboard */,
-				A40C81DF20C979310034681C /* Info.plist */,
 			);
 			path = NSIstanbul;
 			sourceTree = "<group>";
@@ -160,6 +162,60 @@
 				A49C3AEC20C97BBF004A195D /* NetworkerTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B23E041620CC20030045D9B6 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A40C81D320C979300034681C /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B23E041820CC200B0045D9B6 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		B23E041920CC20130045D9B6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B23E041A20CC20190045D9B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B23E041B20CC20220045D9B6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B23E041C20CC20280045D9B6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A40C81D720C979300034681C /* Main.storyboard */,
+				A40C81DC20C979310034681C /* LaunchScreen.storyboard */,
+				A40C81DF20C979310034681C /* Info.plist */,
+				A40C81DA20C979310034681C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B23E041D20CC20310045D9B6 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,7 +532,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDABZ672Z5;
-				INFOPLIST_FILE = NSIstanbul/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NSIstanbul/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -494,7 +550,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDABZ672Z5;
-				INFOPLIST_FILE = NSIstanbul/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NSIstanbul/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
