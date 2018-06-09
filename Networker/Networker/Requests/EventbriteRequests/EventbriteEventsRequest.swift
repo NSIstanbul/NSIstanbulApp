@@ -12,7 +12,7 @@ public struct EventbriteEventsRequest: EventbriteBaseRequest {
     // MARK: Lifecycle
     public init() {}
     
-    // MARK: EventbriteBaseRequest
+    // MARK: EventbriteBaseRequest Protocol
     var token: String? {
         return nil
     }

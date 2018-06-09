@@ -15,6 +15,7 @@ protocol EventbriteBaseRequest: BaseRequest {
 
 extension EventbriteBaseRequest {
 
+    // MARK: BaseRequest
     // Default implementations have to be in protocol extention.
     public var baseURL: URL                { return URL(string: "https://www.eventbriteapi.com/v3")! }
     public var method: HTTPMethod          { return .get }
@@ -22,6 +23,7 @@ extension EventbriteBaseRequest {
     public var headers: [String: String]?  { return nil }
     public var encoding: ParameterEncoding { return URLEncoding.default }
 
+    // MARK: Public
     // Creating request for the properties.
     public func asURLRequest() throws -> URLRequest {
         let url = baseURL.appendingPathComponent(path)

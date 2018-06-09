@@ -11,12 +11,15 @@ import Alamofire
 
 public class RequestManager {
 
+    // MARK: Properties
     private let manager: SessionManager
 
+    // MARK: Lifecycle
     public init() {
         manager = SessionManager()
     }
 
+    // MARK: Public
     @discardableResult public func perform(_ request: BaseRequest, handleCompletion: @escaping () -> Void) -> DataRequest? {
         let dataRequest = manager.request(request)
         dataRequest.responseData { (dataResponse: DataResponse<Data>) in
