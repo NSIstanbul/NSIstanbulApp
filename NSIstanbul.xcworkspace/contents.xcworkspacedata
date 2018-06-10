@@ -5,6 +5,6 @@
       location = "group:NSIstanbul/NSIstanbul.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Networker/Networker.xcodeproj">
+      location = "group:Networking/Networking.xcodeproj">
    </FileRef>
 </Workspace>
