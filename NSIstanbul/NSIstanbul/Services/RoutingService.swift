@@ -7,31 +7,21 @@
 //
 
 import UIKit
-import PluggableApplicationDelegate
 
 // MARK: RoutingService
-class RoutingService: NSObject {
+class RoutingService {
     // MARK: Properties
     private let window: UIWindow
     
     // MARK: Lifecycle
     init(window: UIWindow) {
         self.window = window
-        super.init()
     }
     
     // MARK: Public
-    func retrieveRootController() -> UIViewController {
-        return RootTabBarController.instantiate()
-    }
-}
-
-// MARK: ApplicationService Protocol
-extension RoutingService: ApplicationService {
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-        let rootViewController = retrieveRootController()
-        window.rootViewController = rootViewController
+    func presentMainFlow() {
+        let rootTabBarController = RootTabBarController.instantiate()
+        window.rootViewController = rootTabBarController
         window.makeKeyAndVisible()
-        return true
     }
 }

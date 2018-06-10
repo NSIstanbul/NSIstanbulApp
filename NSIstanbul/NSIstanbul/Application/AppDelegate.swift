@@ -7,17 +7,21 @@
 //
 
 import UIKit
-import PluggableApplicationDelegate
 
 @UIApplicationMain
-class AppDelegate: PluggableApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Properties
-    private var mainWindow: UIWindow = UIWindow(frame: UIScreen.main.bounds)
+    var window: UIWindow?
+    var routingService: RoutingService?
     
-    override var services: [ApplicationService] {
-        return [
-            RoutingService(window: mainWindow)
-        ]
+    // MARK: UIApplicationDelegate
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        guard let window = window else { return false }
+        
+        routingService = RoutingService(window: window)
+        routingService?.presentMainFlow()
+        return true
     }
 }
 
