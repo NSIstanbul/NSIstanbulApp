@@ -7,21 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3643B8EC20CDE42F00EDD771 /* ApplicationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B8E820CDE42F00EDD771 /* ApplicationContainer.swift */; };
+		3643B8ED20CDE42F00EDD771 /* ApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B8EA20CDE42F00EDD771 /* ApplicationDelegate.swift */; };
+		3643B8EE20CDE42F00EDD771 /* ApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B8EB20CDE42F00EDD771 /* ApplicationRouter.swift */; };
+		3643B8F720CDE4AF00EDD771 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B8F120CDE4AF00EDD771 /* TabBarRouter.swift */; };
+		3643B8F820CDE4AF00EDD771 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B8F320CDE4AF00EDD771 /* ContentViewController.swift */; };
+		3643B8F920CDE4AF00EDD771 /* ContentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B8F420CDE4AF00EDD771 /* ContentRouter.swift */; };
+		3643B8FA20CDE4B000EDD771 /* ContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3643B8F520CDE4AF00EDD771 /* ContentViewController.xib */; };
+		3643B8FB20CDE4B000EDD771 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B8F620CDE4AF00EDD771 /* ContentViewModel.swift */; };
+		3643B8FD20CDE5F700EDD771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3643B8FC20CDE5F700EDD771 /* LaunchScreen.storyboard */; };
+		3643B90520CDE65B00EDD771 /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B90420CDE65B00EDD771 /* Instantiatable.swift */; };
+		3643B90720CDE66F00EDD771 /* Instantiatable+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B90620CDE66F00EDD771 /* Instantiatable+UIView.swift */; };
+		3643B90920CDE69B00EDD771 /* Instantiatable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B90820CDE69B00EDD771 /* Instantiatable+UIViewController.swift */; };
+		3643B91320CDE7E100EDD771 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B91220CDE7E100EDD771 /* EventsViewController.swift */; };
+		3643B91520CDE80E00EDD771 /* EventsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3643B91420CDE80E00EDD771 /* EventsViewController.storyboard */; };
+		3643B91720CDE8BE00EDD771 /* EventsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B91620CDE8BE00EDD771 /* EventsRouter.swift */; };
+		3643B91920CDE90E00EDD771 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B91820CDE90E00EDD771 /* EventsViewModel.swift */; };
+		36B28F7420CDEC0E00BF9C45 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B28F7320CDEC0E00BF9C45 /* TabBarController.swift */; };
+		36B28F7720CDED2000BF9C45 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B28F7620CDED2000BF9C45 /* Router.swift */; };
 		36F443FA20CDCE91004EA85D /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F443F720CDCE85004EA85D /* Networking.framework */; };
 		36F443FB20CDCE91004EA85D /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36F443F720CDCE85004EA85D /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A40C81D420C979300034681C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C81D320C979300034681C /* AppDelegate.swift */; };
 		A40C81DB20C979310034681C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40C81DA20C979310034681C /* Assets.xcassets */; };
-		A40C81DE20C979310034681C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40C81DC20C979310034681C /* LaunchScreen.storyboard */; };
 		A40C81E920C979310034681C /* NSIstanbulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C81E820C979310034681C /* NSIstanbulTests.swift */; };
-		B23E042420CC230C0045D9B6 /* RoutingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23E042320CC230C0045D9B6 /* RoutingService.swift */; };
-		B23E042620CC233F0045D9B6 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23E042520CC233F0045D9B6 /* RootTabBarController.swift */; };
-		B23E042820CC23470045D9B6 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23E042720CC23470045D9B6 /* Root.storyboard */; };
-		B23E042A20CC23AF0045D9B6 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23E042920CC23AF0045D9B6 /* EventsController.swift */; };
-		B23E042C20CC23BD0045D9B6 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23E042B20CC23BD0045D9B6 /* Events.storyboard */; };
-		B23E042E20CC23ED0045D9B6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23E042D20CC23ED0045D9B6 /* Constants.swift */; };
-		B23E043220CC24020045D9B6 /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23E042F20CC24020045D9B6 /* StoryboardLoadable.swift */; };
-		B23E043320CC24020045D9B6 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23E043020CC24020045D9B6 /* NibLoadable.swift */; };
-		B23E043420CC24020045D9B6 /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23E043120CC24020045D9B6 /* Instantiatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,24 +77,31 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3643B8E820CDE42F00EDD771 /* ApplicationContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContainer.swift; sourceTree = "<group>"; };
+		3643B8EA20CDE42F00EDD771 /* ApplicationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationDelegate.swift; sourceTree = "<group>"; };
+		3643B8EB20CDE42F00EDD771 /* ApplicationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationRouter.swift; sourceTree = "<group>"; };
+		3643B8F120CDE4AF00EDD771 /* TabBarRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
+		3643B8F320CDE4AF00EDD771 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		3643B8F420CDE4AF00EDD771 /* ContentRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentRouter.swift; sourceTree = "<group>"; };
+		3643B8F520CDE4AF00EDD771 /* ContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
+		3643B8F620CDE4AF00EDD771 /* ContentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		3643B8FC20CDE5F700EDD771 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3643B90420CDE65B00EDD771 /* Instantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiatable.swift; sourceTree = "<group>"; };
+		3643B90620CDE66F00EDD771 /* Instantiatable+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instantiatable+UIView.swift"; sourceTree = "<group>"; };
+		3643B90820CDE69B00EDD771 /* Instantiatable+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instantiatable+UIViewController.swift"; sourceTree = "<group>"; };
+		3643B91220CDE7E100EDD771 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		3643B91420CDE80E00EDD771 /* EventsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventsViewController.storyboard; sourceTree = "<group>"; };
+		3643B91620CDE8BE00EDD771 /* EventsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsRouter.swift; sourceTree = "<group>"; };
+		3643B91820CDE90E00EDD771 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
+		36B28F7320CDEC0E00BF9C45 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		36B28F7620CDED2000BF9C45 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		36F443F120CDCE85004EA85D /* Networking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Networking.xcodeproj; path = ../Networking/Networking.xcodeproj; sourceTree = "<group>"; };
 		A40C81D020C979300034681C /* NSIstanbul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSIstanbul.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A40C81D320C979300034681C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A40C81DA20C979310034681C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A40C81DD20C979310034681C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A40C81DF20C979310034681C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A40C81E420C979310034681C /* NSIstanbulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSIstanbulTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40C81E820C979310034681C /* NSIstanbulTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSIstanbulTests.swift; sourceTree = "<group>"; };
 		A40C81EA20C979310034681C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B23E042320CC230C0045D9B6 /* RoutingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingService.swift; sourceTree = "<group>"; };
-		B23E042520CC233F0045D9B6 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
-		B23E042720CC23470045D9B6 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
-		B23E042920CC23AF0045D9B6 /* EventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
-		B23E042B20CC23BD0045D9B6 /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
-		B23E042D20CC23ED0045D9B6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		B23E042F20CC24020045D9B6 /* StoryboardLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
-		B23E043020CC24020045D9B6 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
-		B23E043120CC24020045D9B6 /* Instantiatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instantiatable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +123,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3643B8EF20CDE4AF00EDD771 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3643B8F020CDE4AF00EDD771 /* TabBar */,
+				3643B91120CDE7CF00EDD771 /* Events */,
+				3643B8F220CDE4AF00EDD771 /* Content */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3643B8F020CDE4AF00EDD771 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				3643B8F120CDE4AF00EDD771 /* TabBarRouter.swift */,
+				36B28F7320CDEC0E00BF9C45 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		3643B8F220CDE4AF00EDD771 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				3643B8F420CDE4AF00EDD771 /* ContentRouter.swift */,
+				3643B8F320CDE4AF00EDD771 /* ContentViewController.swift */,
+				3643B8F520CDE4AF00EDD771 /* ContentViewController.xib */,
+				3643B8F620CDE4AF00EDD771 /* ContentViewModel.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		3643B91020CDE77200EDD771 /* Instantiatable */ = {
+			isa = PBXGroup;
+			children = (
+				3643B90420CDE65B00EDD771 /* Instantiatable.swift */,
+				3643B90620CDE66F00EDD771 /* Instantiatable+UIView.swift */,
+				3643B90820CDE69B00EDD771 /* Instantiatable+UIViewController.swift */,
+			);
+			path = Instantiatable;
+			sourceTree = "<group>";
+		};
+		3643B91120CDE7CF00EDD771 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				3643B91620CDE8BE00EDD771 /* EventsRouter.swift */,
+				3643B91220CDE7E100EDD771 /* EventsViewController.swift */,
+				3643B91420CDE80E00EDD771 /* EventsViewController.storyboard */,
+				3643B91820CDE90E00EDD771 /* EventsViewModel.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		3643B91A20CDEA5000EDD771 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A40C81EA20C979310034681C /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		36F443F220CDCE85004EA85D /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,14 +214,9 @@
 			isa = PBXGroup;
 			children = (
 				B23E041620CC20030045D9B6 /* Application */,
-				B23E041820CC200B0045D9B6 /* Constants */,
-				B23E041920CC20130045D9B6 /* Extensions */,
-				B2383E9320CC3241009215D3 /* Frameworks */,
-				B23E041A20CC20190045D9B6 /* Models */,
+				3643B8EF20CDE4AF00EDD771 /* Scenes */,
 				B23E041B20CC20220045D9B6 /* Protocols */,
 				B23E041C20CC20280045D9B6 /* Resources */,
-				B23E041D20CC20310045D9B6 /* Screens */,
-				B23E043F20CC2DE90045D9B6 /* Services */,
 			);
 			path = NSIstanbul;
 			sourceTree = "<group>";
@@ -157,7 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				A40C81E820C979310034681C /* NSIstanbulTests.swift */,
-				A40C81EA20C979310034681C /* Info.plist */,
+				3643B91A20CDEA5000EDD771 /* Resources */,
 			);
 			path = NSIstanbulTests;
 			sourceTree = "<group>";
@@ -173,39 +241,18 @@
 		B23E041620CC20030045D9B6 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				A40C81D320C979300034681C /* AppDelegate.swift */,
+				3643B8EA20CDE42F00EDD771 /* ApplicationDelegate.swift */,
+				3643B8E820CDE42F00EDD771 /* ApplicationContainer.swift */,
+				3643B8EB20CDE42F00EDD771 /* ApplicationRouter.swift */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		B23E041820CC200B0045D9B6 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				B23E042D20CC23ED0045D9B6 /* Constants.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
-		B23E041920CC20130045D9B6 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		B23E041A20CC20190045D9B6 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		B23E041B20CC20220045D9B6 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				B23E043120CC24020045D9B6 /* Instantiatable.swift */,
-				B23E043020CC24020045D9B6 /* NibLoadable.swift */,
-				B23E042F20CC24020045D9B6 /* StoryboardLoadable.swift */,
+				3643B91020CDE77200EDD771 /* Instantiatable */,
+				36B28F7620CDED2000BF9C45 /* Router.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -213,70 +260,11 @@
 		B23E041C20CC20280045D9B6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A40C81DC20C979310034681C /* LaunchScreen.storyboard */,
 				A40C81DF20C979310034681C /* Info.plist */,
+				3643B8FC20CDE5F700EDD771 /* LaunchScreen.storyboard */,
 				A40C81DA20C979310034681C /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		B23E041D20CC20310045D9B6 /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				B23E042220CC22D30045D9B6 /* About */,
-				B23E042020CC22CB0045D9B6 /* Companies */,
-				B23E041F20CC22AD0045D9B6 /* Events */,
-				B23E042120CC22CF0045D9B6 /* Jobs */,
-				B23E041E20CC22A50045D9B6 /* Root */,
-			);
-			path = Screens;
-			sourceTree = "<group>";
-		};
-		B23E041E20CC22A50045D9B6 /* Root */ = {
-			isa = PBXGroup;
-			children = (
-				B23E042520CC233F0045D9B6 /* RootTabBarController.swift */,
-				B23E042720CC23470045D9B6 /* Root.storyboard */,
-			);
-			path = Root;
-			sourceTree = "<group>";
-		};
-		B23E041F20CC22AD0045D9B6 /* Events */ = {
-			isa = PBXGroup;
-			children = (
-				B23E042920CC23AF0045D9B6 /* EventsController.swift */,
-				B23E042B20CC23BD0045D9B6 /* Events.storyboard */,
-			);
-			path = Events;
-			sourceTree = "<group>";
-		};
-		B23E042020CC22CB0045D9B6 /* Companies */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Companies;
-			sourceTree = "<group>";
-		};
-		B23E042120CC22CF0045D9B6 /* Jobs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Jobs;
-			sourceTree = "<group>";
-		};
-		B23E042220CC22D30045D9B6 /* About */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = About;
-			sourceTree = "<group>";
-		};
-		B23E043F20CC2DE90045D9B6 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				B23E042320CC230C0045D9B6 /* RoutingService.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,9 +374,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B23E042820CC23470045D9B6 /* Root.storyboard in Resources */,
-				B23E042C20CC23BD0045D9B6 /* Events.storyboard in Resources */,
-				A40C81DE20C979310034681C /* LaunchScreen.storyboard in Resources */,
+				3643B8FD20CDE5F700EDD771 /* LaunchScreen.storyboard in Resources */,
+				3643B8FA20CDE4B000EDD771 /* ContentViewController.xib in Resources */,
+				3643B91520CDE80E00EDD771 /* EventsViewController.storyboard in Resources */,
 				A40C81DB20C979310034681C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,12 +398,10 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/../Vendor/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/../Vendor/Carthage/Build/iOS/PluggableApplicationDelegate.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
-				"$(BUILT_PRODUCTS_DIR)/$/(FRAMEWORKS_FOLDER_PATH)/PluggableApplicationDelegate.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -428,14 +414,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B23E042E20CC23ED0045D9B6 /* Constants.swift in Sources */,
-				A40C81D420C979300034681C /* AppDelegate.swift in Sources */,
-				B23E043420CC24020045D9B6 /* Instantiatable.swift in Sources */,
-				B23E043320CC24020045D9B6 /* NibLoadable.swift in Sources */,
-				B23E042620CC233F0045D9B6 /* RootTabBarController.swift in Sources */,
-				B23E042A20CC23AF0045D9B6 /* EventsController.swift in Sources */,
-				B23E043220CC24020045D9B6 /* StoryboardLoadable.swift in Sources */,
-				B23E042420CC230C0045D9B6 /* RoutingService.swift in Sources */,
+				3643B91320CDE7E100EDD771 /* EventsViewController.swift in Sources */,
+				3643B91920CDE90E00EDD771 /* EventsViewModel.swift in Sources */,
+				3643B8EE20CDE42F00EDD771 /* ApplicationRouter.swift in Sources */,
+				3643B8F820CDE4AF00EDD771 /* ContentViewController.swift in Sources */,
+				3643B91720CDE8BE00EDD771 /* EventsRouter.swift in Sources */,
+				3643B8F920CDE4AF00EDD771 /* ContentRouter.swift in Sources */,
+				3643B8ED20CDE42F00EDD771 /* ApplicationDelegate.swift in Sources */,
+				36B28F7720CDED2000BF9C45 /* Router.swift in Sources */,
+				3643B90520CDE65B00EDD771 /* Instantiatable.swift in Sources */,
+				3643B90920CDE69B00EDD771 /* Instantiatable+UIViewController.swift in Sources */,
+				3643B8FB20CDE4B000EDD771 /* ContentViewModel.swift in Sources */,
+				3643B90720CDE66F00EDD771 /* Instantiatable+UIView.swift in Sources */,
+				36B28F7420CDEC0E00BF9C45 /* TabBarController.swift in Sources */,
+				3643B8F720CDE4AF00EDD771 /* TabBarRouter.swift in Sources */,
+				3643B8EC20CDE42F00EDD771 /* ApplicationContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,17 +454,6 @@
 			targetProxy = A40C81E520C979310034681C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		A40C81DC20C979310034681C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A40C81DD20C979310034681C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A40C81EB20C979310034681C /* Debug */ = {
@@ -526,7 +508,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -581,7 +563,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -637,7 +619,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDABZ672Z5;
-				INFOPLIST_FILE = NSIstanbulTests/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NSIstanbulTests/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -658,7 +640,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDABZ672Z5;
-				INFOPLIST_FILE = NSIstanbulTests/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NSIstanbulTests/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
