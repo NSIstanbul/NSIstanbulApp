@@ -25,8 +25,12 @@
 		36ABA40F1FF971BC007B52DE /* OHHTTPStubs.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3643FA381FED42B700BE5705 /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36ABA4101FF971C8007B52DE /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3643FA3A1FED4C2400BE5705 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36ABA4111FF971CF007B52DE /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3643FA381FED42B700BE5705 /* OHHTTPStubs.framework */; };
+		B242FDF120CDEAAD00120002 /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FDF020CDEAAD00120002 /* CredentialsManager.swift */; };
 		B242FDF920CDEB8300120002 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FDF820CDEB8300120002 /* Constants.swift */; };
 		B242FDFB20CDEBAB00120002 /* Constants+Eventbrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FDFA20CDEBAB00120002 /* Constants+Eventbrite.swift */; };
+		B242FE0220CDEC4600120002 /* CredentialsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FE0120CDEC4600120002 /* CredentialsManagerTests.swift */; };
+		B242FE0420CDEC6C00120002 /* EventbriteCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = B242FE0320CDEC6C00120002 /* EventbriteCredentials.plist */; };
+		B242FE0520CDEDE300120002 /* EventbriteCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = B242FE0320CDEC6C00120002 /* EventbriteCredentials.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,8 +87,11 @@
 		3643FA471FED885900BE5705 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		36920F841FF6DF1C0051424F /* Stubber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubber.swift; sourceTree = "<group>"; };
 		36920F861FF6E09A0051424F /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		B242FDF020CDEAAD00120002 /* CredentialsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsManager.swift; sourceTree = "<group>"; };
 		B242FDF820CDEB8300120002 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B242FDFA20CDEBAB00120002 /* Constants+Eventbrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Eventbrite.swift"; sourceTree = "<group>"; };
+		B242FE0120CDEC4600120002 /* CredentialsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsManagerTests.swift; sourceTree = "<group>"; };
+		B242FE0320CDEC6C00120002 /* EventbriteCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EventbriteCredentials.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +150,7 @@
 				B242FDF520CDEB5900120002 /* APIs */,
 				B242FDF720CDEB6D00120002 /* Constants */,
 				B242FDE720CDE8C500120002 /* Resources */,
+				B242FDE820CDE8D900120002 /* Utils */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -154,6 +162,7 @@
 				3618E7A91FED3C03003B5CA5 /* NetworkingTests.swift */,
 				36920F831FF6DF050051424F /* TestHelpers */,
 				3643FA1E1FED3C4B00BE5705 /* Supporting Files */,
+				B242FE0020CDEC3500120002 /* Utils */,
 			);
 			path = NetworkingTests;
 			sourceTree = "<group>";
@@ -207,6 +216,22 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		B242FDE820CDE8D900120002 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B242FDF220CDEAB800120002 /* CredentialsManager */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B242FDF220CDEAB800120002 /* CredentialsManager */ = {
+			isa = PBXGroup;
+			children = (
+				B242FDF020CDEAAD00120002 /* CredentialsManager.swift */,
+			);
+			path = CredentialsManager;
+			sourceTree = "<group>";
+		};
 		B242FDF520CDEB5900120002 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +262,14 @@
 				B242FDFA20CDEBAB00120002 /* Constants+Eventbrite.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		B242FE0020CDEC3500120002 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B242FE0120CDEC4600120002 /* CredentialsManagerTests.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B242FE0520CDEDE300120002 /* EventbriteCredentials.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B242FE0420CDEC6C00120002 /* EventbriteCredentials.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +394,7 @@
 				3643FA211FED3C9C00BE5705 /* Networking.swift in Sources */,
 				3643FA481FED885900BE5705 /* NetworkingError.swift in Sources */,
 				3643FA421FED614900BE5705 /* API.swift in Sources */,
+				B242FDF120CDEAAD00120002 /* CredentialsManager.swift in Sources */,
 				3643FA401FED605800BE5705 /* HTTPMethod.swift in Sources */,
 				3643FA441FED677300BE5705 /* Response.swift in Sources */,
 				36920F871FF6E09A0051424F /* BaseURL.swift in Sources */,
@@ -370,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3618E7AA1FED3C03003B5CA5 /* NetworkingTests.swift in Sources */,
+				B242FE0220CDEC4600120002 /* CredentialsManagerTests.swift in Sources */,
 				36920F851FF6DF1C0051424F /* Stubber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
