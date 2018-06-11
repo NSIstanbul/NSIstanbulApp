@@ -144,7 +144,7 @@
 				360DF1551FFC1A80004DD336 /* APIs */,
 				3643FA3C1FED5B9600BE5705 /* NetworkingModels */,
 				3643FA201FED3C9C00BE5705 /* Networking.swift */,
-				3643FA1F1FED3C7800BE5705 /* Supporting Files */,
+				B242FDE720CDE8C500120002 /* Resources */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -164,15 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				3618E7AB1FED3C03003B5CA5 /* Info.plist */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		3643FA1F1FED3C7800BE5705 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3618E79E1FED3C03003B5CA5 /* Networking.h */,
-				3618E79F1FED3C03003B5CA5 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -206,6 +197,16 @@
 				36920F841FF6DF1C0051424F /* Stubber.swift */,
 			);
 			path = TestHelpers;
+			sourceTree = "<group>";
+		};
+		B242FDE720CDE8C500120002 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B242FE0320CDEC6C00120002 /* EventbriteCredentials.plist */,
+				3618E79E1FED3C03003B5CA5 /* Networking.h */,
+				3618E79F1FED3C03003B5CA5 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -478,11 +479,11 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = P8EBW8LF2M;
+				DEVELOPMENT_TEAM = Z2EVZ5Y6JY;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Networking/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Networking/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsistanbul.Networking;
@@ -501,11 +502,11 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = P8EBW8LF2M;
+				DEVELOPMENT_TEAM = Z2EVZ5Y6JY;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Networking/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Networking/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsistanbul.Networking;
