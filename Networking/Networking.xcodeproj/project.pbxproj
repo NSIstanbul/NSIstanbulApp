@@ -39,6 +39,7 @@
 		B2CD87BB20D1D44E0020F363 /* EventTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87BA20D1D44E0020F363 /* EventTicket.swift */; };
 		B2CD87BF20D1D5270020F363 /* EventAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87BE20D1D5270020F363 /* EventAvailability.swift */; };
 		B2CD87C520D1D6CA0020F363 /* EventLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87C420D1D6CA0020F363 /* EventLogo.swift */; };
+		B2CD87CD20D1D8790020F363 /* EventPagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87CC20D1D8790020F363 /* EventPagination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		B2CD87BA20D1D44E0020F363 /* EventTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTicket.swift; sourceTree = "<group>"; };
 		B2CD87BE20D1D5270020F363 /* EventAvailability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAvailability.swift; sourceTree = "<group>"; };
 		B2CD87C420D1D6CA0020F363 /* EventLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLogo.swift; sourceTree = "<group>"; };
+		B2CD87CC20D1D8790020F363 /* EventPagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPagination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +309,7 @@
 				B2CD87BE20D1D5270020F363 /* EventAvailability.swift */,
 				B2AC722F20D1D25E00D58003 /* EventStatus.swift */,
 				B2AC723120D1D35700D58003 /* EventVenue.swift */,
+				B2CD87CC20D1D8790020F363 /* EventPagination.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2CD87CD20D1D8790020F363 /* EventPagination.swift in Sources */,
 				B242FDFF20CDEBE900120002 /* EventbriteEndpointToken.swift in Sources */,
 				B242FE0820CDEE3900120002 /* EventbriteEndpoint.swift in Sources */,
 				3643FA461FED678300BE5705 /* Result.swift in Sources */,
