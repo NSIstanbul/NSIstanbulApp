@@ -25,6 +25,14 @@
 		36ABA40F1FF971BC007B52DE /* OHHTTPStubs.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3643FA381FED42B700BE5705 /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36ABA4101FF971C8007B52DE /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3643FA3A1FED4C2400BE5705 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36ABA4111FF971CF007B52DE /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3643FA381FED42B700BE5705 /* OHHTTPStubs.framework */; };
+		B242FDF120CDEAAD00120002 /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FDF020CDEAAD00120002 /* CredentialsManager.swift */; };
+		B242FDFF20CDEBE900120002 /* EventbriteEndpointToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FDFE20CDEBE900120002 /* EventbriteEndpointToken.swift */; };
+		B242FE0220CDEC4600120002 /* CredentialsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FE0120CDEC4600120002 /* CredentialsManagerTests.swift */; };
+		B242FE0420CDEC6C00120002 /* EventbriteCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = B242FE0320CDEC6C00120002 /* EventbriteCredentials.plist */; };
+		B242FE0520CDEDE300120002 /* EventbriteCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = B242FE0320CDEC6C00120002 /* EventbriteCredentials.plist */; };
+		B242FE0820CDEE3900120002 /* EventbriteEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FE0720CDEE3900120002 /* EventbriteEndpoint.swift */; };
+		B242FE0A20CDEED800120002 /* EventbriteEventsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FE0920CDEED800120002 /* EventbriteEventsRequest.swift */; };
+		B242FE0C20CDF1E400120002 /* EventbriteEventVenueDetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FE0B20CDF1E400120002 /* EventbriteEventVenueDetailsRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +89,13 @@
 		3643FA471FED885900BE5705 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		36920F841FF6DF1C0051424F /* Stubber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubber.swift; sourceTree = "<group>"; };
 		36920F861FF6E09A0051424F /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		B242FDF020CDEAAD00120002 /* CredentialsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsManager.swift; sourceTree = "<group>"; };
+		B242FDFE20CDEBE900120002 /* EventbriteEndpointToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventbriteEndpointToken.swift; sourceTree = "<group>"; };
+		B242FE0120CDEC4600120002 /* CredentialsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsManagerTests.swift; sourceTree = "<group>"; };
+		B242FE0320CDEC6C00120002 /* EventbriteCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EventbriteCredentials.plist; sourceTree = "<group>"; };
+		B242FE0720CDEE3900120002 /* EventbriteEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventbriteEndpoint.swift; sourceTree = "<group>"; };
+		B242FE0920CDEED800120002 /* EventbriteEventsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventbriteEventsRequest.swift; sourceTree = "<group>"; };
+		B242FE0B20CDF1E400120002 /* EventbriteEventVenueDetailsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventbriteEventVenueDetailsRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +120,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		360DF1551FFC1A80004DD336 /* APIs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = APIs;
-			sourceTree = "<group>";
-		};
 		360DF1671FFC1E0B004DD336 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,10 +149,11 @@
 		3618E79D1FED3C03003B5CA5 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				360DF1551FFC1A80004DD336 /* APIs */,
-				3643FA3C1FED5B9600BE5705 /* NetworkingModels */,
 				3643FA201FED3C9C00BE5705 /* Networking.swift */,
-				3643FA1F1FED3C7800BE5705 /* Supporting Files */,
+				B242FDF520CDEB5900120002 /* APIs */,
+				3643FA3C1FED5B9600BE5705 /* NetworkingModels */,
+				B242FDE720CDE8C500120002 /* Resources */,
+				B242FDE820CDE8D900120002 /* Utils */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -154,8 +163,9 @@
 			children = (
 				360DF1671FFC1E0B004DD336 /* APIs */,
 				3618E7A91FED3C03003B5CA5 /* NetworkingTests.swift */,
-				36920F831FF6DF050051424F /* TestHelpers */,
 				3643FA1E1FED3C4B00BE5705 /* Supporting Files */,
+				36920F831FF6DF050051424F /* TestHelpers */,
+				B242FE0020CDEC3500120002 /* Utils */,
 			);
 			path = NetworkingTests;
 			sourceTree = "<group>";
@@ -164,15 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				3618E7AB1FED3C03003B5CA5 /* Info.plist */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		3643FA1F1FED3C7800BE5705 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3618E79E1FED3C03003B5CA5 /* Networking.h */,
-				3618E79F1FED3C03003B5CA5 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -206,6 +207,83 @@
 				36920F841FF6DF1C0051424F /* Stubber.swift */,
 			);
 			path = TestHelpers;
+			sourceTree = "<group>";
+		};
+		B242FDE720CDE8C500120002 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B242FE0320CDEC6C00120002 /* EventbriteCredentials.plist */,
+				3618E79E1FED3C03003B5CA5 /* Networking.h */,
+				3618E79F1FED3C03003B5CA5 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B242FDE820CDE8D900120002 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B242FDF220CDEAB800120002 /* CredentialsManager */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B242FDF220CDEAB800120002 /* CredentialsManager */ = {
+			isa = PBXGroup;
+			children = (
+				B242FDF020CDEAAD00120002 /* CredentialsManager.swift */,
+			);
+			path = CredentialsManager;
+			sourceTree = "<group>";
+		};
+		B242FDF520CDEB5900120002 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				B242FDF620CDEB6000120002 /* Eventbrite */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		B242FDF620CDEB6000120002 /* Eventbrite */ = {
+			isa = PBXGroup;
+			children = (
+				B242FE0D20CDF2B600120002 /* Models */,
+				B242FE0620CDEE1B00120002 /* Requests */,
+				B242FDFC20CDEBCE00120002 /* Utils */,
+			);
+			path = Eventbrite;
+			sourceTree = "<group>";
+		};
+		B242FDFC20CDEBCE00120002 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B242FDFE20CDEBE900120002 /* EventbriteEndpointToken.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B242FE0020CDEC3500120002 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B242FE0120CDEC4600120002 /* CredentialsManagerTests.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B242FE0620CDEE1B00120002 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				B242FE0720CDEE3900120002 /* EventbriteEndpoint.swift */,
+				B242FE0920CDEED800120002 /* EventbriteEventsRequest.swift */,
+				B242FE0B20CDF1E400120002 /* EventbriteEventVenueDetailsRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		B242FE0D20CDF2B600120002 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +382,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B242FE0520CDEDE300120002 /* EventbriteCredentials.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +390,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B242FE0420CDEC6C00120002 /* EventbriteCredentials.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,14 +401,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B242FDFF20CDEBE900120002 /* EventbriteEndpointToken.swift in Sources */,
+				B242FE0820CDEE3900120002 /* EventbriteEndpoint.swift in Sources */,
 				3643FA461FED678300BE5705 /* Result.swift in Sources */,
 				3643FA3E1FED5BEF00BE5705 /* Endpoint.swift in Sources */,
 				3643FA211FED3C9C00BE5705 /* Networking.swift in Sources */,
 				3643FA481FED885900BE5705 /* NetworkingError.swift in Sources */,
 				3643FA421FED614900BE5705 /* API.swift in Sources */,
+				B242FDF120CDEAAD00120002 /* CredentialsManager.swift in Sources */,
 				3643FA401FED605800BE5705 /* HTTPMethod.swift in Sources */,
+				B242FE0A20CDEED800120002 /* EventbriteEventsRequest.swift in Sources */,
 				3643FA441FED677300BE5705 /* Response.swift in Sources */,
 				36920F871FF6E09A0051424F /* BaseURL.swift in Sources */,
+				B242FE0C20CDF1E400120002 /* EventbriteEventVenueDetailsRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3618E7AA1FED3C03003B5CA5 /* NetworkingTests.swift in Sources */,
+				B242FE0220CDEC4600120002 /* CredentialsManagerTests.swift in Sources */,
 				36920F851FF6DF1C0051424F /* Stubber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,11 +564,11 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = P8EBW8LF2M;
+				DEVELOPMENT_TEAM = Z2EVZ5Y6JY;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Networking/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Networking/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsistanbul.Networking;
@@ -501,11 +587,11 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = P8EBW8LF2M;
+				DEVELOPMENT_TEAM = Z2EVZ5Y6JY;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Networking/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Networking/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsistanbul.Networking;
