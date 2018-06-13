@@ -38,3 +38,10 @@ class CredentialsManager {
         return token
     }
 }
+
+// MARK: CredentialsManagerConstants
+private extension CredentialsManager {
+    enum Constants {
+        static let defaultCredentialsFileExtension = ".plist"
+    }
+}

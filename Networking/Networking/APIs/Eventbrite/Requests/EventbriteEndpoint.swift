@@ -8,6 +8,12 @@
 
 import Foundation
 
+// MARK: EventbriteConstants
+enum EventbriteConstants {
+    static let credentialsFileName: String = "EventbriteCredentials"
+    static let organizationID: String = "13871494483"
+}
+
 // MARK: EventbriteEndpoint
 public protocol EventbriteEndpoint: Endpoint {
     // Default implementation for Eventbrite API
@@ -29,16 +35,15 @@ extension EventbriteEndpoint {
 
 // MARK: Private Methods
 extension EventbriteEndpoint {
-    
     func resolveTokenDictionary() -> [String: String] {
         let token: String?
         switch tokenType {
         case .personal:
             token = CredentialsManager.current.token(named: EventbriteEndpointToken.personal.rawValue,
-                                                     in: Constants.Eventbrite.credentialsFileName)
+                                                     in: EventbriteConstants.credentialsFileName)
         default:
             token = CredentialsManager.current.token(named: EventbriteEndpointToken.standard.rawValue,
-                                                   in: Constants.Eventbrite.credentialsFileName)
+                                                   in: EventbriteConstants.credentialsFileName)
         }
         
         guard let apiToken = token else { return [:] }

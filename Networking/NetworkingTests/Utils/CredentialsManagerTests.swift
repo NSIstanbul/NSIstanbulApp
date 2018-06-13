@@ -11,7 +11,7 @@ import XCTest
 
 class CredentialsManagerTests: XCTestCase {
     // MARK: Properties
-    let plistFile = Constants.Eventbrite.credentialsFileName
+    let plistFile = EventbriteConstants.credentialsFileName
     let standardTokenType = EventbriteEndpointToken.standard.rawValue
     let personalTokenType = EventbriteEndpointToken.personal.rawValue
     

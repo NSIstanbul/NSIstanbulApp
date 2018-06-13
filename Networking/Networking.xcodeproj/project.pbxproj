@@ -26,8 +26,6 @@
 		36ABA4101FF971C8007B52DE /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3643FA3A1FED4C2400BE5705 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36ABA4111FF971CF007B52DE /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3643FA381FED42B700BE5705 /* OHHTTPStubs.framework */; };
 		B242FDF120CDEAAD00120002 /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FDF020CDEAAD00120002 /* CredentialsManager.swift */; };
-		B242FDF920CDEB8300120002 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FDF820CDEB8300120002 /* Constants.swift */; };
-		B242FDFB20CDEBAB00120002 /* Constants+Eventbrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FDFA20CDEBAB00120002 /* Constants+Eventbrite.swift */; };
 		B242FDFF20CDEBE900120002 /* EventbriteEndpointToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FDFE20CDEBE900120002 /* EventbriteEndpointToken.swift */; };
 		B242FE0220CDEC4600120002 /* CredentialsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FE0120CDEC4600120002 /* CredentialsManagerTests.swift */; };
 		B242FE0420CDEC6C00120002 /* EventbriteCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = B242FE0320CDEC6C00120002 /* EventbriteCredentials.plist */; };
@@ -92,8 +90,6 @@
 		36920F841FF6DF1C0051424F /* Stubber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubber.swift; sourceTree = "<group>"; };
 		36920F861FF6E09A0051424F /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		B242FDF020CDEAAD00120002 /* CredentialsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsManager.swift; sourceTree = "<group>"; };
-		B242FDF820CDEB8300120002 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		B242FDFA20CDEBAB00120002 /* Constants+Eventbrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Eventbrite.swift"; sourceTree = "<group>"; };
 		B242FDFE20CDEBE900120002 /* EventbriteEndpointToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventbriteEndpointToken.swift; sourceTree = "<group>"; };
 		B242FE0120CDEC4600120002 /* CredentialsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsManagerTests.swift; sourceTree = "<group>"; };
 		B242FE0320CDEC6C00120002 /* EventbriteCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EventbriteCredentials.plist; sourceTree = "<group>"; };
@@ -155,7 +151,6 @@
 			children = (
 				3643FA201FED3C9C00BE5705 /* Networking.swift */,
 				B242FDF520CDEB5900120002 /* APIs */,
-				B242FDF720CDEB6D00120002 /* Constants */,
 				3643FA3C1FED5B9600BE5705 /* NetworkingModels */,
 				B242FDE720CDE8C500120002 /* Resources */,
 				B242FDE820CDE8D900120002 /* Utils */,
@@ -251,20 +246,11 @@
 		B242FDF620CDEB6000120002 /* Eventbrite */ = {
 			isa = PBXGroup;
 			children = (
-				B242FDFD20CDEBD300120002 /* Constants */,
 				B242FE0D20CDF2B600120002 /* Models */,
 				B242FE0620CDEE1B00120002 /* Requests */,
 				B242FDFC20CDEBCE00120002 /* Utils */,
 			);
 			path = Eventbrite;
-			sourceTree = "<group>";
-		};
-		B242FDF720CDEB6D00120002 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				B242FDF820CDEB8300120002 /* Constants.swift */,
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 		B242FDFC20CDEBCE00120002 /* Utils */ = {
@@ -273,14 +259,6 @@
 				B242FDFE20CDEBE900120002 /* EventbriteEndpointToken.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		B242FDFD20CDEBD300120002 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				B242FDFA20CDEBAB00120002 /* Constants+Eventbrite.swift */,
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 		B242FE0020CDEC3500120002 /* Utils */ = {
@@ -425,8 +403,6 @@
 			files = (
 				B242FDFF20CDEBE900120002 /* EventbriteEndpointToken.swift in Sources */,
 				B242FE0820CDEE3900120002 /* EventbriteEndpoint.swift in Sources */,
-				B242FDFB20CDEBAB00120002 /* Constants+Eventbrite.swift in Sources */,
-				B242FDF920CDEB8300120002 /* Constants.swift in Sources */,
 				3643FA461FED678300BE5705 /* Result.swift in Sources */,
 				3643FA3E1FED5BEF00BE5705 /* Endpoint.swift in Sources */,
 				3643FA211FED3C9C00BE5705 /* Networking.swift in Sources */,

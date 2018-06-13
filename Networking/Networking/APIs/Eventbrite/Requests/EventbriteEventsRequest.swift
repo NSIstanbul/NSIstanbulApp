@@ -9,10 +9,9 @@
 import Foundation
 
 public struct EventbriteEventsRequest: EventbriteEndpoint {
-    
     // MARK: Endpoint Protocol
     public typealias Response = [String]
-    public var path: String = "/organizers/\(Constants.Eventbrite.organizationID)/events/"
+    public var path: String = "/organizers/\(EventbriteConstants.organizationID)/events/"
     public var method: HTTPMethod = .get
     public var parameters: [String : Any] {
         let parameters: [String: Any] = [:]
