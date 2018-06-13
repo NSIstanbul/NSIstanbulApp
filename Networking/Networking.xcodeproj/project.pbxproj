@@ -40,6 +40,7 @@
 		B2CD87BF20D1D5270020F363 /* EventAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87BE20D1D5270020F363 /* EventAvailability.swift */; };
 		B2CD87C520D1D6CA0020F363 /* EventLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87C420D1D6CA0020F363 /* EventLogo.swift */; };
 		B2CD87CD20D1D8790020F363 /* EventPagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87CC20D1D8790020F363 /* EventPagination.swift */; };
+		B2CD87CF20D1DB240020F363 /* EventsListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87CE20D1DB240020F363 /* EventsListResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		B2CD87BE20D1D5270020F363 /* EventAvailability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAvailability.swift; sourceTree = "<group>"; };
 		B2CD87C420D1D6CA0020F363 /* EventLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLogo.swift; sourceTree = "<group>"; };
 		B2CD87CC20D1D8790020F363 /* EventPagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPagination.swift; sourceTree = "<group>"; };
+		B2CD87CE20D1DB240020F363 /* EventsListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +312,7 @@
 				B2AC722F20D1D25E00D58003 /* EventStatus.swift */,
 				B2AC723120D1D35700D58003 /* EventVenue.swift */,
 				B2CD87CC20D1D8790020F363 /* EventPagination.swift */,
+				B2CD87CE20D1DB240020F363 /* EventsListResult.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				3643FA401FED605800BE5705 /* HTTPMethod.swift in Sources */,
 				B242FE0A20CDEED800120002 /* EventbriteEventsRequest.swift in Sources */,
 				3643FA441FED677300BE5705 /* Response.swift in Sources */,
+				B2CD87CF20D1DB240020F363 /* EventsListResult.swift in Sources */,
 				36920F871FF6E09A0051424F /* BaseURL.swift in Sources */,
 				B2AC723020D1D25E00D58003 /* EventStatus.swift in Sources */,
 				B2AC722E20D1D11000D58003 /* Event.swift in Sources */,
