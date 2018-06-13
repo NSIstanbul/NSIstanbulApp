@@ -35,7 +35,7 @@ extension EventbriteEndpoint {
 
 // MARK: Private Methods
 extension EventbriteEndpoint {
-    func resolveTokenDictionary() -> [String: String] {
+    func resolveToken() -> String? {
         let token: String?
         switch tokenType {
         case .personal:
@@ -46,7 +46,7 @@ extension EventbriteEndpoint {
                                                    in: EventbriteConstants.credentialsFileName)
         }
         
-        guard let apiToken = token else { return [:] }
-        return ["api_key": apiToken]
+        guard let apiToken = token else { return nil }
+        return apiToken
     }
 }

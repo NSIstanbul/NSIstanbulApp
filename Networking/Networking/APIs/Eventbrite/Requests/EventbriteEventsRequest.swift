@@ -14,10 +14,15 @@ public struct EventbriteEventsRequest: EventbriteEndpoint {
     public var path: String = "/organizers/\(EventbriteConstants.organizationID)/events/"
     public var method: HTTPMethod = .get
     public var parameters: [String : Any] {
-        let parameters: [String: Any] = [:]
-        return parameters.merging(resolveTokenDictionary()) { (_, new) in new }
+        var parameters: [String: Any] = [
+            "status": "all",
+            "order_by": "status_desc",
+            "expand": "ticket_availability,venue,ticket_classes"
+        ]
+        parameters["token"] = resolveToken()
+        return parameters
     }
     
     // MARK: EventbriteEndpoint Protocol
-    public var tokenType: EventbriteEndpointToken = .standard
+    public var tokenType: EventbriteEndpointToken = .personal
 }
