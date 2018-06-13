@@ -32,7 +32,6 @@
 		B242FE0520CDEDE300120002 /* EventbriteCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = B242FE0320CDEC6C00120002 /* EventbriteCredentials.plist */; };
 		B242FE0820CDEE3900120002 /* EventbriteEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FE0720CDEE3900120002 /* EventbriteEndpoint.swift */; };
 		B242FE0A20CDEED800120002 /* EventbriteEventsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FE0920CDEED800120002 /* EventbriteEventsRequest.swift */; };
-		B242FE0C20CDF1E400120002 /* EventbriteEventVenueDetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FE0B20CDF1E400120002 /* EventbriteEventVenueDetailsRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +94,6 @@
 		B242FE0320CDEC6C00120002 /* EventbriteCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EventbriteCredentials.plist; sourceTree = "<group>"; };
 		B242FE0720CDEE3900120002 /* EventbriteEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventbriteEndpoint.swift; sourceTree = "<group>"; };
 		B242FE0920CDEED800120002 /* EventbriteEventsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventbriteEventsRequest.swift; sourceTree = "<group>"; };
-		B242FE0B20CDF1E400120002 /* EventbriteEventVenueDetailsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventbriteEventVenueDetailsRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,7 +272,6 @@
 			children = (
 				B242FE0720CDEE3900120002 /* EventbriteEndpoint.swift */,
 				B242FE0920CDEED800120002 /* EventbriteEventsRequest.swift */,
-				B242FE0B20CDF1E400120002 /* EventbriteEventVenueDetailsRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -413,7 +410,6 @@
 				B242FE0A20CDEED800120002 /* EventbriteEventsRequest.swift in Sources */,
 				3643FA441FED677300BE5705 /* Response.swift in Sources */,
 				36920F871FF6E09A0051424F /* BaseURL.swift in Sources */,
-				B242FE0C20CDF1E400120002 /* EventbriteEventVenueDetailsRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
