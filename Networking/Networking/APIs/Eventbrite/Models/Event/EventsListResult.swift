@@ -14,16 +14,17 @@ public struct EventsListResult {
     let events: [Event]
 }
 
-// MARK: EventsListResult: Decodable
-extension EventsListResult: Decodable {
-    
+// MARK: EventsListResult CodingKeys
+private extension EventsListResult {
     // MARK: CodingKeys
     enum CodingKeys: String, CodingKey  {
         case pagination
         case events
     }
-    
-    // MARK: Decodable Protocol
+}
+
+// MARK: EventsListResult: Decodable
+extension EventsListResult: Decodable {
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         pagination = try container.decode(EventPagination.self, forKey: .pagination)

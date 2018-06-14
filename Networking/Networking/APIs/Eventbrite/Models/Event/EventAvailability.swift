@@ -13,3 +13,11 @@ public struct EventAvailability: Codable {
     let hasAvailableTickets: Bool
     let isSoldOut: Bool
 }
+
+// MARK: EventAvailabilityCodingKeys
+private extension EventAvailability {
+    enum CodingKeys: String, CodingKey {
+        case hasAvailableTickets = "has_available_tickets"
+        case isSoldOut = "is_sold_out"
+    }
+}

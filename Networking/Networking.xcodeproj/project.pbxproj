@@ -35,7 +35,6 @@
 		B2AC722E20D1D11000D58003 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC722D20D1D11000D58003 /* Event.swift */; };
 		B2AC723020D1D25E00D58003 /* EventStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC722F20D1D25E00D58003 /* EventStatus.swift */; };
 		B2AC723220D1D35700D58003 /* EventVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC723120D1D35700D58003 /* EventVenue.swift */; };
-		B2AC723420D1D37F00D58003 /* EventTicketAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC723320D1D37F00D58003 /* EventTicketAvailability.swift */; };
 		B2CD87BB20D1D44E0020F363 /* EventTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87BA20D1D44E0020F363 /* EventTicket.swift */; };
 		B2CD87BF20D1D5270020F363 /* EventAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87BE20D1D5270020F363 /* EventAvailability.swift */; };
 		B2CD87C520D1D6CA0020F363 /* EventLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87C420D1D6CA0020F363 /* EventLogo.swift */; };
@@ -107,7 +106,6 @@
 		B2AC722D20D1D11000D58003 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B2AC722F20D1D25E00D58003 /* EventStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStatus.swift; sourceTree = "<group>"; };
 		B2AC723120D1D35700D58003 /* EventVenue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventVenue.swift; sourceTree = "<group>"; };
-		B2AC723320D1D37F00D58003 /* EventTicketAvailability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTicketAvailability.swift; sourceTree = "<group>"; };
 		B2CD87BA20D1D44E0020F363 /* EventTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTicket.swift; sourceTree = "<group>"; };
 		B2CD87BE20D1D5270020F363 /* EventAvailability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAvailability.swift; sourceTree = "<group>"; };
 		B2CD87C420D1D6CA0020F363 /* EventLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLogo.swift; sourceTree = "<group>"; };
@@ -308,25 +306,16 @@
 		B2CD87BC20D1D4A90020F363 /* Event */ = {
 			isa = PBXGroup;
 			children = (
-				B2CD87C320D1D6BB0020F363 /* Logo */,
-				B2CD87BD20D1D4AE0020F363 /* Ticket */,
 				B2AC722D20D1D11000D58003 /* Event.swift */,
 				B2CD87BE20D1D5270020F363 /* EventAvailability.swift */,
-				B2AC722F20D1D25E00D58003 /* EventStatus.swift */,
-				B2AC723120D1D35700D58003 /* EventVenue.swift */,
 				B2CD87CC20D1D8790020F363 /* EventPagination.swift */,
 				B2CD87CE20D1DB240020F363 /* EventsListResult.swift */,
+				B2AC722F20D1D25E00D58003 /* EventStatus.swift */,
+				B2CD87BA20D1D44E0020F363 /* EventTicket.swift */,
+				B2AC723120D1D35700D58003 /* EventVenue.swift */,
+				B2CD87C320D1D6BB0020F363 /* Logo */,
 			);
 			path = Event;
-			sourceTree = "<group>";
-		};
-		B2CD87BD20D1D4AE0020F363 /* Ticket */ = {
-			isa = PBXGroup;
-			children = (
-				B2AC723320D1D37F00D58003 /* EventTicketAvailability.swift */,
-				B2CD87BA20D1D44E0020F363 /* EventTicket.swift */,
-			);
-			path = Ticket;
 			sourceTree = "<group>";
 		};
 		B2CD87C320D1D6BB0020F363 /* Logo */ = {
@@ -335,6 +324,16 @@
 				B2CD87C420D1D6CA0020F363 /* EventLogo.swift */,
 			);
 			path = Logo;
+			sourceTree = "<group>";
+		};
+		B2CD87C620D1D81E0020F363 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				B2CD87C720D1D8250020F363 /* Eventbrite */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
 			sourceTree = "<group>";
 		};
 		B2CD87D020D1DE5C0020F363 /* Extensions */ = {
@@ -480,7 +479,6 @@
 				36920F871FF6E09A0051424F /* BaseURL.swift in Sources */,
 				B2AC723020D1D25E00D58003 /* EventStatus.swift in Sources */,
 				B2AC722E20D1D11000D58003 /* Event.swift in Sources */,
-				B2AC723420D1D37F00D58003 /* EventTicketAvailability.swift in Sources */,
 				B2CD87BF20D1D5270020F363 /* EventAvailability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

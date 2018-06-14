@@ -23,7 +23,7 @@ extension EventLogo {
     enum CodingKeys: String, CodingKey {
         case id
         case url
-        case aspectRatio
+        case aspectRatio = "aspect_ratio"
         case original
     }
     
@@ -43,7 +43,7 @@ extension EventLogo: Decodable {
         
         id = try rootContainer.decode(String.self, forKey: .id)
         url = try EventLogo.decodeURL(from: rootContainer, keyedBy: .url)
-        aspectRatio = try rootContainer.decode(Double.self, forKey: .aspectRatio)
+        aspectRatio = try EventLogo.decodeAspectRatio(from: rootContainer)
         
         let originalLogoContainer = try rootContainer.nestedContainer(keyedBy: EventLogoOriginalLogoCodingKeys.self, forKey: .original)
         originalURL = try EventLogo.decodeURL(from: originalLogoContainer, keyedBy: .url)
@@ -62,5 +62,16 @@ extension EventLogo {
         let width = try container.decode(Double.self, forKey: .width)
         let height = try container.decode(Double.self, forKey: .height)
         return CGSize(width: width, height: height)
+    }
+    
+    private static func decodeAspectRatio(from container: KeyedDecodingContainer<CodingKeys>) throws -> Double {
+        let aspectRatioString = try container.decode(String.self, forKey: .aspectRatio)
+        guard let aspectRatio = Double(aspectRatioString) else {
+            let debugDescription = "EventLogo: Cannot conver aspect ratio string to double."
+            throw DecodingError.dataCorruptedError(forKey: .aspectRatio,
+                                                   in: container,
+                                                   debugDescription: debugDescription)
+        }
+        return aspectRatio
     }
 }

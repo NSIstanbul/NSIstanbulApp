@@ -75,7 +75,7 @@ extension Event {
         
         // Trying to format the date
         guard let date = DateFormatter.iso8601Full.date(from: startDateString) else {
-            let debugDescription = "Date string does not match format expected by formatter."
+            let debugDescription = "Event: Date string does not match format expected by formatter."
             throw DecodingError.dataCorruptedError(forKey: .startDate,
                                                    in: container,
                                                    debugDescription: debugDescription)

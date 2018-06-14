@@ -8,20 +8,22 @@
 
 import Foundation
 
+// MARK: EventPagination
 public struct EventPagination: Codable {
-    // MARK: Properties
-    let count: Int
+    let objectCount: Int
     let pageNumber: Int
     let pageSize: Int
     let pageCount: Int
     let hasMoreItems: Bool
-    
-    // MARK: CodingKeys
+}
+
+// MARK: EventPagination CodingKeys
+private extension EventPagination {
     enum CodingKeys: String, CodingKey {
-        case count = "object_count"
-        case pageNumber
-        case pageSize
-        case pageCount
-        case hasMoreItems
+        case objectCount = "object_count"
+        case pageNumber = "page_number"
+        case pageSize = "page_size"
+        case pageCount = "page_count"
+        case hasMoreItems = "has_more_items"
     }
 }
