@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct EventTicketAvailability {
+public struct EventTicketAvailability: Codable {
     let quantitySold: Int
     let remainingQuantity: Int
     let capacity: Int

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum EventStatus: String {
+public enum EventStatus: String, Codable {
     case cancelled
     case live
     case started

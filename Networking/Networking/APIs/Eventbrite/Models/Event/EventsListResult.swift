@@ -8,7 +8,25 @@
 
 import Foundation
 
+// MARK: EventsListResult
 public struct EventsListResult {
     let pagination: EventPagination
     let events: [Event]
+}
+
+// MARK: EventsListResult: Decodable
+extension EventsListResult: Decodable {
+    
+    // MARK: CodingKeys
+    enum CodingKeys: String, CodingKey  {
+        case pagination
+        case events
+    }
+    
+    // MARK: Decodable Protocol
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        pagination = try container.decode(EventPagination.self, forKey: .pagination)
+        events = try container.decode([Event].self, forKey: .events)
+    }
 }

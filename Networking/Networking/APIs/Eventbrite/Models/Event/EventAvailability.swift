@@ -8,7 +8,8 @@
 
 import Foundation
 
-public struct EventAvailability {
+// MARK: EventAvailability
+public struct EventAvailability: Codable {
     let hasAvailableTickets: Bool
     let isSoldOut: Bool
 }
