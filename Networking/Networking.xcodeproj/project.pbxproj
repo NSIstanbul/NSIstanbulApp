@@ -38,9 +38,11 @@
 		B2CD87BB20D1D44E0020F363 /* EventTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87BA20D1D44E0020F363 /* EventTicket.swift */; };
 		B2CD87BF20D1D5270020F363 /* EventAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87BE20D1D5270020F363 /* EventAvailability.swift */; };
 		B2CD87C520D1D6CA0020F363 /* EventLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87C420D1D6CA0020F363 /* EventLogo.swift */; };
+		B2CD87CB20D1D8440020F363 /* EventbriteAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87CA20D1D8440020F363 /* EventbriteAPITests.swift */; };
 		B2CD87CD20D1D8790020F363 /* EventPagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87CC20D1D8790020F363 /* EventPagination.swift */; };
 		B2CD87CF20D1DB240020F363 /* EventsListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87CE20D1DB240020F363 /* EventsListResult.swift */; };
 		B2CD87D220D1DE730020F363 /* DateFormatter+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87D120D1DE730020F363 /* DateFormatter+ISO8601.swift */; };
+		B2CD87D420D1F3F80020F363 /* EventsList.json in Resources */ = {isa = PBXBuildFile; fileRef = B2CD87D320D1F3F80020F363 /* EventsList.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,9 +111,11 @@
 		B2CD87BA20D1D44E0020F363 /* EventTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTicket.swift; sourceTree = "<group>"; };
 		B2CD87BE20D1D5270020F363 /* EventAvailability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAvailability.swift; sourceTree = "<group>"; };
 		B2CD87C420D1D6CA0020F363 /* EventLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLogo.swift; sourceTree = "<group>"; };
+		B2CD87CA20D1D8440020F363 /* EventbriteAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventbriteAPITests.swift; sourceTree = "<group>"; };
 		B2CD87CC20D1D8790020F363 /* EventPagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPagination.swift; sourceTree = "<group>"; };
 		B2CD87CE20D1DB240020F363 /* EventsListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListResult.swift; sourceTree = "<group>"; };
 		B2CD87D120D1DE730020F363 /* DateFormatter+ISO8601.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+ISO8601.swift"; sourceTree = "<group>"; };
+		B2CD87D320D1F3F80020F363 /* EventsList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EventsList.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,13 +140,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		360DF1671FFC1E0B004DD336 /* APIs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = APIs;
-			sourceTree = "<group>";
-		};
 		3618E7911FED3C03003B5CA5 = {
 			isa = PBXGroup;
 			children = (
@@ -177,7 +174,7 @@
 		3618E7A81FED3C03003B5CA5 /* NetworkingTests */ = {
 			isa = PBXGroup;
 			children = (
-				360DF1671FFC1E0B004DD336 /* APIs */,
+				B2CD87C620D1D81E0020F363 /* APIs */,
 				3618E7A91FED3C03003B5CA5 /* NetworkingTests.swift */,
 				3643FA1E1FED3C4B00BE5705 /* Supporting Files */,
 				36920F831FF6DF050051424F /* TestHelpers */,
@@ -334,6 +331,13 @@
 			path = APIs;
 			sourceTree = "<group>";
 		};
+		B2CD87C720D1D8250020F363 /* Eventbrite */ = {
+			isa = PBXGroup;
+			children = (
+				B2CD87CA20D1D8440020F363 /* EventbriteAPITests.swift */,
+				B2CD87D320D1F3F80020F363 /* EventsList.json */,
+			);
+			path = Eventbrite;
 			sourceTree = "<group>";
 		};
 		B2CD87D020D1DE5C0020F363 /* Extensions */ = {
@@ -448,6 +452,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2CD87D420D1F3F80020F363 /* EventsList.json in Resources */,
 				B242FE0420CDEC6C00120002 /* EventbriteCredentials.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +492,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2CD87CB20D1D8440020F363 /* EventbriteAPITests.swift in Sources */,
 				3618E7AA1FED3C03003B5CA5 /* NetworkingTests.swift in Sources */,
 				B242FE0220CDEC4600120002 /* CredentialsManagerTests.swift in Sources */,
 				36920F851FF6DF1C0051424F /* Stubber.swift in Sources */,
