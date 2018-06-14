@@ -408,7 +408,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = "Ilter Cengiz";
+				ORGANIZATIONNAME = NSIstanbul;
 				TargetAttributes = {
 					3618E79A1FED3C03003B5CA5 = {
 						CreatedOnToolsVersion = 9.2;
