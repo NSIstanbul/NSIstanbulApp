@@ -41,6 +41,7 @@
 		B2CD87C520D1D6CA0020F363 /* EventLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87C420D1D6CA0020F363 /* EventLogo.swift */; };
 		B2CD87CD20D1D8790020F363 /* EventPagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87CC20D1D8790020F363 /* EventPagination.swift */; };
 		B2CD87CF20D1DB240020F363 /* EventsListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87CE20D1DB240020F363 /* EventsListResult.swift */; };
+		B2CD87D220D1DE730020F363 /* DateFormatter+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87D120D1DE730020F363 /* DateFormatter+ISO8601.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		B2CD87C420D1D6CA0020F363 /* EventLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLogo.swift; sourceTree = "<group>"; };
 		B2CD87CC20D1D8790020F363 /* EventPagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPagination.swift; sourceTree = "<group>"; };
 		B2CD87CE20D1DB240020F363 /* EventsListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListResult.swift; sourceTree = "<group>"; };
+		B2CD87D120D1DE730020F363 /* DateFormatter+ISO8601.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+ISO8601.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 		B242FDE820CDE8D900120002 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B2CD87D020D1DE5C0020F363 /* Extensions */,
 				B242FDF220CDEAB800120002 /* CredentialsManager */,
 			);
 			path = Utils;
@@ -332,6 +335,14 @@
 				B2CD87C420D1D6CA0020F363 /* EventLogo.swift */,
 			);
 			path = Logo;
+			sourceTree = "<group>";
+		};
+		B2CD87D020D1DE5C0020F363 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B2CD87D120D1DE730020F363 /* DateFormatter+ISO8601.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,6 +467,7 @@
 				B2CD87C520D1D6CA0020F363 /* EventLogo.swift in Sources */,
 				3643FA3E1FED5BEF00BE5705 /* Endpoint.swift in Sources */,
 				B2CD87BB20D1D44E0020F363 /* EventTicket.swift in Sources */,
+				B2CD87D220D1DE730020F363 /* DateFormatter+ISO8601.swift in Sources */,
 				3643FA211FED3C9C00BE5705 /* Networking.swift in Sources */,
 				3643FA481FED885900BE5705 /* NetworkingError.swift in Sources */,
 				3643FA421FED614900BE5705 /* API.swift in Sources */,
