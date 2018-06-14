@@ -29,7 +29,7 @@ extension EventbriteEndpoint {
     /// This implementation will save us from implementing the same `api` variable
     /// in every endpoint for Eventbrite
     public var api: API {
-        return API(baseURL: BaseURL(scheme: "https", host: "eventbriteapi.com/v3"))
+        return API(baseURL: BaseURL(scheme: "https", host: "www.eventbriteapi.com"))
     }
 }
 

@@ -10,14 +10,14 @@ import Foundation
 
 public struct EventbriteEventsRequest: EventbriteEndpoint {
     // MARK: Endpoint Protocol
-    public typealias Response = [String]
-    public var path: String = "/organizers/\(EventbriteConstants.organizationID)/events/"
+    public typealias Response = EventsListResult
+    public var path: String = "/v3/organizers/\(EventbriteConstants.organizationID)/events/"
     public var method: HTTPMethod = .get
     public var parameters: [String : Any] {
         var parameters: [String: Any] = [
             "status": "all",
-            "order_by": "status_desc",
-            "expand": "ticket_availability,venue,ticket_classes"
+            "order_by": "created_desc",
+            "expand": "ticket_availability,venue,attendee,ticket_classes,logo"
         ]
         parameters["token"] = resolveToken()
         return parameters
