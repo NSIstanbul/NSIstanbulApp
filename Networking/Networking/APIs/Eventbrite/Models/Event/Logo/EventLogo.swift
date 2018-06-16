@@ -18,7 +18,7 @@ public struct EventLogo {
 }
 
 // MARK: CodingKeys
-extension EventLogo {
+private extension EventLogo {
     // MARK: EventLogo Object Coding Keys
     enum CodingKeys: String, CodingKey {
         case id
@@ -52,19 +52,19 @@ extension EventLogo: Decodable {
 }
 
 // MARK: EventLogo Properties Decoders
-extension EventLogo {
-    private static func decodeURL<KeyedByType: CodingKey>(from container: KeyedDecodingContainer<KeyedByType>, keyedBy: KeyedByType) throws -> URL? {
+private extension EventLogo {
+    static func decodeURL<KeyedByType: CodingKey>(from container: KeyedDecodingContainer<KeyedByType>, keyedBy: KeyedByType) throws -> URL? {
         let urlString = try container.decode(String.self, forKey: keyedBy)
         return URL(string: urlString)
     }
     
-    private static func decodeSize(from container: KeyedDecodingContainer<EventLogoOriginalLogoCodingKeys>) throws -> CGSize {
+    static func decodeSize(from container: KeyedDecodingContainer<EventLogoOriginalLogoCodingKeys>) throws -> CGSize {
         let width = try container.decode(Double.self, forKey: .width)
         let height = try container.decode(Double.self, forKey: .height)
         return CGSize(width: width, height: height)
     }
     
-    private static func decodeAspectRatio(from container: KeyedDecodingContainer<CodingKeys>) throws -> Double {
+    static func decodeAspectRatio(from container: KeyedDecodingContainer<CodingKeys>) throws -> Double {
         let aspectRatioString = try container.decode(String.self, forKey: .aspectRatio)
         guard let aspectRatio = Double(aspectRatioString) else {
             let debugDescription = "EventLogo: Cannot conver aspect ratio string to double."

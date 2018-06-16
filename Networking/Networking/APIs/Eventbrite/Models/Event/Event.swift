@@ -21,7 +21,7 @@ public struct Event {
 }
 
 // MARK: Event Object Coding Keys
-extension Event {
+private extension Event {
     // MARK: Event Object Coding Keys
     enum CodingKeys: String, CodingKey {
         case name
@@ -62,13 +62,13 @@ extension Event: Decodable {
 }
 
 // MARK: Event Properties Decoders
-extension Event {
-    private static func decodeName(from container: KeyedDecodingContainer<CodingKeys>) throws -> String {
+private extension Event {
+    static func decodeName(from container: KeyedDecodingContainer<CodingKeys>) throws -> String {
         let nameContainer = try container.nestedContainer(keyedBy: EventNameCodingKeys.self, forKey: .name)
         return try nameContainer.decode(String.self, forKey: .text)
     }
     
-    private static func decodeStartDate(from container: KeyedDecodingContainer<CodingKeys>) throws -> Date {
+    static func decodeStartDate(from container: KeyedDecodingContainer<CodingKeys>) throws -> Date {
         // Getting nested container for start date
         let startDateContainer = try container.nestedContainer(keyedBy: StartDateCodingKeys.self, forKey: .startDate)
         let startDateString = try startDateContainer.decode(String.self, forKey: .utc)

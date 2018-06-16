@@ -46,7 +46,7 @@ extension EventVenue: Decodable {
 
 // MARK: EventVenue Properties Decoders
 private extension EventVenue {
-    private static func decodeLocation(from container: KeyedDecodingContainer<CodingKeys>) throws -> CLLocationCoordinate2D {
+    static func decodeLocation(from container: KeyedDecodingContainer<CodingKeys>) throws -> CLLocationCoordinate2D {
         let latitudeString = try container.decode(String.self, forKey: .latitude)
         let longitudeString = try container.decode(String.self, forKey: .longitude)
         
@@ -67,7 +67,7 @@ private extension EventVenue {
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
     
-    private static func decodeAddress(from container: KeyedDecodingContainer<CodingKeys>) throws -> String {
+    static func decodeAddress(from container: KeyedDecodingContainer<CodingKeys>) throws -> String {
         let addressContainer = try container.nestedContainer(keyedBy: AddressCodingKeys.self, forKey: .address)
         return try addressContainer.decode(String.self, forKey: .address)
     }
