@@ -48,7 +48,7 @@
 		B2CD87CD20D1D8790020F363 /* EventPagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87CC20D1D8790020F363 /* EventPagination.swift */; };
 		B2CD87CF20D1DB240020F363 /* EventsListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87CE20D1DB240020F363 /* EventsListResult.swift */; };
 		B2CD87D220D1DE730020F363 /* DateFormatter+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87D120D1DE730020F363 /* DateFormatter+ISO8601.swift */; };
-		B2CD87D420D1F3F80020F363 /* EventsList.json in Resources */ = {isa = PBXBuildFile; fileRef = B2CD87D320D1F3F80020F363 /* EventsList.json */; };
+		B2CD87D420D1F3F80020F363 /* EventsListResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = B2CD87D320D1F3F80020F363 /* EventsListResponse.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,7 +127,7 @@
 		B2CD87CC20D1D8790020F363 /* EventPagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPagination.swift; sourceTree = "<group>"; };
 		B2CD87CE20D1DB240020F363 /* EventsListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListResult.swift; sourceTree = "<group>"; };
 		B2CD87D120D1DE730020F363 /* DateFormatter+ISO8601.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+ISO8601.swift"; sourceTree = "<group>"; };
-		B2CD87D320D1F3F80020F363 /* EventsList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EventsList.json; sourceTree = "<group>"; };
+		B2CD87D320D1F3F80020F363 /* EventsListResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EventsListResponse.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -393,7 +393,7 @@
 			isa = PBXGroup;
 			children = (
 				B2CD87CA20D1D8440020F363 /* EventbriteAPITests.swift */,
-				B2CD87D320D1F3F80020F363 /* EventsList.json */,
+				B2CD87D320D1F3F80020F363 /* EventsListResponse.json */,
 			);
 			path = Eventbrite;
 			sourceTree = "<group>";
@@ -511,7 +511,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2CD87D420D1F3F80020F363 /* EventsList.json in Resources */,
+				B2CD87D420D1F3F80020F363 /* EventsListResponse.json in Resources */,
 				B242FE0420CDEC6C00120002 /* EventbriteCredentials.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
