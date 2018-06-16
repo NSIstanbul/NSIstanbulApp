@@ -29,13 +29,13 @@ extension EventbriteEndpoint {
     /// This implementation will save us from implementing the same `api` variable
     /// in every endpoint for Eventbrite
     public var api: API {
-        return API(baseURL: BaseURL(scheme: "https", host: "eventbriteapi.com/v3"))
+        return API(baseURL: BaseURL(scheme: "https", host: "www.eventbriteapi.com"))
     }
 }
 
 // MARK: Private Methods
 extension EventbriteEndpoint {
-    func resolveTokenDictionary() -> [String: String] {
+    func resolveToken() -> String? {
         let token: String?
         switch tokenType {
         case .personal:
@@ -46,7 +46,7 @@ extension EventbriteEndpoint {
                                                    in: EventbriteConstants.credentialsFileName)
         }
         
-        guard let apiToken = token else { return [:] }
-        return ["api_key": apiToken]
+        guard let apiToken = token else { return nil }
+        return apiToken
     }
 }
