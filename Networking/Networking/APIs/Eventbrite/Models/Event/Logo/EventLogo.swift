@@ -42,21 +42,17 @@ extension EventLogo: Decodable {
         let rootContainer = try decoder.container(keyedBy: CodingKeys.self)
         
         id = try rootContainer.decode(String.self, forKey: .id)
-        url = try EventLogo.decodeURL(from: rootContainer, keyedBy: .url)
+        url = try rootContainer.decodeURL(keyedBy: .url)
         aspectRatio = try EventLogo.decodeAspectRatio(from: rootContainer)
         
         let originalLogoContainer = try rootContainer.nestedContainer(keyedBy: EventLogoOriginalLogoCodingKeys.self, forKey: .original)
-        originalURL = try EventLogo.decodeURL(from: originalLogoContainer, keyedBy: .url)
+        originalURL = try originalLogoContainer.decodeURL(keyedBy: .url)
         size = try EventLogo.decodeSize(from: originalLogoContainer)
     }
 }
 
 // MARK: EventLogo Properties Decoders
 private extension EventLogo {
-    static func decodeURL<KeyedByType: CodingKey>(from container: KeyedDecodingContainer<KeyedByType>, keyedBy: KeyedByType) throws -> URL? {
-        let urlString = try container.decode(String.self, forKey: keyedBy)
-        return URL(string: urlString)
-    }
     
     static func decodeSize(from container: KeyedDecodingContainer<EventLogoOriginalLogoCodingKeys>) throws -> CGSize {
         let width = try container.decode(Double.self, forKey: .width)
