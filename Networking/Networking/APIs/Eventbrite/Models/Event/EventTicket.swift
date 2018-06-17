@@ -26,7 +26,7 @@ private extension EventTicket {
 // MARK: EventTicket: Decodable
 extension EventTicket: Decodable {
     public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let container = try decoder.container(keyedBy: EventTicket.CodingKeys.self)
         
         quantitySold = try container.decode(Int.self, forKey: .quantitySold)
         totalQuantity = try container.decode(Int.self, forKey: .totalQuantity)

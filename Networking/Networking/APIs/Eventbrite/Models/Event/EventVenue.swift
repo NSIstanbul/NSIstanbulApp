@@ -18,25 +18,26 @@ public struct EventVenue {
 
 // MARK: EventVenue Coding Keys
 private extension EventVenue {
-    
-    // MARK: CodingKeys
-    enum CodingKeys: String, CodingKey {
-        case name
-        case address
-        case latitude
-        case longitude
-    }
-    
-    // MARK: AddressCodingKeys
-    enum AddressCodingKeys: String, CodingKey {
-        case address = "localized_address_display"
+    enum CodingKeys {
+        // MARK: Root Keys
+        enum root: String, CodingKey {
+            case name
+            case address
+            case latitude
+            case longitude
+        }
+        
+        // MARK: AddressCodingKeys
+        enum address: String, CodingKey {
+            case address = "localized_address_display"
+        }
     }
 }
 
 // MARK: EventVenue: Decodable
 extension EventVenue: Decodable {
     public init(from decoder: Decoder) throws {
-        let rootContainer = try decoder.container(keyedBy: CodingKeys.self)
+        let rootContainer = try decoder.container(keyedBy: EventVenue.CodingKeys.root.self)
         
         name = try rootContainer.decode(String.self, forKey: .name)
         coordinates = try EventVenue.decodeLocation(from: rootContainer)
@@ -46,7 +47,7 @@ extension EventVenue: Decodable {
 
 // MARK: EventVenue Properties Decoders
 private extension EventVenue {
-    static func decodeLocation(from container: KeyedDecodingContainer<CodingKeys>) throws -> CLLocationCoordinate2D {
+    static func decodeLocation(from container: KeyedDecodingContainer<EventVenue.CodingKeys.root>) throws -> CLLocationCoordinate2D {
         let latitudeString = try container.decode(String.self, forKey: .latitude)
         let longitudeString = try container.decode(String.self, forKey: .longitude)
         
@@ -67,8 +68,8 @@ private extension EventVenue {
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
     
-    static func decodeAddress(from container: KeyedDecodingContainer<CodingKeys>) throws -> String {
-        let addressContainer = try container.nestedContainer(keyedBy: AddressCodingKeys.self, forKey: .address)
+    static func decodeAddress(from container: KeyedDecodingContainer<EventVenue.CodingKeys.root>) throws -> String {
+        let addressContainer = try container.nestedContainer(keyedBy: EventVenue.CodingKeys.address.self, forKey: .address)
         return try addressContainer.decode(String.self, forKey: .address)
     }
 }

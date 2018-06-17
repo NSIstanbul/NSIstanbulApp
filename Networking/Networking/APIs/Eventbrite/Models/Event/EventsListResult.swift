@@ -16,7 +16,7 @@ public struct EventsListResult {
 
 // MARK: EventsListResult CodingKeys
 private extension EventsListResult {
-    // MARK: CodingKeys
+    // MARK: Root Keys
     enum CodingKeys: String, CodingKey  {
         case pagination
         case events
@@ -26,7 +26,7 @@ private extension EventsListResult {
 // MARK: EventsListResult: Decodable
 extension EventsListResult: Decodable {
     public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let container = try decoder.container(keyedBy: EventsListResult.CodingKeys.self)
         pagination = try container.decode(EventPagination.self, forKey: .pagination)
         events = try container.decode([Event].self, forKey: .events)
     }

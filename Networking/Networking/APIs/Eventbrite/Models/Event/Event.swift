@@ -22,25 +22,27 @@ public struct Event {
 
 // MARK: Event Object Coding Keys
 private extension Event {
-    // MARK: Event Object Coding Keys
-    enum CodingKeys: String, CodingKey {
-        case name
-        case startDate = "start"
-        case status
-        case logo
-        case venue
-        case tickets = "ticket_classes"
-        case availability = "ticket_availability"
-    }
-    
-    // MARK: Event Name Coding Keys
-    enum EventNameCodingKeys: String, CodingKey {
-        case text
-    }
-    
-    // MARK: Start Date Coding Keys
-    enum StartDateCodingKeys: String, CodingKey {
-        case utc
+    enum CodingKeys {
+        // MARK: Event Object Root Keys
+        enum root: String, CodingKey {
+            case name
+            case startDate = "start"
+            case status
+            case logo
+            case venue
+            case tickets = "ticket_classes"
+            case availability = "ticket_availability"
+        }
+        
+        // MARK: Event Name Coding Keys
+        enum name: String, CodingKey {
+            case text
+        }
+        
+        // MARK: Start Date Coding Keys
+        enum startDate: String, CodingKey {
+            case utc
+        }
     }
 }
 
@@ -48,7 +50,7 @@ private extension Event {
 extension Event: Decodable {
     public init(from decoder: Decoder) throws {
         // Root container
-        let rootContainer = try decoder.container(keyedBy: CodingKeys.self)
+        let rootContainer = try decoder.container(keyedBy: Event.CodingKeys.root.self)
     
         // Decoding properties
         name = try Event.decodeName(from: rootContainer)
@@ -63,14 +65,14 @@ extension Event: Decodable {
 
 // MARK: Event Properties Decoders
 private extension Event {
-    static func decodeName(from container: KeyedDecodingContainer<CodingKeys>) throws -> String {
-        let nameContainer = try container.nestedContainer(keyedBy: EventNameCodingKeys.self, forKey: .name)
+    static func decodeName(from container: KeyedDecodingContainer<Event.CodingKeys.root>) throws -> String {
+        let nameContainer = try container.nestedContainer(keyedBy: Event.CodingKeys.name.self, forKey: .name)
         return try nameContainer.decode(String.self, forKey: .text)
     }
     
-    static func decodeStartDate(from container: KeyedDecodingContainer<CodingKeys>) throws -> Date {
+    static func decodeStartDate(from container: KeyedDecodingContainer<Event.CodingKeys.root>) throws -> Date {
         // Getting nested container for start date
-        let startDateContainer = try container.nestedContainer(keyedBy: StartDateCodingKeys.self, forKey: .startDate)
+        let startDateContainer = try container.nestedContainer(keyedBy: Event.CodingKeys.startDate.self, forKey: .startDate)
         let startDateString = try startDateContainer.decode(String.self, forKey: .utc)
         
         // Trying to format the date
