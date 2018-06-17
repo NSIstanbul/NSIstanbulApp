@@ -98,7 +98,7 @@ class NSIstanbulAPITests: XCTestCase {
                     break
                 }
                 XCTAssertTrue(!firstJob.city.isEmpty)
-                XCTAssertTrue(!firstJob.description.isEmpty)
+                XCTAssertTrue(!firstJob.companyName.isEmpty)
                 XCTAssertTrue(!firstJob.positionTitle.isEmpty)
                 XCTAssertNotNil(firstJob.url)
             case .failure(let error):
