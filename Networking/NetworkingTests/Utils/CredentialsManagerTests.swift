@@ -19,7 +19,6 @@ class CredentialsManagerTests: XCTestCase {
     func testReadingFromPlistFile() {
         let plistDictionary = CredentialsManager.current.readPlistContents(fromFile: plistFile)
         XCTAssertNotNil(plistDictionary)
-        XCTAssertTrue(plistDictionary is [String: Any])
     }
     
     func testEventbriteStandardToken() {
