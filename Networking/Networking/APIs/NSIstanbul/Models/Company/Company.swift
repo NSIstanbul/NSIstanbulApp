@@ -8,9 +8,34 @@
 
 import Foundation
 
-struct Company {
+// MARK: Company
+public struct Company {
     let name: String
-    let email: URL
-    let iconURL: URL
-    let contactURL: URL
+    let email: URL?
+    let logoURL: URL?
+    let contactURL: URL?
+    let apps: [CompanyApp]
+}
+
+// MARK: CodingKeys
+private extension Company {
+    enum CodingKeys: String, CodingKey {
+        case name
+        case email
+        case logoURL = "icon_url"
+        case contactURL = "contact_url"
+        case apps
+    }
+}
+
+// MARK: Company: Decodable Protocol
+extension Company: Decodable {
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: Company.CodingKeys.self)
+        name = try container.decode(String.self, forKey: .name)
+        email = try container.decodeURL(keyedBy: .email)
+        logoURL = try container.decodeURL(keyedBy: .logoURL)
+        contactURL = try container.decodeURL(keyedBy: .contactURL)
+        apps = try container.decode([CompanyApp].self, forKey: .apps)
+    }
 }

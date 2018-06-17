@@ -32,6 +32,13 @@
 		B242FE0520CDEDE300120002 /* EventbriteCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = B242FE0320CDEC6C00120002 /* EventbriteCredentials.plist */; };
 		B242FE0820CDEE3900120002 /* EventbriteEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FE0720CDEE3900120002 /* EventbriteEndpoint.swift */; };
 		B242FE0A20CDEED800120002 /* EventbriteEventsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FE0920CDEED800120002 /* EventbriteEventsRequest.swift */; };
+		B25521AB20D68A6500121224 /* NSIstanbulEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25521AA20D68A6500121224 /* NSIstanbulEndpoint.swift */; };
+		B25521AD20D68A7000121224 /* NSIstanbulAboutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25521AC20D68A7000121224 /* NSIstanbulAboutRequest.swift */; };
+		B25521AF20D68A7900121224 /* NSIstanbulCompaniesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25521AE20D68A7900121224 /* NSIstanbulCompaniesRequest.swift */; };
+		B25521B120D68A8100121224 /* NSIstanbulJobsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25521B020D68A8100121224 /* NSIstanbulJobsRequest.swift */; };
+		B25521B520D698D300121224 /* NSIstanbulAboutResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = B25521B420D698D300121224 /* NSIstanbulAboutResponse.json */; };
+		B25521B720D698DE00121224 /* NSIstanbulCompaniesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = B25521B620D698DE00121224 /* NSIstanbulCompaniesResponse.json */; };
+		B25521B920D698E800121224 /* NSIstanbulJobsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = B25521B820D698E800121224 /* NSIstanbulJobsResponse.json */; };
 		B27FA53020D5BB3400B46D3E /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27FA52F20D5BB3400B46D3E /* Company.swift */; };
 		B27FA53220D5BB5700B46D3E /* CompanyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27FA53120D5BB5700B46D3E /* CompanyApp.swift */; };
 		B27FA53420D5BB5F00B46D3E /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27FA53320D5BB5F00B46D3E /* Job.swift */; };
@@ -111,6 +118,13 @@
 		B242FE0320CDEC6C00120002 /* EventbriteCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EventbriteCredentials.plist; sourceTree = "<group>"; };
 		B242FE0720CDEE3900120002 /* EventbriteEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventbriteEndpoint.swift; sourceTree = "<group>"; };
 		B242FE0920CDEED800120002 /* EventbriteEventsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventbriteEventsRequest.swift; sourceTree = "<group>"; };
+		B25521AA20D68A6500121224 /* NSIstanbulEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSIstanbulEndpoint.swift; sourceTree = "<group>"; };
+		B25521AC20D68A7000121224 /* NSIstanbulAboutRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSIstanbulAboutRequest.swift; sourceTree = "<group>"; };
+		B25521AE20D68A7900121224 /* NSIstanbulCompaniesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSIstanbulCompaniesRequest.swift; sourceTree = "<group>"; };
+		B25521B020D68A8100121224 /* NSIstanbulJobsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSIstanbulJobsRequest.swift; sourceTree = "<group>"; };
+		B25521B420D698D300121224 /* NSIstanbulAboutResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NSIstanbulAboutResponse.json; sourceTree = "<group>"; };
+		B25521B620D698DE00121224 /* NSIstanbulCompaniesResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NSIstanbulCompaniesResponse.json; sourceTree = "<group>"; };
+		B25521B820D698E800121224 /* NSIstanbulJobsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NSIstanbulJobsResponse.json; sourceTree = "<group>"; };
 		B27FA52F20D5BB3400B46D3E /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		B27FA53120D5BB5700B46D3E /* CompanyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyApp.swift; sourceTree = "<group>"; };
 		B27FA53320D5BB5F00B46D3E /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
@@ -305,9 +319,21 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
+		B25521A920D68A5200121224 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				B25521AA20D68A6500121224 /* NSIstanbulEndpoint.swift */,
+				B25521AC20D68A7000121224 /* NSIstanbulAboutRequest.swift */,
+				B25521AE20D68A7900121224 /* NSIstanbulCompaniesRequest.swift */,
+				B25521B020D68A8100121224 /* NSIstanbulJobsRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
 		B27FA52D20D5BB1400B46D3E /* NSIstanbul */ = {
 			isa = PBXGroup;
 			children = (
+				B25521A920D68A5200121224 /* Requests */,
 				B27FA52E20D5BB2B00B46D3E /* Models */,
 			);
 			path = NSIstanbul;
@@ -538,9 +564,11 @@
 				3643FA481FED885900BE5705 /* NetworkingError.swift in Sources */,
 				3643FA421FED614900BE5705 /* API.swift in Sources */,
 				B2AC723220D1D35700D58003 /* EventVenue.swift in Sources */,
+				B25521AD20D68A7000121224 /* NSIstanbulAboutRequest.swift in Sources */,
 				B242FDF120CDEAAD00120002 /* CredentialsManager.swift in Sources */,
 				3643FA401FED605800BE5705 /* HTTPMethod.swift in Sources */,
 				B27FA53B20D5BBAD00B46D3E /* About.swift in Sources */,
+				B25521B120D68A8100121224 /* NSIstanbulJobsRequest.swift in Sources */,
 				B242FE0A20CDEED800120002 /* EventbriteEventsRequest.swift in Sources */,
 				3643FA441FED677300BE5705 /* Response.swift in Sources */,
 				B2CD87CF20D1DB240020F363 /* EventsListResult.swift in Sources */,
@@ -550,6 +578,8 @@
 				B2AC722E20D1D11000D58003 /* Event.swift in Sources */,
 				B27FA54320D5D4F700B46D3E /* KeyedDecodingContainer+DecodeURL.swift in Sources */,
 				B2CD87BF20D1D5270020F363 /* EventAvailability.swift in Sources */,
+				B25521AF20D68A7900121224 /* NSIstanbulCompaniesRequest.swift in Sources */,
+				B25521AB20D68A6500121224 /* NSIstanbulEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
