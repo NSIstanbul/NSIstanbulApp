@@ -36,6 +36,7 @@
 		B25521AD20D68A7000121224 /* NSIstanbulAboutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25521AC20D68A7000121224 /* NSIstanbulAboutRequest.swift */; };
 		B25521AF20D68A7900121224 /* NSIstanbulCompaniesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25521AE20D68A7900121224 /* NSIstanbulCompaniesRequest.swift */; };
 		B25521B120D68A8100121224 /* NSIstanbulJobsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25521B020D68A8100121224 /* NSIstanbulJobsRequest.swift */; };
+		B25521B320D6949E00121224 /* NSIstanbulAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25521B220D6949E00121224 /* NSIstanbulAPITests.swift */; };
 		B25521B520D698D300121224 /* NSIstanbulAboutResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = B25521B420D698D300121224 /* NSIstanbulAboutResponse.json */; };
 		B25521B720D698DE00121224 /* NSIstanbulCompaniesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = B25521B620D698DE00121224 /* NSIstanbulCompaniesResponse.json */; };
 		B25521B920D698E800121224 /* NSIstanbulJobsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = B25521B820D698E800121224 /* NSIstanbulJobsResponse.json */; };
@@ -122,6 +123,7 @@
 		B25521AC20D68A7000121224 /* NSIstanbulAboutRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSIstanbulAboutRequest.swift; sourceTree = "<group>"; };
 		B25521AE20D68A7900121224 /* NSIstanbulCompaniesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSIstanbulCompaniesRequest.swift; sourceTree = "<group>"; };
 		B25521B020D68A8100121224 /* NSIstanbulJobsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSIstanbulJobsRequest.swift; sourceTree = "<group>"; };
+		B25521B220D6949E00121224 /* NSIstanbulAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSIstanbulAPITests.swift; sourceTree = "<group>"; };
 		B25521B420D698D300121224 /* NSIstanbulAboutResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NSIstanbulAboutResponse.json; sourceTree = "<group>"; };
 		B25521B620D698DE00121224 /* NSIstanbulCompaniesResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NSIstanbulCompaniesResponse.json; sourceTree = "<group>"; };
 		B25521B820D698E800121224 /* NSIstanbulJobsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NSIstanbulJobsResponse.json; sourceTree = "<group>"; };
@@ -376,6 +378,17 @@
 			path = About;
 			sourceTree = "<group>";
 		};
+		B27FA54420D5D9AA00B46D3E /* NSIstanbul */ = {
+			isa = PBXGroup;
+			children = (
+				B25521B220D6949E00121224 /* NSIstanbulAPITests.swift */,
+				B25521B420D698D300121224 /* NSIstanbulAboutResponse.json */,
+				B25521B620D698DE00121224 /* NSIstanbulCompaniesResponse.json */,
+				B25521B820D698E800121224 /* NSIstanbulJobsResponse.json */,
+			);
+			path = NSIstanbul;
+			sourceTree = "<group>";
+		};
 		B2AC722C20D1D10900D58003 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +423,7 @@
 		B2CD87C620D1D81E0020F363 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				B27FA54420D5D9AA00B46D3E /* NSIstanbul */,
 				B2CD87C720D1D8250020F363 /* Eventbrite */,
 			);
 			path = APIs;
@@ -537,8 +551,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B25521B920D698E800121224 /* NSIstanbulJobsResponse.json in Resources */,
 				B2CD87D420D1F3F80020F363 /* EventsListResponse.json in Resources */,
 				B242FE0420CDEC6C00120002 /* EventbriteCredentials.plist in Resources */,
+				B25521B720D698DE00121224 /* NSIstanbulCompaniesResponse.json in Resources */,
+				B25521B520D698D300121224 /* NSIstanbulAboutResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +605,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2CD87CB20D1D8440020F363 /* EventbriteAPITests.swift in Sources */,
+				B25521B320D6949E00121224 /* NSIstanbulAPITests.swift in Sources */,
 				3618E7AA1FED3C03003B5CA5 /* NetworkingTests.swift in Sources */,
 				B242FE0220CDEC4600120002 /* CredentialsManagerTests.swift in Sources */,
 				36920F851FF6DF1C0051424F /* Stubber.swift in Sources */,

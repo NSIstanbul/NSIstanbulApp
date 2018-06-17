@@ -39,7 +39,7 @@ class EventbriteAPITests: XCTestCase {
             XCTAssertEqual(value.pagination.objectCount, value.events.count)
             XCTAssertNotNil(value.events.first)
             guard let firstEvent = value.events.first else {
-                XCTAssert(false)
+                XCTFail("Expected an event inside the json but not found")
                 break
             }
             
