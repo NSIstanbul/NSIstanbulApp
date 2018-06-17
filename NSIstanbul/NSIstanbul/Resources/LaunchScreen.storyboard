@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,17 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NSIstanbul" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSJ-ey-rRN">
-                                <rect key="frame" x="143.66666666666666" y="395.66666666666669" width="87.666666666666657" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NSIstanbulLogo" translatesAutoresizingMaskIntoConstraints="NO" id="HZg-gg-Swt">
+                                <rect key="frame" x="97" y="386" width="180" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="I4b-iz-Gkm"/>
+                                    <constraint firstAttribute="height" constant="40" id="UIm-QU-1T0"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="YSJ-ey-rRN" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="GtA-pu-pXf"/>
-                            <constraint firstItem="YSJ-ey-rRN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="amc-eh-qGt"/>
+                            <constraint firstItem="HZg-gg-Swt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6aX-ON-Eak"/>
+                            <constraint firstItem="HZg-gg-Swt" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="U2p-v8-ER5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,4 +38,7 @@
             <point key="canvasLocation" x="-175" y="365"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSIstanbulLogo" width="180" height="40"/>
+    </resources>
 </document>
