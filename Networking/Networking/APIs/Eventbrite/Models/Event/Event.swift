@@ -20,10 +20,10 @@ public struct Event {
     let availability: EventAvailability
 }
 
-// MARK: Event Object Coding Keys
 private extension Event {
+    
+    // MARK: Event Object Root Keys
     enum CodingKeys {
-        // MARK: Event Object Root Keys
         enum root: String, CodingKey {
             case name
             case startDate = "start"
@@ -44,27 +44,8 @@ private extension Event {
             case utc
         }
     }
-}
-
-// MARK: Event: Decodable
-extension Event: Decodable {
-    public init(from decoder: Decoder) throws {
-        // Root container
-        let rootContainer = try decoder.container(keyedBy: Event.CodingKeys.root.self)
     
-        // Decoding properties
-        name = try Event.decodeName(from: rootContainer)
-        startDate = try Event.decodeStartDate(from: rootContainer)
-        status = try rootContainer.decode(EventStatus.self, forKey: .status)
-        logo = try rootContainer.decode(EventLogo.self, forKey: .logo)
-        venue = try rootContainer.decode(EventVenue.self, forKey: .venue)
-        tickets = try rootContainer.decode([EventTicket].self, forKey: .tickets)
-        availability = try rootContainer.decode(EventAvailability.self, forKey: .availability)
-    }
-}
-
-// MARK: Event Properties Decoders
-private extension Event {
+    // MARK: Individual Decoders
     static func decodeName(from container: KeyedDecodingContainer<Event.CodingKeys.root>) throws -> String {
         let nameContainer = try container.nestedContainer(keyedBy: Event.CodingKeys.name.self, forKey: .name)
         return try nameContainer.decode(String.self, forKey: .text)
@@ -84,5 +65,22 @@ private extension Event {
         }
         
         return date
+    }
+}
+
+// MARK: Event: Decodable
+extension Event: Decodable {
+    public init(from decoder: Decoder) throws {
+        // Root container
+        let rootContainer = try decoder.container(keyedBy: Event.CodingKeys.root.self)
+    
+        // Decoding properties
+        name = try Event.decodeName(from: rootContainer)
+        startDate = try Event.decodeStartDate(from: rootContainer)
+        status = try rootContainer.decode(EventStatus.self, forKey: .status)
+        logo = try rootContainer.decode(EventLogo.self, forKey: .logo)
+        venue = try rootContainer.decode(EventVenue.self, forKey: .venue)
+        tickets = try rootContainer.decode([EventTicket].self, forKey: .tickets)
+        availability = try rootContainer.decode(EventAvailability.self, forKey: .availability)
     }
 }
