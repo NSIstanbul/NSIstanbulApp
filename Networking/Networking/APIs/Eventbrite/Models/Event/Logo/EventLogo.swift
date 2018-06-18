@@ -18,20 +18,22 @@ public struct EventLogo {
 }
 
 // MARK: CodingKeys
-extension EventLogo {
-    // MARK: EventLogo Object Coding Keys
-    enum CodingKeys: String, CodingKey {
-        case id
-        case url
-        case aspectRatio = "aspect_ratio"
-        case original
-    }
-    
-    // MARK: EventLogo Original Logo Coding Keys
-    enum EventLogoOriginalLogoCodingKeys: String, CodingKey {
-        case url
-        case width
-        case height
+private extension EventLogo {
+    enum CodingKeys {
+        // MARK: EventLogo Object Coding Keys
+        enum root: String, CodingKey {
+            case id
+            case url
+            case aspectRatio = "aspect_ratio"
+            case original
+        }
+        
+        // MARK: EventLogo Original Logo Coding Keys
+        enum originalLogo: String, CodingKey {
+            case url
+            case width
+            case height
+        }
     }
 }
 
@@ -39,32 +41,28 @@ extension EventLogo {
 extension EventLogo: Decodable {
     public init(from decoder: Decoder) throws {
         // Root container
-        let rootContainer = try decoder.container(keyedBy: CodingKeys.self)
+        let rootContainer = try decoder.container(keyedBy: EventLogo.CodingKeys.root.self)
         
         id = try rootContainer.decode(String.self, forKey: .id)
-        url = try EventLogo.decodeURL(from: rootContainer, keyedBy: .url)
+        url = try rootContainer.decodeURL(keyedBy: .url)
         aspectRatio = try EventLogo.decodeAspectRatio(from: rootContainer)
         
-        let originalLogoContainer = try rootContainer.nestedContainer(keyedBy: EventLogoOriginalLogoCodingKeys.self, forKey: .original)
-        originalURL = try EventLogo.decodeURL(from: originalLogoContainer, keyedBy: .url)
+        let originalLogoContainer = try rootContainer.nestedContainer(keyedBy: EventLogo.CodingKeys.originalLogo.self, forKey: .original)
+        originalURL = try originalLogoContainer.decodeURL(keyedBy: .url)
         size = try EventLogo.decodeSize(from: originalLogoContainer)
     }
 }
 
 // MARK: EventLogo Properties Decoders
-extension EventLogo {
-    private static func decodeURL<KeyedByType: CodingKey>(from container: KeyedDecodingContainer<KeyedByType>, keyedBy: KeyedByType) throws -> URL? {
-        let urlString = try container.decode(String.self, forKey: keyedBy)
-        return URL(string: urlString)
-    }
+private extension EventLogo {
     
-    private static func decodeSize(from container: KeyedDecodingContainer<EventLogoOriginalLogoCodingKeys>) throws -> CGSize {
+    static func decodeSize(from container: KeyedDecodingContainer<EventLogo.CodingKeys.originalLogo>) throws -> CGSize {
         let width = try container.decode(Double.self, forKey: .width)
         let height = try container.decode(Double.self, forKey: .height)
         return CGSize(width: width, height: height)
     }
     
-    private static func decodeAspectRatio(from container: KeyedDecodingContainer<CodingKeys>) throws -> Double {
+    static func decodeAspectRatio(from container: KeyedDecodingContainer<EventLogo.CodingKeys.root>) throws -> Double {
         let aspectRatioString = try container.decode(String.self, forKey: .aspectRatio)
         guard let aspectRatio = Double(aspectRatioString) else {
             let debugDescription = "EventLogo: Cannot conver aspect ratio string to double."
