@@ -29,6 +29,8 @@
 		36F443FB20CDCE91004EA85D /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36F443F720CDCE85004EA85D /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A40C81DB20C979310034681C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40C81DA20C979310034681C /* Assets.xcassets */; };
 		A40C81E920C979310034681C /* NSIstanbulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C81E820C979310034681C /* NSIstanbulTests.swift */; };
+		B246FB9B20D6FD91007CC9FD /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B246FB9A20D6FD91007CC9FD /* StyleKit.swift */; };
+		B246FBB120D726DF007CC9FD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = B246FBB020D726DF007CC9FD /* Font.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		A40C81E420C979310034681C /* NSIstanbulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSIstanbulTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40C81E820C979310034681C /* NSIstanbulTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSIstanbulTests.swift; sourceTree = "<group>"; };
 		A40C81EA20C979310034681C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B246FB9A20D6FD91007CC9FD /* StyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
+		B246FBB020D726DF007CC9FD /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +221,7 @@
 				3643B8EF20CDE4AF00EDD771 /* Scenes */,
 				B23E041B20CC20220045D9B6 /* Protocols */,
 				B23E041C20CC20280045D9B6 /* Resources */,
+				B246FB9920D6FD84007CC9FD /* StyleKit */,
 			);
 			path = NSIstanbul;
 			sourceTree = "<group>";
@@ -265,6 +270,15 @@
 				A40C81DA20C979310034681C /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B246FB9920D6FD84007CC9FD /* StyleKit */ = {
+			isa = PBXGroup;
+			children = (
+				B246FB9A20D6FD91007CC9FD /* StyleKit.swift */,
+				B246FBB020D726DF007CC9FD /* Font.swift */,
+			);
+			path = StyleKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +430,7 @@
 			files = (
 				3643B91320CDE7E100EDD771 /* EventsViewController.swift in Sources */,
 				3643B91920CDE90E00EDD771 /* EventsViewModel.swift in Sources */,
+				B246FBB120D726DF007CC9FD /* Font.swift in Sources */,
 				3643B8EE20CDE42F00EDD771 /* ApplicationRouter.swift in Sources */,
 				3643B8F820CDE4AF00EDD771 /* ContentViewController.swift in Sources */,
 				3643B91720CDE8BE00EDD771 /* EventsRouter.swift in Sources */,
@@ -429,6 +444,7 @@
 				36B28F7420CDEC0E00BF9C45 /* TabBarController.swift in Sources */,
 				3643B8F720CDE4AF00EDD771 /* TabBarRouter.swift in Sources */,
 				3643B8EC20CDE42F00EDD771 /* ApplicationContainer.swift in Sources */,
+				B246FB9B20D6FD91007CC9FD /* StyleKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
