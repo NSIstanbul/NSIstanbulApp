@@ -29,6 +29,7 @@
 		36F443FB20CDCE91004EA85D /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36F443F720CDCE85004EA85D /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A40C81DB20C979310034681C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40C81DA20C979310034681C /* Assets.xcassets */; };
 		A40C81E920C979310034681C /* NSIstanbulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C81E820C979310034681C /* NSIstanbulTests.swift */; };
+		B2CE53AF20D9DCCA00354A60 /* UINavigationBar+ClearBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE53AE20D9DCCA00354A60 /* UINavigationBar+ClearBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		A40C81E420C979310034681C /* NSIstanbulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSIstanbulTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40C81E820C979310034681C /* NSIstanbulTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSIstanbulTests.swift; sourceTree = "<group>"; };
 		A40C81EA20C979310034681C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2CE53AE20D9DCCA00354A60 /* UINavigationBar+ClearBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+ClearBackground.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,9 +216,10 @@
 			isa = PBXGroup;
 			children = (
 				B23E041620CC20030045D9B6 /* Application */,
-				3643B8EF20CDE4AF00EDD771 /* Scenes */,
+				B2CE53AC20D9DCB400354A60 /* Extensions */,
 				B23E041B20CC20220045D9B6 /* Protocols */,
 				B23E041C20CC20280045D9B6 /* Resources */,
+				3643B8EF20CDE4AF00EDD771 /* Scenes */,
 			);
 			path = NSIstanbul;
 			sourceTree = "<group>";
@@ -265,6 +268,14 @@
 				A40C81DA20C979310034681C /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B2CE53AC20D9DCB400354A60 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B2CE53AE20D9DCCA00354A60 /* UINavigationBar+ClearBackground.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,6 +430,7 @@
 				3643B8EE20CDE42F00EDD771 /* ApplicationRouter.swift in Sources */,
 				3643B8F820CDE4AF00EDD771 /* ContentViewController.swift in Sources */,
 				3643B91720CDE8BE00EDD771 /* EventsRouter.swift in Sources */,
+				B2CE53AF20D9DCCA00354A60 /* UINavigationBar+ClearBackground.swift in Sources */,
 				3643B8F920CDE4AF00EDD771 /* ContentRouter.swift in Sources */,
 				3643B8ED20CDE42F00EDD771 /* ApplicationDelegate.swift in Sources */,
 				36B28F7720CDED2000BF9C45 /* Router.swift in Sources */,
