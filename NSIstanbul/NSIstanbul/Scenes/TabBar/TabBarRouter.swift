@@ -13,13 +13,9 @@ final class TabBarRouter {
     private var tabBarController: TabBarController?
     
     private enum Content: Int {
-        case content1
-        case content2
         case events
     }
     
-    private lazy var content1Router = ContentRouter(index: 1)
-    private lazy var content2Router = ContentRouter(index: 2)
     private lazy var eventsRouter = EventsRouter()
     
 }
@@ -34,11 +30,9 @@ extension TabBarRouter: Router {
         
         let viewController = TabBarController()
         viewController.viewControllers = [
-            content1Router.viewController(),
-            content2Router.viewController(),
             eventsRouter.viewController()
         ]
-        viewController.selectedIndex = Content.content1.rawValue
+        viewController.selectedIndex = Content.events.rawValue
         
         // Cache view controller
         self.tabBarController = viewController
