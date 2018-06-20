@@ -29,6 +29,8 @@
 		36F443FB20CDCE91004EA85D /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36F443F720CDCE85004EA85D /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A40C81DB20C979310034681C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40C81DA20C979310034681C /* Assets.xcassets */; };
 		A40C81E920C979310034681C /* NSIstanbulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C81E820C979310034681C /* NSIstanbulTests.swift */; };
+		B246FBA820D70DFA007CC9FD /* ViewModelResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B246FBA720D70DFA007CC9FD /* ViewModelResult.swift */; };
+		B246FBBA20D72B38007CC9FD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B246FBB920D72B38007CC9FD /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		A40C81E420C979310034681C /* NSIstanbulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSIstanbulTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40C81E820C979310034681C /* NSIstanbulTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSIstanbulTests.swift; sourceTree = "<group>"; };
 		A40C81EA20C979310034681C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B246FBA720D70DFA007CC9FD /* ViewModelResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelResult.swift; sourceTree = "<group>"; };
+		B246FBB920D72B38007CC9FD /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = NSIstanbul/Protocols/ViewModel/ViewModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +219,7 @@
 			children = (
 				B23E041620CC20030045D9B6 /* Application */,
 				3643B8EF20CDE4AF00EDD771 /* Scenes */,
+				B246FBA620D70DE9007CC9FD /* Models */,
 				B23E041B20CC20220045D9B6 /* Protocols */,
 				B23E041C20CC20280045D9B6 /* Resources */,
 			);
@@ -251,6 +256,7 @@
 		B23E041B20CC20220045D9B6 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				B246FBB720D72B2B007CC9FD /* ViewModel */,
 				3643B91020CDE77200EDD771 /* Instantiatable */,
 				36B28F7620CDED2000BF9C45 /* Router.swift */,
 			);
@@ -265,6 +271,14 @@
 				A40C81DA20C979310034681C /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B246FBA620D70DE9007CC9FD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B246FBA720D70DFA007CC9FD /* ViewModelResult.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,8 +435,10 @@
 				3643B91720CDE8BE00EDD771 /* EventsRouter.swift in Sources */,
 				3643B8F920CDE4AF00EDD771 /* ContentRouter.swift in Sources */,
 				3643B8ED20CDE42F00EDD771 /* ApplicationDelegate.swift in Sources */,
+				B246FBBA20D72B38007CC9FD /* ViewModel.swift in Sources */,
 				36B28F7720CDED2000BF9C45 /* Router.swift in Sources */,
 				3643B90520CDE65B00EDD771 /* Instantiatable.swift in Sources */,
+				B246FBA820D70DFA007CC9FD /* ViewModelResult.swift in Sources */,
 				3643B90920CDE69B00EDD771 /* Instantiatable+UIViewController.swift in Sources */,
 				3643B8FB20CDE4B000EDD771 /* ContentViewModel.swift in Sources */,
 				3643B90720CDE66F00EDD771 /* Instantiatable+UIView.swift in Sources */,
