@@ -1,5 +1,5 @@
 //
-//  UINavigationBar+Clear.swift
+//  UINavigationBar+Customizations.swift
 //  NSIstanbul
 //
 //  Created by Said Ozcan on 18/06/2018.
