@@ -30,6 +30,9 @@
 		A40C81DB20C979310034681C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40C81DA20C979310034681C /* Assets.xcassets */; };
 		A40C81E920C979310034681C /* NSIstanbulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C81E820C979310034681C /* NSIstanbulTests.swift */; };
 		B2CE53C120DD80D600354A60 /* UITabBarItem+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */; };
+		B246FB9B20D6FD91007CC9FD /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B246FB9A20D6FD91007CC9FD /* StyleKit.swift */; };
+		B246FBB120D726DF007CC9FD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = B246FBB020D726DF007CC9FD /* Font.swift */; };
+		B2CE53B620DD7FE500354A60 /* UINavigationBar+Customizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE53AE20D9DCCA00354A60 /* UINavigationBar+Customizations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +107,9 @@
 		A40C81E820C979310034681C /* NSIstanbulTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSIstanbulTests.swift; sourceTree = "<group>"; };
 		A40C81EA20C979310034681C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+Default.swift"; sourceTree = "<group>"; };
+		B246FB9A20D6FD91007CC9FD /* StyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
+		B246FBB020D726DF007CC9FD /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		B2CE53AE20D9DCCA00354A60 /* UINavigationBar+Customizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Customizations.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +226,7 @@
 				B23E041B20CC20220045D9B6 /* Protocols */,
 				B23E041C20CC20280045D9B6 /* Resources */,
 				3643B8EF20CDE4AF00EDD771 /* Scenes */,
+        B246FB9920D6FD84007CC9FD /* StyleKit */,
 			);
 			path = NSIstanbul;
 			sourceTree = "<group>";
@@ -274,8 +281,18 @@
 			isa = PBXGroup;
 			children = (
 				B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */,
+        B2CE53AE20D9DCCA00354A60 /* UINavigationBar+Customizations.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B246FB9920D6FD84007CC9FD /* StyleKit */ = {
+			isa = PBXGroup;
+			children = (
+				B246FB9A20D6FD91007CC9FD /* StyleKit.swift */,
+				B246FBB020D726DF007CC9FD /* Font.swift */,
+			);
+			path = StyleKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,8 +442,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2CE53B620DD7FE500354A60 /* UINavigationBar+Customizations.swift in Sources */,
 				3643B91320CDE7E100EDD771 /* EventsViewController.swift in Sources */,
 				3643B91920CDE90E00EDD771 /* EventsViewModel.swift in Sources */,
+				B246FBB120D726DF007CC9FD /* Font.swift in Sources */,
 				3643B8EE20CDE42F00EDD771 /* ApplicationRouter.swift in Sources */,
 				3643B8F820CDE4AF00EDD771 /* ContentViewController.swift in Sources */,
 				3643B91720CDE8BE00EDD771 /* EventsRouter.swift in Sources */,
@@ -441,6 +460,7 @@
 				3643B8F720CDE4AF00EDD771 /* TabBarRouter.swift in Sources */,
 				B2CE53C120DD80D600354A60 /* UITabBarItem+Default.swift in Sources */,
 				3643B8EC20CDE42F00EDD771 /* ApplicationContainer.swift in Sources */,
+				B246FB9B20D6FD91007CC9FD /* StyleKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
