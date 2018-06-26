@@ -8,24 +8,20 @@
 
 import UIKit
 
+// MARK: TabBarRouter
 final class TabBarRouter {
-    
+    // MARK: Properties
     private var tabBarController: TabBarController?
-    
-    private enum Content: Int {
-        case content1
-        case content2
-        case events
+    private let childRouters: [Router] = [
+        EventsRouter()
+    ]
+    private enum ContentIndex: Int {
+        case events = 0
     }
-    
-    private lazy var content1Router = ContentRouter(index: 1)
-    private lazy var content2Router = ContentRouter(index: 2)
-    private lazy var eventsRouter = EventsRouter()
-    
 }
 
+// MARK: TabBarRouter: Router
 extension TabBarRouter: Router {
-    
     func viewController() -> UIViewController {
         
         if let viewController = tabBarController {
@@ -33,17 +29,10 @@ extension TabBarRouter: Router {
         }
         
         let viewController = TabBarController()
-        viewController.viewControllers = [
-            content1Router.viewController(),
-            content2Router.viewController(),
-            eventsRouter.viewController()
-        ]
-        viewController.selectedIndex = Content.content1.rawValue
+        viewController.viewControllers = childRouters.map {$0.viewController()}
+        viewController.selectedIndex = ContentIndex.events.rawValue
         
-        // Cache view controller
         self.tabBarController = viewController
-        
         return viewController
     }
-    
 }
