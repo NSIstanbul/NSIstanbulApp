@@ -10,10 +10,10 @@ import Foundation
 
 // MARK: Job
 public struct Job {
-    let positionTitle: String
-    let companyName: String
-    let city: String
-    let url: URL?
+    public let positionTitle: String
+    public let companyName: String
+    public let city: String
+    public let url: URL?
 }
 
 // MARK: CodingKeys
