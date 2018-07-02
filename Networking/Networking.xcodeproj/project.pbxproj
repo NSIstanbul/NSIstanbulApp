@@ -25,6 +25,7 @@
 		36ABA40F1FF971BC007B52DE /* OHHTTPStubs.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3643FA381FED42B700BE5705 /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36ABA4101FF971C8007B52DE /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3643FA3A1FED4C2400BE5705 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36ABA4111FF971CF007B52DE /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3643FA381FED42B700BE5705 /* OHHTTPStubs.framework */; };
+		A42766CA20EA8F7900363F92 /* Stubber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36920F841FF6DF1C0051424F /* Stubber.swift */; };
 		B242FDF120CDEAAD00120002 /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FDF020CDEAAD00120002 /* CredentialsManager.swift */; };
 		B242FDFF20CDEBE900120002 /* EventbriteEndpointToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FDFE20CDEBE900120002 /* EventbriteEndpointToken.swift */; };
 		B242FE0220CDEC4600120002 /* CredentialsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FE0120CDEC4600120002 /* CredentialsManagerTests.swift */; };
@@ -597,6 +598,7 @@
 				B2CD87BF20D1D5270020F363 /* EventAvailability.swift in Sources */,
 				B25521AF20D68A7900121224 /* NSIstanbulCompaniesRequest.swift in Sources */,
 				B25521AB20D68A6500121224 /* NSIstanbulEndpoint.swift in Sources */,
+				A42766CA20EA8F7900363F92 /* Stubber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

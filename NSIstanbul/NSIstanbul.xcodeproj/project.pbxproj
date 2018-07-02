@@ -25,10 +25,15 @@
 		36F443FB20CDCE91004EA85D /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36F443F720CDCE85004EA85D /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A40C81DB20C979310034681C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40C81DA20C979310034681C /* Assets.xcassets */; };
 		A40C81E920C979310034681C /* NSIstanbulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C81E820C979310034681C /* NSIstanbulTests.swift */; };
-		B2CE53C120DD80D600354A60 /* UITabBarItem+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */; };
+		A415D72B20E2C2A300B2B0A0 /* CompaniesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A415D72A20E2C2A300B2B0A0 /* CompaniesViewController.swift */; };
+		A415D72D20E2C2BF00B2B0A0 /* CompaniesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A415D72C20E2C2BF00B2B0A0 /* CompaniesViewController.storyboard */; };
+		A415D72F20E2C3C300B2B0A0 /* CompaniesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A415D72E20E2C3C300B2B0A0 /* CompaniesRouter.swift */; };
+		A415D73120E2C4AE00B2B0A0 /* CompaniesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A415D73020E2C4AE00B2B0A0 /* CompaniesViewModel.swift */; };
+		A42766CE20EA91DF00363F92 /* NSIstanbulCompaniesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = A42766CD20EA91DF00363F92 /* NSIstanbulCompaniesResponse.json */; };
 		B246FB9B20D6FD91007CC9FD /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B246FB9A20D6FD91007CC9FD /* StyleKit.swift */; };
 		B246FBB120D726DF007CC9FD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = B246FBB020D726DF007CC9FD /* Font.swift */; };
 		B2CE53B620DD7FE500354A60 /* UINavigationBar+Customizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE53AE20D9DCCA00354A60 /* UINavigationBar+Customizations.swift */; };
+		B2CE53C120DD80D600354A60 /* UITabBarItem+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,10 +103,15 @@
 		A40C81E420C979310034681C /* NSIstanbulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSIstanbulTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40C81E820C979310034681C /* NSIstanbulTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSIstanbulTests.swift; sourceTree = "<group>"; };
 		A40C81EA20C979310034681C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+Default.swift"; sourceTree = "<group>"; };
+		A415D72A20E2C2A300B2B0A0 /* CompaniesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesViewController.swift; sourceTree = "<group>"; };
+		A415D72C20E2C2BF00B2B0A0 /* CompaniesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompaniesViewController.storyboard; sourceTree = "<group>"; };
+		A415D72E20E2C3C300B2B0A0 /* CompaniesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesRouter.swift; sourceTree = "<group>"; };
+		A415D73020E2C4AE00B2B0A0 /* CompaniesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesViewModel.swift; sourceTree = "<group>"; };
+		A42766CD20EA91DF00363F92 /* NSIstanbulCompaniesResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NSIstanbulCompaniesResponse.json; sourceTree = "<group>"; };
 		B246FB9A20D6FD91007CC9FD /* StyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
 		B246FBB020D726DF007CC9FD /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		B2CE53AE20D9DCCA00354A60 /* UINavigationBar+Customizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Customizations.swift"; sourceTree = "<group>"; };
+		B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+Default.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +136,7 @@
 		3643B8EF20CDE4AF00EDD771 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A415D72820E2C24F00B2B0A0 /* Companies */,
 				3643B8F020CDE4AF00EDD771 /* TabBar */,
 				3643B91120CDE7CF00EDD771 /* Events */,
 			);
@@ -201,12 +212,13 @@
 		A40C81D220C979300034681C /* NSIstanbul */ = {
 			isa = PBXGroup;
 			children = (
+				A42766C820EA8E7200363F92 /* NetworkStubs */,
 				B23E041620CC20030045D9B6 /* Application */,
 				B2CE53BF20DD80D600354A60 /* Extensions */,
 				B23E041B20CC20220045D9B6 /* Protocols */,
 				B23E041C20CC20280045D9B6 /* Resources */,
 				3643B8EF20CDE4AF00EDD771 /* Scenes */,
-        B246FB9920D6FD84007CC9FD /* StyleKit */,
+				B246FB9920D6FD84007CC9FD /* StyleKit */,
 			);
 			path = NSIstanbul;
 			sourceTree = "<group>";
@@ -220,12 +232,31 @@
 			path = NSIstanbulTests;
 			sourceTree = "<group>";
 		};
+		A415D72820E2C24F00B2B0A0 /* Companies */ = {
+			isa = PBXGroup;
+			children = (
+				A415D72C20E2C2BF00B2B0A0 /* CompaniesViewController.storyboard */,
+				A415D72E20E2C3C300B2B0A0 /* CompaniesRouter.swift */,
+				A415D72A20E2C2A300B2B0A0 /* CompaniesViewController.swift */,
+				A415D73020E2C4AE00B2B0A0 /* CompaniesViewModel.swift */,
+			);
+			path = Companies;
+			sourceTree = "<group>";
+		};
 		A41B659720C97B31005A38B2 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
 				36F443F120CDCE85004EA85D /* Networking.xcodeproj */,
 			);
 			name = Vendor;
+			sourceTree = "<group>";
+		};
+		A42766C820EA8E7200363F92 /* NetworkStubs */ = {
+			isa = PBXGroup;
+			children = (
+				A42766CD20EA91DF00363F92 /* NSIstanbulCompaniesResponse.json */,
+			);
+			path = NetworkStubs;
 			sourceTree = "<group>";
 		};
 		B23E041620CC20030045D9B6 /* Application */ = {
@@ -257,15 +288,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		B2CE53BF20DD80D600354A60 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */,
-        B2CE53AE20D9DCCA00354A60 /* UINavigationBar+Customizations.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		B246FB9920D6FD84007CC9FD /* StyleKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +295,15 @@
 				B246FBB020D726DF007CC9FD /* Font.swift */,
 			);
 			path = StyleKit;
+			sourceTree = "<group>";
+		};
+		B2CE53BF20DD80D600354A60 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */,
+				B2CE53AE20D9DCCA00354A60 /* UINavigationBar+Customizations.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,7 +415,9 @@
 			files = (
 				3643B8FD20CDE5F700EDD771 /* LaunchScreen.storyboard in Resources */,
 				3643B91520CDE80E00EDD771 /* EventsViewController.storyboard in Resources */,
+				A415D72D20E2C2BF00B2B0A0 /* CompaniesViewController.storyboard in Resources */,
 				A40C81DB20C979310034681C /* Assets.xcassets in Resources */,
+				A42766CE20EA91DF00363F92 /* NSIstanbulCompaniesResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,10 +438,12 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/../Vendor/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/../Vendor/Carthage/Build/iOS/OHHTTPStubs.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/OHHTTPStubs.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -423,6 +458,7 @@
 			files = (
 				B2CE53B620DD7FE500354A60 /* UINavigationBar+Customizations.swift in Sources */,
 				3643B91320CDE7E100EDD771 /* EventsViewController.swift in Sources */,
+				A415D73120E2C4AE00B2B0A0 /* CompaniesViewModel.swift in Sources */,
 				3643B91920CDE90E00EDD771 /* EventsViewModel.swift in Sources */,
 				B246FBB120D726DF007CC9FD /* Font.swift in Sources */,
 				3643B8EE20CDE42F00EDD771 /* ApplicationRouter.swift in Sources */,
@@ -435,6 +471,8 @@
 				36B28F7420CDEC0E00BF9C45 /* TabBarController.swift in Sources */,
 				3643B8F720CDE4AF00EDD771 /* TabBarRouter.swift in Sources */,
 				B2CE53C120DD80D600354A60 /* UITabBarItem+Default.swift in Sources */,
+				A415D72F20E2C3C300B2B0A0 /* CompaniesRouter.swift in Sources */,
+				A415D72B20E2C2A300B2B0A0 /* CompaniesViewController.swift in Sources */,
 				3643B8EC20CDE42F00EDD771 /* ApplicationContainer.swift in Sources */,
 				B246FB9B20D6FD91007CC9FD /* StyleKit.swift in Sources */,
 			);

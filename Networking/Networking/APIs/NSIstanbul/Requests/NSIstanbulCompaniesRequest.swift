@@ -9,7 +9,13 @@
 import Foundation
 
 public struct NSIstanbulCompaniesRequest: NSIstanbulEndpoint {
+    
+    // MARK: - Properties
     public typealias Response = [Company]
     public var path: String = "/v1/companies"
     public var method: HTTPMethod = .get
+    
+    // MARK: - Lifecycle
+    public init() {}
+    
 }
