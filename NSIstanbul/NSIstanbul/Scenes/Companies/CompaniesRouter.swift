@@ -22,9 +22,9 @@ extension CompaniesRouter: Router {
             return viewController
         }
         
-        let eventsViewController = CompaniesViewController.instantiate()
-        eventsViewController.viewModel = CompaniesViewModel()
-        let viewController = UINavigationController(rootViewController: eventsViewController)
+        let companiesViewController = CompaniesViewController.instantiate()
+        companiesViewController.viewModel = CompaniesViewModel()
+        let viewController = UINavigationController(rootViewController: companiesViewController)
         viewController.title = "Companies"
         
         // Cache view controller

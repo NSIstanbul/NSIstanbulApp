@@ -60,10 +60,11 @@ extension CompaniesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "companyCell", for: indexPath)
+        let identifier = String(describing: CompanyTableViewCell.self)
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! CompanyTableViewCell
         
         let company = viewModel.state.companies[indexPath.row]
-        cell.textLabel?.text = company.name
+        cell.configure(with: company)
         
         return cell
     }
@@ -73,6 +74,7 @@ extension CompaniesViewController: UITableViewDataSource {
 extension CompaniesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         // TODO: something.
     }
     
