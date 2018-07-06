@@ -10,11 +10,11 @@ import Foundation
 
 // MARK: Company
 public struct Company {
-    let name: String
-    let email: URL?
-    let logoURL: URL?
-    let contactURL: URL?
-    let apps: [CompanyApp]
+    public let name: String
+    public let email: URL?
+    public let logoURL: URL?
+    public let contactURL: URL?
+    public let apps: [CompanyApp]
 }
 
 // MARK: CodingKeys
