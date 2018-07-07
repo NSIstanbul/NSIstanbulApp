@@ -33,6 +33,8 @@
 		A42766CE20EA91DF00363F92 /* NSIstanbulCompaniesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = A42766CD20EA91DF00363F92 /* NSIstanbulCompaniesResponse.json */; };
 		B246FB9B20D6FD91007CC9FD /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B246FB9A20D6FD91007CC9FD /* StyleKit.swift */; };
 		B246FBB120D726DF007CC9FD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = B246FBB020D726DF007CC9FD /* Font.swift */; };
+		B276C14D20F1872E00193706 /* UITableView+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B276C14C20F1872E00193706 /* UITableView+ReuseIdentifier.swift */; };
+		B276C15120F1874D00193706 /* ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B276C15020F1874D00193706 /* ReuseIdentifier.swift */; };
 		B2CE53B620DD7FE500354A60 /* UINavigationBar+Customizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE53AE20D9DCCA00354A60 /* UINavigationBar+Customizations.swift */; };
 		B2CE53C120DD80D600354A60 /* UITabBarItem+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */; };
 /* End PBXBuildFile section */
@@ -112,6 +114,8 @@
 		A42766CD20EA91DF00363F92 /* NSIstanbulCompaniesResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NSIstanbulCompaniesResponse.json; sourceTree = "<group>"; };
 		B246FB9A20D6FD91007CC9FD /* StyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
 		B246FBB020D726DF007CC9FD /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		B276C14C20F1872E00193706 /* UITableView+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ReuseIdentifier.swift"; sourceTree = "<group>"; };
+		B276C15020F1874D00193706 /* ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifier.swift; sourceTree = "<group>"; };
 		B2CE53AE20D9DCCA00354A60 /* UINavigationBar+Customizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Customizations.swift"; sourceTree = "<group>"; };
 		B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+Default.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,9 +226,9 @@
 		A40C81D220C979300034681C /* NSIstanbul */ = {
 			isa = PBXGroup;
 			children = (
-				A42766C820EA8E7200363F92 /* NetworkStubs */,
 				B23E041620CC20030045D9B6 /* Application */,
 				B2CE53BF20DD80D600354A60 /* Extensions */,
+				A42766C820EA8E7200363F92 /* NetworkStubs */,
 				B23E041B20CC20220045D9B6 /* Protocols */,
 				B23E041C20CC20280045D9B6 /* Resources */,
 				3643B8EF20CDE4AF00EDD771 /* Scenes */,
@@ -285,6 +289,7 @@
 			children = (
 				3643B91020CDE77200EDD771 /* Instantiatable */,
 				36B28F7620CDED2000BF9C45 /* Router.swift */,
+				B276C15020F1874D00193706 /* ReuseIdentifier.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 			children = (
 				B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */,
 				B2CE53AE20D9DCCA00354A60 /* UINavigationBar+Customizations.swift */,
+				B276C14C20F1872E00193706 /* UITableView+ReuseIdentifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -474,6 +480,7 @@
 				A415D73120E2C4AE00B2B0A0 /* CompaniesViewModel.swift in Sources */,
 				A409AEB920EAA0C7001757FE /* CompanyTableViewCell.swift in Sources */,
 				3643B91920CDE90E00EDD771 /* EventsViewModel.swift in Sources */,
+				B276C15120F1874D00193706 /* ReuseIdentifier.swift in Sources */,
 				B246FBB120D726DF007CC9FD /* Font.swift in Sources */,
 				3643B8EE20CDE42F00EDD771 /* ApplicationRouter.swift in Sources */,
 				3643B91720CDE8BE00EDD771 /* EventsRouter.swift in Sources */,
@@ -489,6 +496,7 @@
 				A415D72B20E2C2A300B2B0A0 /* CompaniesViewController.swift in Sources */,
 				3643B8EC20CDE42F00EDD771 /* ApplicationContainer.swift in Sources */,
 				B246FB9B20D6FD91007CC9FD /* StyleKit.swift in Sources */,
+				B276C14D20F1872E00193706 /* UITableView+ReuseIdentifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
