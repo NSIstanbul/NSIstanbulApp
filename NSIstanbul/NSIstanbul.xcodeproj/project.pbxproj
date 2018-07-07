@@ -450,11 +450,13 @@
 			inputPaths = (
 				"$(SRCROOT)/../Vendor/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/../Vendor/Carthage/Build/iOS/OHHTTPStubs.framework",
+				"$(SRCROOT)/../Vendor/Carthage/Build/iOS/AlamofireImage.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/OHHTTPStubs.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
