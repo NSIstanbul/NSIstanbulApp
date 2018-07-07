@@ -10,12 +10,12 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-enum ImageDownloadServiceResult {
+public enum ImageDownloadServiceResult {
     case success(UIImage)
     case failure(Error)
 }
 
-class ImageDownloadingService {
+public class ImageDownloadingService {
     
     //MARK: Properties
     fileprivate lazy var imageDownloader : ImageDownloader = {
@@ -28,8 +28,11 @@ class ImageDownloadingService {
     }()
     fileprivate var receipts : [URL:RequestReceipt] = [:]
     
+    //MARK: Lifecycle
+    public init() {}
+    
     //MARK: Public
-    func download(url: URL,
+    public func download(url: URL,
                   downloadProgressHandler: ((Progress) -> Void)?,
                   completionHandler:((ImageDownloadServiceResult, URL) -> Void)?)
     {
@@ -55,21 +58,30 @@ class ImageDownloadingService {
         }
     }
     
-    func cancel(downloading url:URL) {
+    public func cancel(downloading url:URL) {
         if let receipt = self.receipts[url] {
             imageDownloader.cancelRequest(with: receipt)
         }
     }
     
-    func prefetch(_ imageUrls:[URL]) {
+    public func prefetch(_ imageUrls:[URL]) {
         for url in imageUrls {
             self.download(url: url, downloadProgressHandler: nil, completionHandler: nil)
         }
     }
     
-    func cancelPrefetcing(_ imageUrls:[URL]) {
+    public func cancelPrefetcing(_ imageUrls:[URL]) {
         for url in imageUrls {
             self.cancel(downloading: url)
         }
     }
+
+}
+
+public extension UIImageView {
+    
+    public func setImage(url: URL) {
+        self.af_setImage(withURL: url)
+    }
+    
 }
