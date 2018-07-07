@@ -75,7 +75,9 @@ extension CompaniesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        // TODO: something.
+        
+        let detailVC = CompanyDetailRouter.viewController(with: viewModel.state.companies[indexPath.row])
+        show(detailVC, sender: nil)
     }
     
 }
