@@ -1,5 +1,6 @@
 # Networking
 github "Alamofire/Alamofire" ~> 4.7
+github "Alamofire/AlamofireImage" ~> 3.3
 
 # Testing
 github "AliSoftware/OHHTTPStubs" ~> 6.1
