@@ -35,6 +35,10 @@
 		B246FBB120D726DF007CC9FD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = B246FBB020D726DF007CC9FD /* Font.swift */; };
 		B276C14D20F1872E00193706 /* UITableView+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B276C14C20F1872E00193706 /* UITableView+ReuseIdentifier.swift */; };
 		B276C15120F1874D00193706 /* ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B276C15020F1874D00193706 /* ReuseIdentifier.swift */; };
+		B276C15420F1878F00193706 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B276C15320F1878F00193706 /* ViewModel.swift */; };
+		B276C15620F187AE00193706 /* ViewModelState+ImageDownloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B276C15520F187AE00193706 /* ViewModelState+ImageDownloadable.swift */; };
+		B276C15820F187BE00193706 /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B276C15720F187BE00193706 /* ViewModelState.swift */; };
+		B276C15A20F187D500193706 /* ImageDownloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B276C15920F187D500193706 /* ImageDownloadable.swift */; };
 		B2CE53B620DD7FE500354A60 /* UINavigationBar+Customizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE53AE20D9DCCA00354A60 /* UINavigationBar+Customizations.swift */; };
 		B2CE53C120DD80D600354A60 /* UITabBarItem+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */; };
 /* End PBXBuildFile section */
@@ -116,6 +120,10 @@
 		B246FBB020D726DF007CC9FD /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		B276C14C20F1872E00193706 /* UITableView+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ReuseIdentifier.swift"; sourceTree = "<group>"; };
 		B276C15020F1874D00193706 /* ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifier.swift; sourceTree = "<group>"; };
+		B276C15320F1878F00193706 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		B276C15520F187AE00193706 /* ViewModelState+ImageDownloadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModelState+ImageDownloadable.swift"; sourceTree = "<group>"; };
+		B276C15720F187BE00193706 /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
+		B276C15920F187D500193706 /* ImageDownloadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadable.swift; sourceTree = "<group>"; };
 		B2CE53AE20D9DCCA00354A60 /* UINavigationBar+Customizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Customizations.swift"; sourceTree = "<group>"; };
 		B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+Default.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -287,9 +295,11 @@
 		B23E041B20CC20220045D9B6 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				3643B91020CDE77200EDD771 /* Instantiatable */,
-				36B28F7620CDED2000BF9C45 /* Router.swift */,
 				B276C15020F1874D00193706 /* ReuseIdentifier.swift */,
+				36B28F7620CDED2000BF9C45 /* Router.swift */,
+				3643B91020CDE77200EDD771 /* Instantiatable */,
+				B276C15220F1877D00193706 /* ViewModel */,
+				B276C15920F187D500193706 /* ImageDownloadable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -311,6 +321,16 @@
 				B246FBB020D726DF007CC9FD /* Font.swift */,
 			);
 			path = StyleKit;
+			sourceTree = "<group>";
+		};
+		B276C15220F1877D00193706 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B276C15320F1878F00193706 /* ViewModel.swift */,
+				B276C15720F187BE00193706 /* ViewModelState.swift */,
+				B276C15520F187AE00193706 /* ViewModelState+ImageDownloadable.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B2CE53BF20DD80D600354A60 /* Extensions */ = {
@@ -475,11 +495,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B276C15620F187AE00193706 /* ViewModelState+ImageDownloadable.swift in Sources */,
 				B2CE53B620DD7FE500354A60 /* UINavigationBar+Customizations.swift in Sources */,
 				3643B91320CDE7E100EDD771 /* EventsViewController.swift in Sources */,
 				A415D73120E2C4AE00B2B0A0 /* CompaniesViewModel.swift in Sources */,
 				A409AEB920EAA0C7001757FE /* CompanyTableViewCell.swift in Sources */,
+				B276C15820F187BE00193706 /* ViewModelState.swift in Sources */,
 				3643B91920CDE90E00EDD771 /* EventsViewModel.swift in Sources */,
+				B276C15420F1878F00193706 /* ViewModel.swift in Sources */,
 				B276C15120F1874D00193706 /* ReuseIdentifier.swift in Sources */,
 				B246FBB120D726DF007CC9FD /* Font.swift in Sources */,
 				3643B8EE20CDE42F00EDD771 /* ApplicationRouter.swift in Sources */,
@@ -493,6 +516,7 @@
 				3643B8F720CDE4AF00EDD771 /* TabBarRouter.swift in Sources */,
 				B2CE53C120DD80D600354A60 /* UITabBarItem+Default.swift in Sources */,
 				A415D72F20E2C3C300B2B0A0 /* CompaniesRouter.swift in Sources */,
+				B276C15A20F187D500193706 /* ImageDownloadable.swift in Sources */,
 				A415D72B20E2C2A300B2B0A0 /* CompaniesViewController.swift in Sources */,
 				3643B8EC20CDE42F00EDD771 /* ApplicationContainer.swift in Sources */,
 				B246FB9B20D6FD91007CC9FD /* StyleKit.swift in Sources */,
