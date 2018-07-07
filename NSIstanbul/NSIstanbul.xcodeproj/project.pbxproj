@@ -34,6 +34,7 @@
 		A46D757520F0E714003E4475 /* CompanyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D757420F0E714003E4475 /* CompanyDetailViewModel.swift */; };
 		A46D757720F0E81E003E4475 /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D757620F0E81E003E4475 /* CompanyDetailViewController.swift */; };
 		A46D757920F0E99A003E4475 /* CompanyDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46D757820F0E99A003E4475 /* CompanyDetailViewController.storyboard */; };
+		A46D757B20F0EA76003E4475 /* CompanyDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D757A20F0EA76003E4475 /* CompanyDetailRouter.swift */; };
 		B246FB9B20D6FD91007CC9FD /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B246FB9A20D6FD91007CC9FD /* StyleKit.swift */; };
 		B246FBB120D726DF007CC9FD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = B246FBB020D726DF007CC9FD /* Font.swift */; };
 		B2CE53B620DD7FE500354A60 /* UINavigationBar+Customizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE53AE20D9DCCA00354A60 /* UINavigationBar+Customizations.swift */; };
@@ -116,6 +117,7 @@
 		A46D757420F0E714003E4475 /* CompanyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewModel.swift; sourceTree = "<group>"; };
 		A46D757620F0E81E003E4475 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
 		A46D757820F0E99A003E4475 /* CompanyDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompanyDetailViewController.storyboard; sourceTree = "<group>"; };
+		A46D757A20F0EA76003E4475 /* CompanyDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailRouter.swift; sourceTree = "<group>"; };
 		B246FB9A20D6FD91007CC9FD /* StyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
 		B246FBB020D726DF007CC9FD /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		B2CE53AE20D9DCCA00354A60 /* UINavigationBar+Customizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Customizations.swift"; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				A46D757420F0E714003E4475 /* CompanyDetailViewModel.swift */,
 				A46D757620F0E81E003E4475 /* CompanyDetailViewController.swift */,
 				A46D757820F0E99A003E4475 /* CompanyDetailViewController.storyboard */,
+				A46D757A20F0EA76003E4475 /* CompanyDetailRouter.swift */,
 			);
 			path = CompanyDetail;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				3643B91320CDE7E100EDD771 /* EventsViewController.swift in Sources */,
 				A415D73120E2C4AE00B2B0A0 /* CompaniesViewModel.swift in Sources */,
 				A409AEB920EAA0C7001757FE /* CompanyTableViewCell.swift in Sources */,
+				A46D757B20F0EA76003E4475 /* CompanyDetailRouter.swift in Sources */,
 				3643B91920CDE90E00EDD771 /* EventsViewModel.swift in Sources */,
 				B246FBB120D726DF007CC9FD /* Font.swift in Sources */,
 				3643B8EE20CDE42F00EDD771 /* ApplicationRouter.swift in Sources */,
