@@ -22,8 +22,20 @@ class CompanyDetailViewController: UIViewController, Instantiatable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setupUI()
     }
 
+    @IBAction func backTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+}
+
+private extension CompanyDetailViewController {
+    
+    func setupUI() {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
 }

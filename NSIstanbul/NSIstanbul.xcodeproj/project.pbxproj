@@ -282,10 +282,10 @@
 		A46D757220F0E3AC003E4475 /* CompanyDetail */ = {
 			isa = PBXGroup;
 			children = (
-				A46D757420F0E714003E4475 /* CompanyDetailViewModel.swift */,
-				A46D757620F0E81E003E4475 /* CompanyDetailViewController.swift */,
 				A46D757820F0E99A003E4475 /* CompanyDetailViewController.storyboard */,
 				A46D757A20F0EA76003E4475 /* CompanyDetailRouter.swift */,
+				A46D757620F0E81E003E4475 /* CompanyDetailViewController.swift */,
+				A46D757420F0E714003E4475 /* CompanyDetailViewModel.swift */,
 			);
 			path = CompanyDetail;
 			sourceTree = "<group>";
