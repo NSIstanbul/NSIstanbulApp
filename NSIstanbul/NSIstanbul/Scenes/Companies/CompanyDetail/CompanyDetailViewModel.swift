@@ -10,12 +10,12 @@ import Foundation
 import Networking
 
 struct CompanyDetailState {
-    var company: Company!
+    var company: Company
 }
 
 final class CompanyDetailViewModel {
     
-    var state: CompanyDetailState!
+    var state: CompanyDetailState
     
     init(with company: Company) {
         state = CompanyDetailState(company: company)
