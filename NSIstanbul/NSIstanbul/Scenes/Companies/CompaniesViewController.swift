@@ -25,6 +25,12 @@ class CompaniesViewController: UIViewController, Instantiatable {
         setUpUI()
         populateUI()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        configureUI()
+    }
 
 }
 
@@ -33,6 +39,10 @@ private extension CompaniesViewController {
     func setUpUI() {
         navigationController?.navigationBar.prefersLargeTitles = true
         tableView.tableFooterView = UIView(frame: CGRect.zero)
+    }
+    
+    func configureUI() {
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     func populateUI() {
@@ -77,7 +87,7 @@ extension CompaniesViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let detailVC = CompanyDetailRouter.viewController(with: viewModel.state.companies[indexPath.row])
-        show(detailVC, sender: nil)
+        show(detailVC, sender: self)
     }
     
 }
