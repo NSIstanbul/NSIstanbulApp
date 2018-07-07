@@ -13,6 +13,12 @@ class CompanyDetailViewController: UIViewController, Instantiatable {
 
     var viewModel: CompanyDetailViewModel!
     
+    @IBOutlet weak var companyImageView: UIImageView!
+    @IBOutlet weak var appsCollectionView: UICollectionView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var websiteTextView: UITextView!
+    @IBOutlet weak var emailTextView: UITextView!
+    
     static func instantiate(with company: Company) -> CompanyDetailViewController {
         let vc = CompanyDetailViewController.instantiate()
         vc.viewModel = CompanyDetailViewModel(with: company)
@@ -24,6 +30,7 @@ class CompanyDetailViewController: UIViewController, Instantiatable {
         super.viewDidLoad()
         
         setupUI()
+        populateUI()
     }
     
 }
@@ -31,7 +38,17 @@ class CompanyDetailViewController: UIViewController, Instantiatable {
 private extension CompanyDetailViewController {
     
     func setupUI() {
-        // for future use
+        companyImageView.layer.cornerRadius = companyImageView.frame.width / 2
+        companyImageView.layer.borderWidth = 0.5
+        companyImageView.layer.borderColor = StyleKit.Colors.imageBorder.cgColor
+    }
+    
+    func populateUI() {
+        guard let company = viewModel.state.company else { return }
+        
+        nameLabel.text = company.name
+        websiteTextView.text = company.contactURL?.absoluteString
+        emailTextView.text = company.email?.absoluteString
     }
     
 }

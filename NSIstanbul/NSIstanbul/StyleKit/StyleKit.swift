@@ -12,8 +12,11 @@ import UIKit
 enum StyleKit {
     enum Assets {}
     struct Font {}
+    
+    // MARK: Colors
     struct Colors {
         static let grayOne = UIColor(red: 248.0/255.0, green: 248.0/255.0, blue: 248.0/255.0, alpha: 1)
         static let blueOne = UIColor(red: 20.0/255.0, green: 109.0/255.0, blue: 45.0/255.0, alpha: 1)
+        static let imageBorder = UIColor(red: 206/255.0, green: 206/255.0, blue: 206/255.0, alpha: 1)
     }
 }
