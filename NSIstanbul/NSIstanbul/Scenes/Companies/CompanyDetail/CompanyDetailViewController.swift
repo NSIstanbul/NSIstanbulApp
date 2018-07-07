@@ -25,17 +25,13 @@ class CompanyDetailViewController: UIViewController, Instantiatable {
         
         setupUI()
     }
-
-    @IBAction func backTapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
     
 }
 
 private extension CompanyDetailViewController {
     
     func setupUI() {
-        navigationController?.setNavigationBarHidden(true, animated: true)
+        // for future use
     }
     
 }

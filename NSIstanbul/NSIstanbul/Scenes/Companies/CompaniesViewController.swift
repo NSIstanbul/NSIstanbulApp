@@ -25,28 +25,18 @@ class CompaniesViewController: UIViewController, Instantiatable {
         setUpUI()
         populateUI()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        configureUI()
-    }
 
 }
 
 private extension CompaniesViewController {
     
     func setUpUI() {
-        navigationController?.navigationBar.prefersLargeTitles = true
+        title = " "
+        navigationController?.navigationBar.clearBackground()
         tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
     
-    func configureUI() {
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
     func populateUI() {
-        title = "Companies"
         viewModel.loadCompanies()
     }
     
