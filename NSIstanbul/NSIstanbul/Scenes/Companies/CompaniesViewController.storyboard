@@ -17,8 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Companies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jg9-o1-DvT">
+                                <rect key="frame" x="20" y="20" width="118" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bc4-H5-A00">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="69" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CompanyTableViewCell" id="k2h-Qi-Hop" customClass="CompanyTableViewCell" customModule="NSIstanbul" customModuleProvider="target">
@@ -70,9 +76,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Bc4-H5-A00" firstAttribute="leading" secondItem="8lT-zE-z6N" secondAttribute="leading" id="CAA-ws-46D"/>
+                            <constraint firstItem="8lT-zE-z6N" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jg9-o1-DvT" secondAttribute="trailing" constant="16" id="Jz4-22-vaC"/>
                             <constraint firstItem="8lT-zE-z6N" firstAttribute="trailing" secondItem="Bc4-H5-A00" secondAttribute="trailing" id="Puf-Yk-YU6"/>
-                            <constraint firstItem="Bc4-H5-A00" firstAttribute="top" secondItem="8lT-zE-z6N" secondAttribute="top" id="QR7-re-bZY"/>
+                            <constraint firstItem="jg9-o1-DvT" firstAttribute="leading" secondItem="8lT-zE-z6N" secondAttribute="leading" constant="20" id="Ztd-s9-Sc1"/>
                             <constraint firstItem="8lT-zE-z6N" firstAttribute="bottom" secondItem="Bc4-H5-A00" secondAttribute="bottom" id="e0T-ES-tpX"/>
+                            <constraint firstItem="jg9-o1-DvT" firstAttribute="top" secondItem="8lT-zE-z6N" secondAttribute="top" id="gjs-CG-rjj"/>
+                            <constraint firstItem="Bc4-H5-A00" firstAttribute="top" secondItem="jg9-o1-DvT" secondAttribute="bottom" constant="20" id="s7R-lr-WkG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8lT-zE-z6N"/>
                     </view>

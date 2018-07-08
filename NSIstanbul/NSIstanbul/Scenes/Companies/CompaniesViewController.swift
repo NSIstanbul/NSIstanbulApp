@@ -19,6 +19,11 @@ class CompaniesViewController: UIViewController, Instantiatable {
         }
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.setupTabBarItem()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,12 +36,16 @@ class CompaniesViewController: UIViewController, Instantiatable {
 private extension CompaniesViewController {
     
     func setUpUI() {
-        navigationController?.navigationBar.prefersLargeTitles = true
         tableView.tableFooterView = UIView(frame: CGRect.zero)
+        navigationController?.navigationBar.clearBackground()
+    }
+    
+    private func setupTabBarItem() {
+        tabBarItem = UITabBarItem.defaultItem(image: #imageLiteral(resourceName: "CompaniesUnselected"),
+                                              selectedImage: #imageLiteral(resourceName: "CompaniesSelected"))
     }
     
     func populateUI() {
-        title = "Companies"
         viewModel.loadCompanies()
     }
     
