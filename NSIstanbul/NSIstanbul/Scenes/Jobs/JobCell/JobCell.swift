@@ -11,9 +11,9 @@ import UIKit
 class JobCell: UITableViewCell, ReuseIdentifier {
     // MARK: IBOutlets
     @IBOutlet weak var companyLogoImageView: UIImageView!
-    @IBOutlet weak var positionTitleLabel: UILabel!
-    @IBOutlet weak var companyNameLabel: UILabel!
-    @IBOutlet weak var cityNameLabel: UILabel!
+    @IBOutlet fileprivate weak var positionTitleLabel: UILabel!
+    @IBOutlet fileprivate weak var companyNameLabel: UILabel!
+    @IBOutlet fileprivate weak var cityNameLabel: UILabel!
     
     // MARK: Lifecycle
     override func awakeFromNib() {

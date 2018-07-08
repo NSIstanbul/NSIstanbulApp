@@ -52,8 +52,8 @@ final class JobsViewController: UIViewController, Instantiatable {
 // MARK: JobsViewController Private Methods
 extension JobsViewController {
     private func setupTabBarItem() {
-        tabBarItem = UITabBarItem.defaultItem(image: StyleKit.Assets.Jobs.unselectedTabBarIcon,
-                                              selectedImage: StyleKit.Assets.Jobs.selectedTabBarIcon)
+        tabBarItem = UITabBarItem.defaultItem(image: #imageLiteral(resourceName: "JobsUnselected"),
+                                              selectedImage: #imageLiteral(resourceName: "JobsSelected"))
     }
     
     private func setupUI() {
@@ -133,12 +133,3 @@ extension JobsViewController: UITableViewDataSourcePrefetching {
         imageDownloadingService.cancelPrefetcing(viewModel.state.imageUrls(for: indexPaths))
     }
 }
-
-// MARK: StyleKit + EventsAssets
-private extension StyleKit.Assets {
-    enum Jobs {
-        static let selectedTabBarIcon: UIImage = #imageLiteral(resourceName: "JobsSelected")
-        static let unselectedTabBarIcon: UIImage = #imageLiteral(resourceName: "JobsUnselected")
-    }
-}
-
