@@ -41,8 +41,8 @@ private extension CompaniesViewController {
     }
     
     private func setupTabBarItem() {
-        tabBarItem = UITabBarItem.defaultItem(image: StyleKit.Assets.Companies.unselectedTabBarIcon,
-                                              selectedImage: StyleKit.Assets.Companies.selectedTabBarIcon)
+        tabBarItem = UITabBarItem.defaultItem(image: #imageLiteral(resourceName: "CompaniesUnselected"),
+                                              selectedImage: #imageLiteral(resourceName: "CompaniesSelected"))
     }
     
     func populateUI() {
@@ -87,12 +87,4 @@ extension CompaniesViewController: UITableViewDelegate {
         // TODO: something.
     }
     
-}
-
-// MARK: StyleKit + CompaniesAssets
-private extension StyleKit.Assets {
-    enum Companies {
-        static let selectedTabBarIcon: UIImage = #imageLiteral(resourceName: "CompaniesSelected")
-        static let unselectedTabBarIcon: UIImage = #imageLiteral(resourceName: "CompaniesUnselected")
-    }
 }
