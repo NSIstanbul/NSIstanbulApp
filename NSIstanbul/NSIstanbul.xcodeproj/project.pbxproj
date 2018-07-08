@@ -33,6 +33,10 @@
 		A42766CE20EA91DF00363F92 /* NSIstanbulCompaniesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = A42766CD20EA91DF00363F92 /* NSIstanbulCompaniesResponse.json */; };
 		B204A64120F22EC8005D0F88 /* JobsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B204A64020F22EC8005D0F88 /* JobsViewController.xib */; };
 		B204A64320F22FAE005D0F88 /* JobCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B204A64220F22FAE005D0F88 /* JobCellViewModel.swift */; };
+		B204A64820F23CBB005D0F88 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B204A64720F23CBB005D0F88 /* AboutViewController.swift */; };
+		B204A64A20F23CC3005D0F88 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B204A64920F23CC3005D0F88 /* AboutViewController.xib */; };
+		B204A64C20F23D79005D0F88 /* AboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B204A64B20F23D79005D0F88 /* AboutViewModel.swift */; };
+		B204A64E20F23D83005D0F88 /* AboutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B204A64D20F23D83005D0F88 /* AboutRouter.swift */; };
 		B20E793C20F0FFB700081278 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20E793B20F0FFB700081278 /* JobsViewController.swift */; };
 		B20E794020F0FFC900081278 /* JobsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20E793F20F0FFC900081278 /* JobsViewModel.swift */; };
 		B20E794420F1000500081278 /* JobsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20E794320F1000400081278 /* JobsRouter.swift */; };
@@ -125,6 +129,10 @@
 		A42766CD20EA91DF00363F92 /* NSIstanbulCompaniesResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NSIstanbulCompaniesResponse.json; sourceTree = "<group>"; };
 		B204A64020F22EC8005D0F88 /* JobsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobsViewController.xib; sourceTree = "<group>"; };
 		B204A64220F22FAE005D0F88 /* JobCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCellViewModel.swift; sourceTree = "<group>"; };
+		B204A64720F23CBB005D0F88 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		B204A64920F23CC3005D0F88 /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		B204A64B20F23D79005D0F88 /* AboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewModel.swift; sourceTree = "<group>"; };
+		B204A64D20F23D83005D0F88 /* AboutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutRouter.swift; sourceTree = "<group>"; };
 		B20E793B20F0FFB700081278 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		B20E793F20F0FFC900081278 /* JobsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewModel.swift; sourceTree = "<group>"; };
 		B20E794320F1000400081278 /* JobsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsRouter.swift; sourceTree = "<group>"; };
@@ -164,6 +172,7 @@
 		3643B8EF20CDE4AF00EDD771 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				B204A64520F23C86005D0F88 /* About */,
 				A415D72820E2C24F00B2B0A0 /* Companies */,
 				3643B91120CDE7CF00EDD771 /* Events */,
 				B20E793A20F0FF8900081278 /* Jobs */,
@@ -298,6 +307,17 @@
 			path = NetworkStubs;
 			sourceTree = "<group>";
 		};
+		B204A64520F23C86005D0F88 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				B204A64720F23CBB005D0F88 /* AboutViewController.swift */,
+				B204A64920F23CC3005D0F88 /* AboutViewController.xib */,
+				B204A64B20F23D79005D0F88 /* AboutViewModel.swift */,
+				B204A64D20F23D83005D0F88 /* AboutRouter.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		B20E793A20F0FF8900081278 /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,8 +337,9 @@
 				B20E794620F1002300081278 /* JobCell.xib */,
 				B204A64220F22FAE005D0F88 /* JobCellViewModel.swift */,
 			);
-			path = JobCell;
-			sourceTree = "<group>";
+			name = JobCell;
+			path = NSIstanbul/Scenes/Jobs/JobCell;
+			sourceTree = SOURCE_ROOT;
 		};
 		B23E041620CC20030045D9B6 /* Application */ = {
 			isa = PBXGroup;
@@ -488,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3643B8FD20CDE5F700EDD771 /* LaunchScreen.storyboard in Resources */,
+				B204A64A20F23CC3005D0F88 /* AboutViewController.xib in Resources */,
 				3643B91520CDE80E00EDD771 /* EventsViewController.storyboard in Resources */,
 				A415D72D20E2C2BF00B2B0A0 /* CompaniesViewController.storyboard in Resources */,
 				A40C81DB20C979310034681C /* Assets.xcassets in Resources */,
@@ -540,6 +562,7 @@
 				B2CE53B620DD7FE500354A60 /* UINavigationBar+Customizations.swift in Sources */,
 				3643B91320CDE7E100EDD771 /* EventsViewController.swift in Sources */,
 				A415D73120E2C4AE00B2B0A0 /* CompaniesViewModel.swift in Sources */,
+				B204A64E20F23D83005D0F88 /* AboutRouter.swift in Sources */,
 				A409AEB920EAA0C7001757FE /* CompanyTableViewCell.swift in Sources */,
 				B276C15820F187BE00193706 /* ViewModelState.swift in Sources */,
 				3643B91920CDE90E00EDD771 /* EventsViewModel.swift in Sources */,
@@ -564,7 +587,9 @@
 				A415D72B20E2C2A300B2B0A0 /* CompaniesViewController.swift in Sources */,
 				3643B8EC20CDE42F00EDD771 /* ApplicationContainer.swift in Sources */,
 				B246FB9B20D6FD91007CC9FD /* StyleKit.swift in Sources */,
+				B204A64820F23CBB005D0F88 /* AboutViewController.swift in Sources */,
 				B276C14D20F1872E00193706 /* UITableView+ReuseIdentifier.swift in Sources */,
+				B204A64C20F23D79005D0F88 /* AboutViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
