@@ -14,13 +14,13 @@ final class TabBarRouter {
     private var tabBarController: TabBarController?
     private let childRouters: [Router] = [
         EventsRouter(),
-        CompaniesRouter(),
-        JobsRouter()
+        JobsRouter(),
+        CompaniesRouter()
     ]
     private enum ContentIndex: Int {
         case events = 0
-        case companies
         case jobs
+        case companies
     }
 }
 
