@@ -14,6 +14,7 @@ public struct Job {
     public let companyName: String
     public let city: String
     public let url: URL?
+    public let companyLogoURL: URL?
 }
 
 // MARK: CodingKeys
@@ -23,6 +24,7 @@ private extension Job {
         case companyName = "company_name"
         case city
         case url
+        case companyLogoURL = "company_logo_url"
     }
 }
 
@@ -34,5 +36,6 @@ extension Job: Decodable {
         companyName = try container.decode(String.self, forKey: .companyName)
         city = try container.decode(String.self, forKey: .city)
         url = try container.decodeURL(keyedBy: .url)
+        companyLogoURL = try container.decodeURL(keyedBy: .companyLogoURL)
     }
 }

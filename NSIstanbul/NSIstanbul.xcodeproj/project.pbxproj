@@ -38,6 +38,7 @@
 		B276C15620F187AE00193706 /* ViewModelState+ImageDownloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B276C15520F187AE00193706 /* ViewModelState+ImageDownloadable.swift */; };
 		B276C15820F187BE00193706 /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B276C15720F187BE00193706 /* ViewModelState.swift */; };
 		B276C15A20F187D500193706 /* ImageDownloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B276C15920F187D500193706 /* ImageDownloadable.swift */; };
+		B276C15F20F188AF00193706 /* NSIstanbulJobsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = B276C15E20F188AF00193706 /* NSIstanbulJobsResponse.json */; };
 		B2CE53B620DD7FE500354A60 /* UINavigationBar+Customizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE53AE20D9DCCA00354A60 /* UINavigationBar+Customizations.swift */; };
 		B2CE53C120DD80D600354A60 /* UITabBarItem+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */; };
 /* End PBXBuildFile section */
@@ -122,6 +123,7 @@
 		B276C15520F187AE00193706 /* ViewModelState+ImageDownloadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModelState+ImageDownloadable.swift"; sourceTree = "<group>"; };
 		B276C15720F187BE00193706 /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
 		B276C15920F187D500193706 /* ImageDownloadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadable.swift; sourceTree = "<group>"; };
+		B276C15E20F188AF00193706 /* NSIstanbulJobsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NSIstanbulJobsResponse.json; sourceTree = "<group>"; };
 		B2CE53AE20D9DCCA00354A60 /* UINavigationBar+Customizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Customizations.swift"; sourceTree = "<group>"; };
 		B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+Default.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -276,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				A42766CD20EA91DF00363F92 /* NSIstanbulCompaniesResponse.json */,
+				B276C15E20F188AF00193706 /* NSIstanbulJobsResponse.json */,
 			);
 			path = NetworkStubs;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				A415D72D20E2C2BF00B2B0A0 /* CompaniesViewController.storyboard in Resources */,
 				A40C81DB20C979310034681C /* Assets.xcassets in Resources */,
 				A42766CE20EA91DF00363F92 /* NSIstanbulCompaniesResponse.json in Resources */,
+				B276C15F20F188AF00193706 /* NSIstanbulJobsResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
