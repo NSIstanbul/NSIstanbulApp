@@ -12,4 +12,7 @@ public struct NSIstanbulAboutRequest: NSIstanbulEndpoint {
     public typealias Response = About
     public var path: String = "/v1/about"
     public var method: HTTPMethod = .get
+    
+    // MARK: Lifecycle
+    public init() {}
 }

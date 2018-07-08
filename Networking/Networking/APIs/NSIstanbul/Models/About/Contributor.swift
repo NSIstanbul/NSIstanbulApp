@@ -10,9 +10,9 @@ import Foundation
 
 // MARK: Contributor
 public struct Contributor {
-    let name: String
-    let avatarURL: URL?
-    let externalURL: URL?
+    public let name: String
+    public let avatarURL: URL?
+    public let externalURL: URL?
 }
 
 // MARK: CodingKeys

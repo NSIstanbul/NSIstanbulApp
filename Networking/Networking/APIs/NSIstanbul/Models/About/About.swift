@@ -10,8 +10,8 @@ import Foundation
 
 // MARK: About
 public struct About {
-    let description: String
-    let contributors: [Contributor]
+    public let description: String
+    public let contributors: [Contributor]
 }
 
 // MARK: CodingKeys
