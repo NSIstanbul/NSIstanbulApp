@@ -9,7 +9,5 @@
 import UIKit
 
 protocol Router {
-    
     func viewController() -> UIViewController
-    
 }
