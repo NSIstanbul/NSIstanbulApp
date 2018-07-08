@@ -18,9 +18,9 @@ final class JobsViewController: UIViewController, Instantiatable {
     private let imageDownloadingService: ImageDownloadingService
     
     // MARK: IBOutlets
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: Lifecycle
     init(viewModel: JobsViewModel, router: JobsRouter, imageDownloadingService: ImageDownloadingService) {
