@@ -9,9 +9,9 @@
 import UIKit
 
 final class EventsRouter {
-    
+
     private var navigationController: UINavigationController?
-    
+
 }
 
 extension EventsRouter: Router {
@@ -25,11 +25,11 @@ extension EventsRouter: Router {
         let eventsViewController = EventsViewController.instantiate()
         eventsViewController.viewModel = EventsViewModel()
         let viewController = UINavigationController(rootViewController: eventsViewController)
-        viewController.title = "Events"
-        
+
         // Cache view controller
         self.navigationController = viewController
         
         return viewController
     }
+
 }
