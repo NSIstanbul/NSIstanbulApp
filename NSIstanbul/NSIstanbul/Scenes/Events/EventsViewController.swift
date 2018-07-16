@@ -9,15 +9,21 @@
 import UIKit
 
 final class EventsViewController: UIViewController, Instantiatable {
-    
-    var viewModel: EventsViewModel!
-    
+
+    var viewModel: EventsViewModel! {
+        didSet {
+            viewModel.stateChangeHandler = handleStateChange
+            viewModel.errorHandler = handleError
+        }
+    }
+
     // MARK: View life cycle
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupTabBarItem()
+        self.setupTabBarItem()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
@@ -26,17 +32,25 @@ final class EventsViewController: UIViewController, Instantiatable {
 }
 
 private extension EventsViewController {
-    
+
+    private func setupTabBarItem() {
+        tabBarItem = UITabBarItem.defaultItem(image: #imageLiteral(resourceName: "EventsUnselected"), selectedImage: #imageLiteral(resourceName: "EventsSelected"))
+    }
+
     func setUpUI() {
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.clearBackground()
     }
-    
+
     func populateUI() {
-        
+        viewModel.loadEvents()
     }
-    
-    func setupTabBarItem() {
-        tabBarItem = UITabBarItem.defaultItem(image: #imageLiteral(resourceName: "EventsUnselected"),
-                                              selectedImage: #imageLiteral(resourceName: "EventsSelected"))
+
+    func handleStateChange(change: EventsState.Change) {
+        // TODO: Handle state change ex. tableView update
     }
+
+    func handleError(errorMessage: EventsState.Error) {
+        // TODO: Handle error.
+    }
+
 }
