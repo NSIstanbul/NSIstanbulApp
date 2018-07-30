@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C83C372210FBB130065249A /* MeetupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83C370210FBB130065249A /* MeetupCell.swift */; };
+		0C83C373210FBB130065249A /* MeetupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C83C371210FBB130065249A /* MeetupCell.xib */; };
+		0C83C378210FBB310065249A /* TalksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83C376210FBB310065249A /* TalksCell.swift */; };
+		0C83C379210FBB310065249A /* TalksCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C83C377210FBB310065249A /* TalksCell.xib */; };
 		3643B8EC20CDE42F00EDD771 /* ApplicationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B8E820CDE42F00EDD771 /* ApplicationContainer.swift */; };
 		3643B8ED20CDE42F00EDD771 /* ApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B8EA20CDE42F00EDD771 /* ApplicationDelegate.swift */; };
 		3643B8EE20CDE42F00EDD771 /* ApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B8EB20CDE42F00EDD771 /* ApplicationRouter.swift */; };
@@ -105,6 +109,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C83C370210FBB130065249A /* MeetupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupCell.swift; sourceTree = "<group>"; };
+		0C83C371210FBB130065249A /* MeetupCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeetupCell.xib; sourceTree = "<group>"; };
+		0C83C376210FBB310065249A /* TalksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalksCell.swift; sourceTree = "<group>"; };
+		0C83C377210FBB310065249A /* TalksCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalksCell.xib; sourceTree = "<group>"; };
 		3643B8E820CDE42F00EDD771 /* ApplicationContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContainer.swift; sourceTree = "<group>"; };
 		3643B8EA20CDE42F00EDD771 /* ApplicationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationDelegate.swift; sourceTree = "<group>"; };
 		3643B8EB20CDE42F00EDD771 /* ApplicationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationRouter.swift; sourceTree = "<group>"; };
@@ -179,6 +187,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C83C36C210FBAD00065249A /* EventCells */ = {
+			isa = PBXGroup;
+			children = (
+				0C83C375210FBB220065249A /* TalksCell */,
+				0C83C374210FBB170065249A /* MeetupCell */,
+			);
+			path = EventCells;
+			sourceTree = "<group>";
+		};
+		0C83C374210FBB170065249A /* MeetupCell */ = {
+			isa = PBXGroup;
+			children = (
+				0C83C371210FBB130065249A /* MeetupCell.xib */,
+				0C83C370210FBB130065249A /* MeetupCell.swift */,
+			);
+			path = MeetupCell;
+			sourceTree = "<group>";
+		};
+		0C83C375210FBB220065249A /* TalksCell */ = {
+			isa = PBXGroup;
+			children = (
+				0C83C377210FBB310065249A /* TalksCell.xib */,
+				0C83C376210FBB310065249A /* TalksCell.swift */,
+			);
+			path = TalksCell;
+			sourceTree = "<group>";
+		};
 		3643B8EF20CDE4AF00EDD771 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +248,7 @@
 		3643B91120CDE7CF00EDD771 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				0C83C36C210FBAD00065249A /* EventCells */,
 				3643B91620CDE8BE00EDD771 /* EventsRouter.swift */,
 				3643B91220CDE7E100EDD771 /* EventsViewController.swift */,
 				3643B91420CDE80E00EDD771 /* EventsViewController.storyboard */,
@@ -544,11 +580,13 @@
 				3643B91520CDE80E00EDD771 /* EventsViewController.storyboard in Resources */,
 				A415D72D20E2C2BF00B2B0A0 /* CompaniesViewController.storyboard in Resources */,
 				A40C81DB20C979310034681C /* Assets.xcassets in Resources */,
+				0C83C373210FBB130065249A /* MeetupCell.xib in Resources */,
 				B204A64120F22EC8005D0F88 /* JobsViewController.xib in Resources */,
 				A46D757920F0E99A003E4475 /* CompanyDetailViewController.storyboard in Resources */,
 				A42766CE20EA91DF00363F92 /* NSIstanbulCompaniesResponse.json in Resources */,
 				B276C15F20F188AF00193706 /* NSIstanbulJobsResponse.json in Resources */,
 				B20E794720F1002300081278 /* JobCell.xib in Resources */,
+				0C83C379210FBB310065249A /* TalksCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,12 +638,14 @@
 				A46D757B20F0EA76003E4475 /* CompanyDetailRouter.swift in Sources */,
 				3643B91920CDE90E00EDD771 /* EventsViewModel.swift in Sources */,
 				B276C15120F1874D00193706 /* ReuseIdentifier.swift in Sources */,
+				0C83C378210FBB310065249A /* TalksCell.swift in Sources */,
 				B20E793C20F0FFB700081278 /* JobsViewController.swift in Sources */,
 				B246FBB120D726DF007CC9FD /* Font.swift in Sources */,
 				3643B8EE20CDE42F00EDD771 /* ApplicationRouter.swift in Sources */,
 				3643B91720CDE8BE00EDD771 /* EventsRouter.swift in Sources */,
 				3643B8ED20CDE42F00EDD771 /* ApplicationDelegate.swift in Sources */,
 				A46D757520F0E714003E4475 /* CompanyDetailViewModel.swift in Sources */,
+				0C83C372210FBB130065249A /* MeetupCell.swift in Sources */,
 				36B28F7720CDED2000BF9C45 /* Router.swift in Sources */,
 				3643B90520CDE65B00EDD771 /* Instantiatable.swift in Sources */,
 				3643B90920CDE69B00EDD771 /* Instantiatable+UIViewController.swift in Sources */,

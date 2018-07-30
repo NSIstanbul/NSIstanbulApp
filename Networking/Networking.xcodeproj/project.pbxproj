@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C83C36B210FA54F0065249A /* EventbriteCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C83C36A210FA54F0065249A /* EventbriteCredentials.plist */; };
 		3618E7A51FED3C03003B5CA5 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3618E79B1FED3C03003B5CA5 /* Networking.framework */; };
 		3618E7AA1FED3C03003B5CA5 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618E7A91FED3C03003B5CA5 /* NetworkingTests.swift */; };
 		3618E7AC1FED3C03003B5CA5 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 3618E79E1FED3C03003B5CA5 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,8 +34,6 @@
 		B242FDF120CDEAAD00120002 /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FDF020CDEAAD00120002 /* CredentialsManager.swift */; };
 		B242FDFF20CDEBE900120002 /* EventbriteEndpointToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FDFE20CDEBE900120002 /* EventbriteEndpointToken.swift */; };
 		B242FE0220CDEC4600120002 /* CredentialsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FE0120CDEC4600120002 /* CredentialsManagerTests.swift */; };
-		B242FE0420CDEC6C00120002 /* EventbriteCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = B242FE0320CDEC6C00120002 /* EventbriteCredentials.plist */; };
-		B242FE0520CDEDE300120002 /* EventbriteCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = B242FE0320CDEC6C00120002 /* EventbriteCredentials.plist */; };
 		B242FE0820CDEE3900120002 /* EventbriteEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FE0720CDEE3900120002 /* EventbriteEndpoint.swift */; };
 		B242FE0A20CDEED800120002 /* EventbriteEventsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FE0920CDEED800120002 /* EventbriteEventsRequest.swift */; };
 		B25521AB20D68A6500121224 /* NSIstanbulEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25521AA20D68A6500121224 /* NSIstanbulEndpoint.swift */; };
@@ -103,6 +102,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C83C36A210FA54F0065249A /* EventbriteCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = EventbriteCredentials.plist; path = ../../../../EventbriteCredentials.plist; sourceTree = "<group>"; };
 		3618E79B1FED3C03003B5CA5 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3618E79E1FED3C03003B5CA5 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		3618E79F1FED3C03003B5CA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,7 +124,6 @@
 		B242FDF020CDEAAD00120002 /* CredentialsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsManager.swift; sourceTree = "<group>"; };
 		B242FDFE20CDEBE900120002 /* EventbriteEndpointToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventbriteEndpointToken.swift; sourceTree = "<group>"; };
 		B242FE0120CDEC4600120002 /* CredentialsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsManagerTests.swift; sourceTree = "<group>"; };
-		B242FE0320CDEC6C00120002 /* EventbriteCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EventbriteCredentials.plist; sourceTree = "<group>"; };
 		B242FE0720CDEE3900120002 /* EventbriteEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventbriteEndpoint.swift; sourceTree = "<group>"; };
 		B242FE0920CDEED800120002 /* EventbriteEventsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventbriteEventsRequest.swift; sourceTree = "<group>"; };
 		B25521AA20D68A6500121224 /* NSIstanbulEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSIstanbulEndpoint.swift; sourceTree = "<group>"; };
@@ -264,7 +263,7 @@
 		B242FDE720CDE8C500120002 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B242FE0320CDEC6C00120002 /* EventbriteCredentials.plist */,
+				0C83C36A210FA54F0065249A /* EventbriteCredentials.plist */,
 				3618E79E1FED3C03003B5CA5 /* Networking.h */,
 				3618E79F1FED3C03003B5CA5 /* Info.plist */,
 			);
@@ -554,7 +553,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B242FE0520CDEDE300120002 /* EventbriteCredentials.plist in Resources */,
+				0C83C36B210FA54F0065249A /* EventbriteCredentials.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,7 +563,6 @@
 			files = (
 				B25521B920D698E800121224 /* NSIstanbulJobsResponse.json in Resources */,
 				B2CD87D420D1F3F80020F363 /* EventsListResponse.json in Resources */,
-				B242FE0420CDEC6C00120002 /* EventbriteCredentials.plist in Resources */,
 				B25521B720D698DE00121224 /* NSIstanbulCompaniesResponse.json in Resources */,
 				B25521B520D698D300121224 /* NSIstanbulAboutResponse.json in Resources */,
 			);

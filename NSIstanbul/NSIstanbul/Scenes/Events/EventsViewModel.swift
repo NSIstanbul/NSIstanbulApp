@@ -35,7 +35,9 @@ final class EventsViewModel {
     var errorHandler: ((EventsState.Error)->())?
 
     func loadEvents() {
-        // TODO: Add Events stub or request
+//        let request = EventbriteEventsRequest()
+//        Networking.shared.execute(request: request) { [weak self] (response: Response<EventbriteEventsRequest.Response>) in
+//        }
     }
 
 }
