@@ -17,20 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXC-Pt-vba">
-                                <rect key="frame" x="131" y="311.5" width="113.5" height="44.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="37"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wrk-u4-oj3">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZXC-Pt-vba" firstAttribute="centerX" secondItem="CyS-mJ-qH9" secondAttribute="centerX" id="BfK-ZV-gjb"/>
-                            <constraint firstItem="ZXC-Pt-vba" firstAttribute="centerY" secondItem="CyS-mJ-qH9" secondAttribute="centerY" id="zTi-ei-AKJ"/>
+                            <constraint firstItem="e4P-bz-FzD" firstAttribute="trailing" secondItem="wrk-u4-oj3" secondAttribute="trailing" id="I3p-dY-nQl"/>
+                            <constraint firstItem="wrk-u4-oj3" firstAttribute="leading" secondItem="e4P-bz-FzD" secondAttribute="leading" id="phL-na-dVS"/>
+                            <constraint firstItem="e4P-bz-FzD" firstAttribute="bottom" secondItem="wrk-u4-oj3" secondAttribute="bottom" id="qy3-sS-p6l"/>
+                            <constraint firstItem="wrk-u4-oj3" firstAttribute="top" secondItem="e4P-bz-FzD" secondAttribute="top" id="sqF-Hk-PSc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e4P-bz-FzD"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="wrk-u4-oj3" id="tP1-bA-PX5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooY-l0-IN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
