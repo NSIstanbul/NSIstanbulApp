@@ -15,7 +15,6 @@ final class JobsViewController: UIViewController, Instantiatable {
     // MARK: Properties
     private let viewModel: JobsViewModel
     private weak var router: JobsRouter?
-    private let imageDownloadingService: ImageDownloadingService
     
     // MARK: IBOutlets
     @IBOutlet private weak var titleLabel: UILabel!
@@ -23,10 +22,9 @@ final class JobsViewController: UIViewController, Instantiatable {
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: Lifecycle
-    init(viewModel: JobsViewModel, router: JobsRouter, imageDownloadingService: ImageDownloadingService) {
+    init(viewModel: JobsViewModel, router: JobsRouter) {
         self.viewModel = viewModel
         self.router = router
-        self.imageDownloadingService = imageDownloadingService
         super.init(nibName: nil, bundle: nil)
         setupTabBarItem()
     }
@@ -71,7 +69,6 @@ extension JobsViewController {
     private func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.prefetchDataSource = self
         tableView.tableHeaderView = nil
         tableView.register(nib: JobCell.self)
     }
@@ -104,10 +101,6 @@ extension JobsViewController: UITableViewDataSource {
         let jobViewModel = viewModel.state.items[indexPath.row]
         cell.configure(viewModel: jobViewModel)
         
-        if let imageURL = viewModel.state.imageURL(at: indexPath) {
-            cell.companyLogoImageView.setImage(url: imageURL)
-        }
-        
         return cell
     }
 }
@@ -120,16 +113,5 @@ extension JobsViewController: UITableViewDelegate {
         if let url = selectedItem.url {
             router?.open(jobItemURL: url)
         }
-    }
-}
-
-// MARK: JobsViewController: UITableViewDataSourcePrefetching
-extension JobsViewController: UITableViewDataSourcePrefetching {
-    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        imageDownloadingService.prefetch(viewModel.state.imageUrls(for: indexPaths))
-    }
-    
-    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
-        imageDownloadingService.cancelPrefetcing(viewModel.state.imageUrls(for: indexPaths))
     }
 }
