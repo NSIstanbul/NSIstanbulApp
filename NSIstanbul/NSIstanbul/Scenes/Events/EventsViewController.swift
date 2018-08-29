@@ -13,6 +13,10 @@ final class EventsViewController: UIViewController, Instantiatable {
     var viewModel: EventsViewModel!
     
     // MARK: View life cycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupTabBarItem()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +32,11 @@ private extension EventsViewController {
     }
     
     func populateUI() {
-        title = "Events"
+        
+    }
+    
+    func setupTabBarItem() {
+        tabBarItem = UITabBarItem.defaultItem(image: #imageLiteral(resourceName: "EventsUnselected"),
+                                              selectedImage: #imageLiteral(resourceName: "EventsSelected"))
     }
 }
