@@ -8,6 +8,7 @@
 
 import UIKit
 import Networking
+import AlamofireImage
 
 class CompanyTableViewCell: UITableViewCell {
 
@@ -24,6 +25,8 @@ class CompanyTableViewCell: UITableViewCell {
     
     func configure(with company: Company) {
         nameLabel.text = company.name
+        if let logoURL = company.logoURL {
+            companyImageView.af_setImage(withURL: logoURL)
+        }
     }
-
 }
