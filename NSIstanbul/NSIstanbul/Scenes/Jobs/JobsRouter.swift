@@ -32,8 +32,7 @@ extension JobsRouter: Router {
         }
         
         let viewModel = JobsViewModel()
-        let imageDownloadingService = ImageDownloadingService()
-        let jobsViewController = JobsViewController(viewModel: viewModel, router: self, imageDownloadingService: imageDownloadingService)
+        let jobsViewController = JobsViewController(viewModel: viewModel, router: self)
         
         let viewController = UINavigationController(rootViewController: jobsViewController)
         viewController.title = "Events"
