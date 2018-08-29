@@ -11,7 +11,9 @@ import Networking
 
 class CompaniesViewController: UIViewController, Instantiatable {
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    
     var viewModel: CompaniesViewModel! {
         didSet {
             viewModel.stateChangeHandler = handleStateChange
@@ -36,6 +38,8 @@ class CompaniesViewController: UIViewController, Instantiatable {
 private extension CompaniesViewController {
     
     func setUpUI() {
+        titleLabel.font = StyleKit.Font.title1
+        titleLabel.textColor = StyleKit.Colors.deepSkyBlue
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         navigationController?.navigationBar.clearBackground()
     }
