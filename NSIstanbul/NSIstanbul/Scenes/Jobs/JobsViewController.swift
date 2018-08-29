@@ -55,7 +55,7 @@ extension JobsViewController {
     }
     
     private func setupUI() {
-        titleLabel.font = StyleKit.Font.title2
+        titleLabel.font = StyleKit.Font.title1
         titleLabel.textColor = StyleKit.Colors.deepSkyBlue
         activityIndicator.hidesWhenStopped = true
         navigationController?.navigationBar.clearBackground()

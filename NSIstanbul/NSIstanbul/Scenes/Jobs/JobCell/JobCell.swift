@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class JobCell: UITableViewCell, ReuseIdentifier {
     // MARK: IBOutlets
@@ -29,5 +30,8 @@ class JobCell: UITableViewCell, ReuseIdentifier {
         positionTitleLabel.text = viewModel.positionTitle
         companyNameLabel.text = viewModel.companyName
         cityNameLabel.text = viewModel.city
+        if let logoURL = viewModel.companyLogoURL {
+            companyLogoImageView.af_setImage(withURL: logoURL)
+        }
     }
 }
