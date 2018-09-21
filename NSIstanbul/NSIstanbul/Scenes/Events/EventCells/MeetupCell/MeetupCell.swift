@@ -24,6 +24,8 @@ class MeetupCell: UITableViewCell, ReuseIdentifier {
         containerView.layer.shadowOpacity = 0.2
         containerView.layer.masksToBounds = false
 
+        eventImageView.roundCorners(corners: [.topLeft, .topRight], radius: 14)
+
         selectionStyle = .none
     }
 

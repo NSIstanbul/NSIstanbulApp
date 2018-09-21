@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C29E58E21554BCF00E3B2B0 /* UIView+RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C29E58D21554BCF00E3B2B0 /* UIView+RoundedCorner.swift */; };
 		0C5C24912152D20000CB7D0E /* EventsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C24902152D20000CB7D0E /* EventsHeaderView.swift */; };
 		0C5C24932152D21400CB7D0E /* EventsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C24922152D21400CB7D0E /* EventsHeaderView.xib */; };
 		0C83C372210FBB130065249A /* MeetupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83C370210FBB130065249A /* MeetupCell.swift */; };
@@ -109,6 +110,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C29E58D21554BCF00E3B2B0 /* UIView+RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundedCorner.swift"; sourceTree = "<group>"; };
 		0C5C24902152D20000CB7D0E /* EventsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsHeaderView.swift; sourceTree = "<group>"; };
 		0C5C24922152D21400CB7D0E /* EventsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsHeaderView.xib; sourceTree = "<group>"; };
 		0C83C370210FBB130065249A /* MeetupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupCell.swift; sourceTree = "<group>"; };
@@ -464,6 +466,7 @@
 				B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */,
 				B2CE53AE20D9DCCA00354A60 /* UINavigationBar+Customizations.swift */,
 				B276C14C20F1872E00193706 /* UITableView+ReuseIdentifier.swift */,
+				0C29E58D21554BCF00E3B2B0 /* UIView+RoundedCorner.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C29E58E21554BCF00E3B2B0 /* UIView+RoundedCorner.swift in Sources */,
 				B276C15620F187AE00193706 /* ViewModelState+ImageDownloadable.swift in Sources */,
 				B20E794420F1000500081278 /* JobsRouter.swift in Sources */,
 				B2CE53B620DD7FE500354A60 /* UINavigationBar+Customizations.swift in Sources */,
