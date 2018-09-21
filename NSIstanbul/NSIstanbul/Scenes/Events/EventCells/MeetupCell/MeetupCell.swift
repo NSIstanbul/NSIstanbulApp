@@ -11,13 +11,30 @@ import UIKit
 class MeetupCell: UITableViewCell, ReuseIdentifier {
 
     @IBOutlet fileprivate weak var containerView: UIView!
+    @IBOutlet fileprivate weak var eventImageView: UIImageView!
 
     // MARK: Lifecycle
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         containerView.layer.cornerRadius = 14
-        containerView.clipsToBounds = true
+        containerView.layer.shadowColor = UIColor.black.cgColor
+        containerView.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
+        containerView.layer.shadowRadius = 4.0
+        containerView.layer.shadowOpacity = 0.2
+        containerView.layer.masksToBounds = false
+
         selectionStyle = .none
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        containerView.backgroundColor = .white
+
+    }
+
+    func hideImageView(_ hidden: Bool) {
+        eventImageView?.isHidden = hidden
     }
     
 }

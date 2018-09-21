@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C5C248C2152BA6200CB7D0E /* EventbriteCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C248B2152BA6200CB7D0E /* EventbriteCredentials.plist */; };
 		0C83C36B210FA54F0065249A /* EventbriteCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C83C36A210FA54F0065249A /* EventbriteCredentials.plist */; };
 		3618E7A51FED3C03003B5CA5 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3618E79B1FED3C03003B5CA5 /* Networking.framework */; };
 		3618E7AA1FED3C03003B5CA5 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618E7A91FED3C03003B5CA5 /* NetworkingTests.swift */; };
@@ -102,6 +103,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C5C248B2152BA6200CB7D0E /* EventbriteCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = EventbriteCredentials.plist; path = ../../../../EventbriteCredentials.plist; sourceTree = "<group>"; };
 		0C83C36A210FA54F0065249A /* EventbriteCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = EventbriteCredentials.plist; path = ../../../../EventbriteCredentials.plist; sourceTree = "<group>"; };
 		3618E79B1FED3C03003B5CA5 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3618E79E1FED3C03003B5CA5 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		3643FA1E1FED3C4B00BE5705 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0C5C248B2152BA6200CB7D0E /* EventbriteCredentials.plist */,
 				3618E7AB1FED3C03003B5CA5 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -554,6 +557,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C83C36B210FA54F0065249A /* EventbriteCredentials.plist in Resources */,
+				0C5C248C2152BA6200CB7D0E /* EventbriteCredentials.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +569,7 @@
 				B2CD87D420D1F3F80020F363 /* EventsListResponse.json in Resources */,
 				B25521B720D698DE00121224 /* NSIstanbulCompaniesResponse.json in Resources */,
 				B25521B520D698D300121224 /* NSIstanbulAboutResponse.json in Resources */,
+				0C5C248D2152BA6200CB7D0E /* EventbriteCredentials.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

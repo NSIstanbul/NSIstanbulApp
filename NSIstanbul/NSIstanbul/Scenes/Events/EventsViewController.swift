@@ -50,10 +50,11 @@ private extension EventsViewController {
 
     func setupTableView() {
         tableView.dataSource = self
-        tableView.tableHeaderView = nil
+        tableView.delegate = self
         tableView.separatorStyle = .none
         tableView.register(nib: MeetupCell.self)
-        tableView.register(nib: TalksCell.self)
+//        tableView.register(nib: TalksCell.self)
+        tableView.register(EventsHeaderView.nib(), forHeaderFooterViewReuseIdentifier: "EventsHeaderView")
     }
 
     func handleStateChange(change: EventsState.Change) {
@@ -69,16 +70,38 @@ private extension EventsViewController {
 extension EventsViewController : UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        if section == 0 {
+            return 2
+        } else {
+            return 10
+        }
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let row = indexPath.row
-        let cell: UITableViewCell!
-        if row % 2 == 0 {
-            cell = tableView.dequeueReusableCell(withIdentifier: MeetupCell.reuseIdentifier, for: indexPath) as! MeetupCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MeetupCell.reuseIdentifier,
+                                                       for: indexPath) as? MeetupCell else {
+                                                        return UITableViewCell()
+        }
+        cell.hideImageView(indexPath.row % 2 == 0)
+        return cell
+    }
+
+}
+
+extension EventsViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let cell = self.tableView.dequeueReusableHeaderFooterView(withIdentifier: "EventsHeaderView") as? EventsHeaderView else {
+            return UIView()
+        }
+        if section == 0 {
+            cell.headerLabel.text = "Upcoming events"
         } else {
-            cell = tableView.dequeueReusableCell(withIdentifier: TalksCell.reuseIdentifier, for: indexPath) as! TalksCell
+            cell.headerLabel.text = "Past events"
         }
         return cell
     }
