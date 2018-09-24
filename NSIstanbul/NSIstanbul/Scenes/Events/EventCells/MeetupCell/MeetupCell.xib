@@ -21,10 +21,10 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u3t-pk-aJ4">
                         <rect key="frame" x="20" y="8.5" width="335" height="283"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="P4M-Ua-RAN">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P4M-Ua-RAN">
                                 <rect key="frame" x="0.0" y="0.5" width="335" height="283"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boardImage" translatesAutoresizingMaskIntoConstraints="NO" id="7Vo-1y-M54">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boardImage" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Vo-1y-M54">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="141.5"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vSs-Mu-iW2">
@@ -79,14 +79,14 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zoN-36-sJO">
                                                                 <rect key="frame" x="52.5" y="0.0" width="123.5" height="57"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="June Meetup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwx-sZ-CeB">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="33.5"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="June Meetup" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwx-sZ-CeB">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="24"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garage Istanbul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLl-9I-zhQ">
-                                                                        <rect key="frame" x="10.5" y="33.5" width="102" height="23.5"/>
+                                                                        <rect key="frame" x="10.5" y="24" width="102" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -132,7 +132,6 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="vSs-Mu-iW2" firstAttribute="leading" secondItem="P4M-Ua-RAN" secondAttribute="leading" id="OPC-Nz-TSu"/>
-                                    <constraint firstItem="7Vo-1y-M54" firstAttribute="width" secondItem="P4M-Ua-RAN" secondAttribute="width" id="R4D-F2-ilm"/>
                                     <constraint firstItem="vSs-Mu-iW2" firstAttribute="trailing" secondItem="P4M-Ua-RAN" secondAttribute="trailing" id="mnG-Vs-78M"/>
                                 </constraints>
                             </stackView>
@@ -156,7 +155,14 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="containerView" destination="u3t-pk-aJ4" id="03V-ns-XBr"/>
+                <outlet property="dayLabel" destination="wJm-cJ-cfR" id="LSd-A1-cgH"/>
                 <outlet property="eventImageView" destination="7Vo-1y-M54" id="291-Cy-GWL"/>
+                <outlet property="locationLabel" destination="ZLl-9I-zhQ" id="K1P-Vt-aVi"/>
+                <outlet property="monthLabel" destination="Gda-ov-28u" id="4vq-vg-btI"/>
+                <outlet property="nameLabel" destination="Lwx-sZ-CeB" id="GL8-wQ-aiT"/>
+                <outlet property="numberOfAvailableLabel" destination="e1V-sG-9f5" id="cVp-JE-zGU"/>
+                <outlet property="numberOfGoingLabel" destination="Wou-HS-Jfr" id="i7u-LU-v9P"/>
+                <outlet property="timeLabel" destination="XDP-Q0-DSN" id="xav-Pd-iV9"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="54"/>
         </tableViewCell>

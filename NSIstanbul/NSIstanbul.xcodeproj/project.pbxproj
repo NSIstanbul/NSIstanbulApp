@@ -12,6 +12,8 @@
 		0C5C24932152D21400CB7D0E /* EventsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C24922152D21400CB7D0E /* EventsHeaderView.xib */; };
 		0C83C372210FBB130065249A /* MeetupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83C370210FBB130065249A /* MeetupCell.swift */; };
 		0C83C373210FBB130065249A /* MeetupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C83C371210FBB130065249A /* MeetupCell.xib */; };
+		0CB5EA7821591A96009D52D1 /* Date+EventPrintable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB5EA7721591A96009D52D1 /* Date+EventPrintable.swift */; };
+		0CB5EA7B215964C0009D52D1 /* MeetupCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB5EA7A215964C0009D52D1 /* MeetupCellViewModel.swift */; };
 		3643B8EC20CDE42F00EDD771 /* ApplicationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B8E820CDE42F00EDD771 /* ApplicationContainer.swift */; };
 		3643B8ED20CDE42F00EDD771 /* ApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B8EA20CDE42F00EDD771 /* ApplicationDelegate.swift */; };
 		3643B8EE20CDE42F00EDD771 /* ApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B8EB20CDE42F00EDD771 /* ApplicationRouter.swift */; };
@@ -115,6 +117,8 @@
 		0C5C24922152D21400CB7D0E /* EventsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsHeaderView.xib; sourceTree = "<group>"; };
 		0C83C370210FBB130065249A /* MeetupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupCell.swift; sourceTree = "<group>"; };
 		0C83C371210FBB130065249A /* MeetupCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeetupCell.xib; sourceTree = "<group>"; };
+		0CB5EA7721591A96009D52D1 /* Date+EventPrintable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+EventPrintable.swift"; sourceTree = "<group>"; };
+		0CB5EA7A215964C0009D52D1 /* MeetupCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupCellViewModel.swift; sourceTree = "<group>"; };
 		3643B8E820CDE42F00EDD771 /* ApplicationContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContainer.swift; sourceTree = "<group>"; };
 		3643B8EA20CDE42F00EDD771 /* ApplicationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationDelegate.swift; sourceTree = "<group>"; };
 		3643B8EB20CDE42F00EDD771 /* ApplicationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationRouter.swift; sourceTree = "<group>"; };
@@ -210,8 +214,9 @@
 		0C83C374210FBB170065249A /* MeetupCell */ = {
 			isa = PBXGroup;
 			children = (
-				0C83C371210FBB130065249A /* MeetupCell.xib */,
 				0C83C370210FBB130065249A /* MeetupCell.swift */,
+				0C83C371210FBB130065249A /* MeetupCell.xib */,
+				0CB5EA7A215964C0009D52D1 /* MeetupCellViewModel.swift */,
 			);
 			path = MeetupCell;
 			sourceTree = "<group>";
@@ -467,6 +472,7 @@
 				B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */,
 				B276C14C20F1872E00193706 /* UITableView+ReuseIdentifier.swift */,
 				0C29E58D21554BCF00E3B2B0 /* UIView+RoundedCorner.swift */,
+				0CB5EA7721591A96009D52D1 /* Date+EventPrintable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -656,6 +662,7 @@
 				A46D757E20F11628003E4475 /* AppCollectionViewCell.swift in Sources */,
 				3643B90720CDE66F00EDD771 /* Instantiatable+UIView.swift in Sources */,
 				B20E794020F0FFC900081278 /* JobsViewModel.swift in Sources */,
+				0CB5EA7B215964C0009D52D1 /* MeetupCellViewModel.swift in Sources */,
 				36B28F7420CDEC0E00BF9C45 /* TabBarController.swift in Sources */,
 				B204A64320F22FAE005D0F88 /* JobCellViewModel.swift in Sources */,
 				3643B8F720CDE4AF00EDD771 /* TabBarRouter.swift in Sources */,
@@ -663,6 +670,7 @@
 				B20E794920F1003A00081278 /* JobCell.swift in Sources */,
 				A415D72F20E2C3C300B2B0A0 /* CompaniesRouter.swift in Sources */,
 				B276C15A20F187D500193706 /* ImageDownloadable.swift in Sources */,
+				0CB5EA7821591A96009D52D1 /* Date+EventPrintable.swift in Sources */,
 				A415D72B20E2C2A300B2B0A0 /* CompaniesViewController.swift in Sources */,
 				A46D757720F0E81E003E4475 /* CompanyDetailViewController.swift in Sources */,
 				3643B8EC20CDE42F00EDD771 /* ApplicationContainer.swift in Sources */,

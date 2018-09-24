@@ -11,20 +11,20 @@ import Networking
 
 struct EventsState: ViewModelState {
 
-    typealias RawModelType = Event
-    var items: [Event] = []
+    typealias RawModelType = MeetupCellViewModel
+    var items: [MeetupCellViewModel] = []
 
     enum Change {
-        case eventsUpdated
+        case updated
     }
 
     enum Error {
         case fetchFailed(String)
     }
 
-    mutating func update(with response: [Event]) -> EventsState.Change {
+    mutating func update(with response: [MeetupCellViewModel]) -> EventsState.Change {
         items = response
-        return .eventsUpdated
+        return .updated
     }
 
 }
@@ -42,8 +42,8 @@ final class EventsViewModel {
 
             switch response.result {
             case .success(let result):
-                let events = result.events
-                let change = strongSelf.state.update(with: events)
+                let meetupCellViewModels = result.events.compactMap { MeetupCellViewModel(event: $0) }
+                let change = strongSelf.state.update(with: meetupCellViewModels)
                 strongSelf.stateChangeHandler?(change)
                 break
             case .failure(let error):

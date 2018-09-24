@@ -52,13 +52,18 @@ private extension EventsViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
-        tableView.register(nib: MeetupCell.self)
-//        tableView.register(nib: TalksCell.self)
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
+        tableView.register(MeetupCell.nib(), forCellReuseIdentifier: MeetupCell.reuseIdentifier)
         tableView.register(EventsHeaderView.nib(), forHeaderFooterViewReuseIdentifier: "EventsHeaderView")
     }
 
     func handleStateChange(change: EventsState.Change) {
         // TODO: Handle state change ex. tableView update
+        switch change {
+        case .updated:
+            tableView.reloadData()
+        }
     }
 
     func handleError(errorMessage: EventsState.Error) {
@@ -70,23 +75,18 @@ private extension EventsViewController {
 extension EventsViewController : UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 2
-        } else {
-            return 10
-        }
+        return viewModel.state.items.count
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: MeetupCell.reuseIdentifier,
-                                                       for: indexPath) as? MeetupCell else {
-                                                        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MeetupCell.reuseIdentifier, for: indexPath) as? MeetupCell else {
+            return UITableViewCell()
         }
-        cell.hideImageView(indexPath.row % 2 == 0)
+        cell.configure(with: viewModel.state.items[indexPath.row])
         return cell
     }
 
@@ -98,11 +98,7 @@ extension EventsViewController: UITableViewDelegate {
         guard let cell = self.tableView.dequeueReusableHeaderFooterView(withIdentifier: "EventsHeaderView") as? EventsHeaderView else {
             return UIView()
         }
-        if section == 0 {
-            cell.headerLabel.text = "Upcoming events"
-        } else {
-            cell.headerLabel.text = "Past events"
-        }
+        cell.headerLabel.text = "Past events"
         return cell
     }
 

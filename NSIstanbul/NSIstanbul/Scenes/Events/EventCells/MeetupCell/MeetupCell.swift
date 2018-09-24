@@ -7,11 +7,19 @@
 //
 
 import UIKit
+import Networking
 
-class MeetupCell: UITableViewCell, ReuseIdentifier {
+class MeetupCell: UITableViewCell, Instantiatable, ReuseIdentifier {
 
     @IBOutlet fileprivate weak var containerView: UIView!
     @IBOutlet fileprivate weak var eventImageView: UIImageView!
+    @IBOutlet fileprivate weak var dayLabel: UILabel!
+    @IBOutlet fileprivate weak var monthLabel: UILabel!
+    @IBOutlet fileprivate weak var timeLabel: UILabel!
+    @IBOutlet fileprivate weak var nameLabel: UILabel!
+    @IBOutlet fileprivate weak var locationLabel: UILabel!
+    @IBOutlet fileprivate weak var numberOfGoingLabel: UILabel!
+    @IBOutlet fileprivate weak var numberOfAvailableLabel: UILabel!
 
     // MARK: Lifecycle
     
@@ -29,12 +37,42 @@ class MeetupCell: UITableViewCell, ReuseIdentifier {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        containerView.backgroundColor = .white
+        eventImageView.roundCorners(corners: [.topLeft, .topRight], radius: 14)
+        cleanFields()
+    }
 
+    func configure(with vieWModel: MeetupCellViewModel) {
+        dayLabel.text = vieWModel.day()
+        monthLabel.text = vieWModel.month()
+        timeLabel.text = vieWModel.time()
+        nameLabel.text = vieWModel.name()
+        locationLabel.text = vieWModel.location()
+        numberOfGoingLabel.text = vieWModel.numberOfGoing()
+        numberOfAvailableLabel.text = vieWModel.numberOfAvailable()
+        if vieWModel.hasImageOnEvent() {
+            hideImageView(false)
+            eventImageView.af_setImage(withURL: vieWModel.imageURLToDownload!)
+        } else {
+            hideImageView(true)
+        }
     }
 
     func hideImageView(_ hidden: Bool) {
         eventImageView?.isHidden = hidden
+        if hidden {
+            eventImageView.image = nil
+        }
+    }
+
+    private func cleanFields() {
+        eventImageView.image = nil
+        dayLabel.text = nil
+        monthLabel.text = nil
+        timeLabel.text = nil
+        nameLabel.text = nil
+        locationLabel.text = nil
+        numberOfGoingLabel.text = nil
+        numberOfAvailableLabel.text = nil
     }
     
 }
