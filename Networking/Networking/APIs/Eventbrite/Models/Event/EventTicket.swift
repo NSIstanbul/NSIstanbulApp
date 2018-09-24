@@ -10,9 +10,9 @@ import Foundation
 
 // MARK: EventTicket
 public struct EventTicket {
-    let quantitySold: Int
-    let remainingQuantity: Int
-    let totalQuantity: Int
+    public let quantitySold: Int
+    public let remainingQuantity: Int
+    public let totalQuantity: Int
 }
 
 // MARK: EventTicketAvailability

@@ -10,14 +10,14 @@ import Foundation
 
 // MARK: Event
 public struct Event {
-    let name: String
-    let startDate: Date
-    let status: EventStatus
+    public let name: String
+    public let startDate: Date
+    public let status: EventStatus
     
-    let logo: EventLogo
-    let venue: EventVenue
-    let tickets: [EventTicket]
-    let availability: EventAvailability
+    public let logo: EventLogo
+    public let venue: EventVenue
+    public let tickets: [EventTicket]
+    public let availability: EventAvailability
 }
 
 private extension Event {
