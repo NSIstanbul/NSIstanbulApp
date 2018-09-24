@@ -25,8 +25,6 @@ class MeetupCell: UITableViewCell, ReuseIdentifier {
         containerView.layer.masksToBounds = false
 
         eventImageView.roundCorners(corners: [.topLeft, .topRight], radius: 14)
-
-        selectionStyle = .none
     }
 
     override func prepareForReuse() {

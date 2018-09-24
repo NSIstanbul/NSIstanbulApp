@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeetupCell" id="KGk-i7-Jjw" customClass="MeetupCell" customModule="NSIstanbul" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MeetupCell" id="KGk-i7-Jjw" customClass="MeetupCell" customModule="NSIstanbul" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -21,10 +21,10 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u3t-pk-aJ4">
                         <rect key="frame" x="20" y="8.5" width="335" height="283"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P4M-Ua-RAN">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="P4M-Ua-RAN">
                                 <rect key="frame" x="0.0" y="0.5" width="335" height="283"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boardImage" translatesAutoresizingMaskIntoConstraints="NO" id="7Vo-1y-M54">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boardImage" translatesAutoresizingMaskIntoConstraints="NO" id="7Vo-1y-M54">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="141.5"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vSs-Mu-iW2">
@@ -33,7 +33,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zfO-IH-nwn">
                                                 <rect key="frame" x="0.0" y="20.5" width="96" height="101"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QUR-o3-5Pw">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QUR-o3-5Pw">
                                                         <rect key="frame" x="33.5" y="0.5" width="29" height="62.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJm-cJ-cfR">
@@ -132,6 +132,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="vSs-Mu-iW2" firstAttribute="leading" secondItem="P4M-Ua-RAN" secondAttribute="leading" id="OPC-Nz-TSu"/>
+                                    <constraint firstItem="7Vo-1y-M54" firstAttribute="width" secondItem="P4M-Ua-RAN" secondAttribute="width" id="R4D-F2-ilm"/>
                                     <constraint firstItem="vSs-Mu-iW2" firstAttribute="trailing" secondItem="P4M-Ua-RAN" secondAttribute="trailing" id="mnG-Vs-78M"/>
                                 </constraints>
                             </stackView>

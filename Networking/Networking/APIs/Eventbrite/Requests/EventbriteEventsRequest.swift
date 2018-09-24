@@ -26,6 +26,5 @@ public struct EventbriteEventsRequest: EventbriteEndpoint {
     // MARK: EventbriteEndpoint Protocol
     public var tokenType: EventbriteEndpointToken = .personal
 
-    public init() {
-    }
+    public init() {}
 }

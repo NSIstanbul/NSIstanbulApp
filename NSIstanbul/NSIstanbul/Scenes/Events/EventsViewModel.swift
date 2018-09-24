@@ -9,7 +9,10 @@
 import Foundation
 import Networking
 
-struct EventsState {
+struct EventsState: ViewModelState {
+
+    typealias RawModelType = Event
+    var items: [Event] = []
 
     enum Change {
         case eventsUpdated
@@ -19,10 +22,8 @@ struct EventsState {
         case fetchFailed(String)
     }
 
-    var events: [Event] = []
-    
     mutating func update(with response: [Event]) -> EventsState.Change {
-        events = response
+        items = response
         return .eventsUpdated
     }
 
@@ -37,7 +38,18 @@ final class EventsViewModel {
     func loadEvents() {
         let request = EventbriteEventsRequest()
         Networking.shared.execute(request: request) { [weak self] (response: Response<EventbriteEventsRequest.Response>) in
+            guard let strongSelf = self else { return }
 
+            switch response.result {
+            case .success(let result):
+                let events = result.events
+                let change = strongSelf.state.update(with: events)
+                strongSelf.stateChangeHandler?(change)
+                break
+            case .failure(let error):
+                strongSelf.errorHandler?(.fetchFailed(error.localizedDescription))
+                break
+            }
         }
     }
 

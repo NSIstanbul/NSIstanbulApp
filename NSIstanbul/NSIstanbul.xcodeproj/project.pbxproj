@@ -463,8 +463,8 @@
 		B2CE53BF20DD80D600354A60 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */,
 				B2CE53AE20D9DCCA00354A60 /* UINavigationBar+Customizations.swift */,
+				B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */,
 				B276C14C20F1872E00193706 /* UITableView+ReuseIdentifier.swift */,
 				0C29E58D21554BCF00E3B2B0 /* UIView+RoundedCorner.swift */,
 			);
