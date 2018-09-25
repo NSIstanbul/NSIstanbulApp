@@ -12,14 +12,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EventsHeaderView" customModule="NSIstanbul" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="369" height="70"/>
+            <rect key="frame" x="0.0" y="0.0" width="369" height="95"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="54c-XG-bIc">
-                    <rect key="frame" x="0.0" y="0.0" width="369" height="70"/>
+                    <rect key="frame" x="0.0" y="0.0" width="369" height="95"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming events" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMt-YC-Gax">
-                            <rect key="frame" x="20" y="5" width="329" height="60"/>
+                            <rect key="frame" x="20" y="35" width="329" height="55"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -31,11 +31,11 @@
                         <constraint firstItem="eMt-YC-Gax" firstAttribute="leading" secondItem="54c-XG-bIc" secondAttribute="leading" constant="20" id="AwT-6J-1xr"/>
                         <constraint firstItem="eMt-YC-Gax" firstAttribute="trailing" secondItem="54c-XG-bIc" secondAttribute="trailing" constant="-20" id="Wtf-Pl-eOY"/>
                         <constraint firstItem="eMt-YC-Gax" firstAttribute="bottom" secondItem="54c-XG-bIc" secondAttribute="bottom" constant="-5" id="ZyB-f5-ML2"/>
-                        <constraint firstAttribute="height" constant="70" id="dGJ-B3-WN3"/>
-                        <constraint firstItem="eMt-YC-Gax" firstAttribute="top" secondItem="54c-XG-bIc" secondAttribute="top" constant="5" id="l9e-Fw-N6y"/>
+                        <constraint firstItem="eMt-YC-Gax" firstAttribute="top" secondItem="54c-XG-bIc" secondAttribute="top" constant="35" id="l9e-Fw-N6y"/>
                     </constraints>
                 </view>
             </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="54c-XG-bIc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1dd-yr-s7v"/>
                 <constraint firstAttribute="bottom" secondItem="54c-XG-bIc" secondAttribute="bottom" id="2eo-kb-EK5"/>
@@ -47,7 +47,7 @@
             <connections>
                 <outlet property="headerLabel" destination="eMt-YC-Gax" id="tVw-3a-1s0"/>
             </connections>
-            <point key="canvasLocation" x="47.5" y="-244"/>
+            <point key="canvasLocation" x="47.5" y="-244.5"/>
         </view>
     </objects>
 </document>

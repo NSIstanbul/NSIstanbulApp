@@ -32,6 +32,9 @@ class MeetupCell: UITableViewCell, Instantiatable, ReuseIdentifier {
         containerView.layer.shadowOpacity = 0.2
         containerView.layer.masksToBounds = false
 
+        dayLabel.textColor = StyleKit.Colors.deepSkyBlue
+        monthLabel.textColor = StyleKit.Colors.deepSkyBlue
+
         eventImageView.roundCorners(corners: [.topLeft, .topRight], radius: 14)
     }
 

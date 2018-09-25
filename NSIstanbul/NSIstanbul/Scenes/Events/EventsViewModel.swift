@@ -15,6 +15,7 @@ struct EventsState: ViewModelState {
     var items: [MeetupCellViewModel] = []
 
     enum Change {
+        case fetching
         case updated
     }
 
@@ -36,6 +37,7 @@ final class EventsViewModel {
     var errorHandler: ((EventsState.Error)->())?
 
     func loadEvents() {
+        stateChangeHandler?(.fetching)
         let request = EventbriteEventsRequest()
         Networking.shared.execute(request: request) { [weak self] (response: Response<EventbriteEventsRequest.Response>) in
             guard let strongSelf = self else { return }

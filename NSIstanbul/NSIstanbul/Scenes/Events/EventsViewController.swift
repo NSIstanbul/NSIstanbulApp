@@ -11,6 +11,8 @@ import UIKit
 final class EventsViewController: UIViewController, Instantiatable {
 
      @IBOutlet private weak var tableView: UITableView!
+    var loadingView = LoadingView.instantiate()
+    var emptyStateView = EmptyView.instantiate()
 
     var viewModel: EventsViewModel! {
         didSet {
@@ -28,9 +30,14 @@ final class EventsViewController: UIViewController, Instantiatable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpUI()
-        populateUI()
+        setupUI()
         setupTableView()
+        populateUI()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        loadingView.center = view.center
     }
 }
 
@@ -40,8 +47,22 @@ private extension EventsViewController {
         tabBarItem = UITabBarItem.defaultItem(image: #imageLiteral(resourceName: "EventsUnselected"), selectedImage: #imageLiteral(resourceName: "EventsSelected"))
     }
 
-    func setUpUI() {
+    func setupUI() {
         navigationController?.navigationBar.clearBackground()
+
+        view.addSubview(loadingView)
+        view.bringSubview(toFront: loadingView)
+        loadingView.center = view.center
+        loadingView.isHidden = true
+
+        emptyStateView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(emptyStateView)
+        view.bringSubview(toFront: emptyStateView)
+        emptyStateView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        emptyStateView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        emptyStateView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        emptyStateView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        emptyStateView.isHidden = true
     }
 
     func populateUI() {
@@ -61,13 +82,25 @@ private extension EventsViewController {
     func handleStateChange(change: EventsState.Change) {
         // TODO: Handle state change ex. tableView update
         switch change {
+        case .fetching:
+            loadingView.isHidden = false
+            break
         case .updated:
+            loadingView.isHidden = true
+            emptyStateView.isHidden = !viewModel.state.items.isEmpty
             tableView.reloadData()
+            break
         }
     }
 
     func handleError(errorMessage: EventsState.Error) {
-        // TODO: Handle error.
+        switch errorMessage {
+        case .fetchFailed(let errorString):
+            emptyStateView.updateLabel(string: errorString)
+            emptyStateView.isHidden = false
+            loadingView.isHidden = true
+            break
+        }
     }
 
 }

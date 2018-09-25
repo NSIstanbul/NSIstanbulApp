@@ -12,4 +12,10 @@ class EventsHeaderView: UITableViewHeaderFooterView, Instantiatable {
 
     @IBOutlet weak var headerLabel: UILabel!
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        headerLabel.textColor = StyleKit.Colors.deepSkyBlue
+        headerLabel.font = StyleKit.Font.title1
+    }
+
 }
