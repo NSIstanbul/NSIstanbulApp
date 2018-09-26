@@ -107,19 +107,23 @@ private extension EventsViewController {
 
 extension EventsViewController : UITableViewDataSource {
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.state.items.count
     }
 
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section > viewModel.state.items.count {
+            return 0
+        }
+        return viewModel.state.items[section].count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MeetupCell.reuseIdentifier, for: indexPath) as? MeetupCell else {
             return UITableViewCell()
         }
-        cell.configure(with: viewModel.state.items[indexPath.row])
+        let meetupCellViewModels: [MeetupCellViewModel] = viewModel.state.items[indexPath.section]
+        cell.configure(with: meetupCellViewModels[indexPath.row])
         return cell
     }
 
@@ -131,7 +135,20 @@ extension EventsViewController: UITableViewDelegate {
         guard let cell = self.tableView.dequeueReusableHeaderFooterView(withIdentifier: "EventsHeaderView") as? EventsHeaderView else {
             return UIView()
         }
-        cell.headerLabel.text = "Past events"
+        if viewModel.state.items.count > 1 {
+            switch section {
+            case 0:
+                cell.headerLabel.text = "Upcoming events"
+                break
+            case 1:
+                cell.headerLabel.text = "Past events"
+                break
+            default:
+                break
+            }
+        } else {
+            cell.headerLabel.text = "Past events"
+        }
         return cell
     }
 
