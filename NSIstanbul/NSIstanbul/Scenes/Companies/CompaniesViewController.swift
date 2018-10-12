@@ -40,6 +40,7 @@ private extension CompaniesViewController {
     func setUpUI() {
         titleLabel.font = StyleKit.Font.title1
         titleLabel.textColor = StyleKit.Colors.deepSkyBlue
+        navigationController?.navigationBar.clearBackground()
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         navigationController?.navigationBar.clearBackground()
     }
@@ -88,7 +89,9 @@ extension CompaniesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        // TODO: something.
+        
+        let detailVC = CompanyDetailRouter.viewController(with: viewModel.state.companies[indexPath.row])
+        show(detailVC, sender: self)
     }
     
 }
