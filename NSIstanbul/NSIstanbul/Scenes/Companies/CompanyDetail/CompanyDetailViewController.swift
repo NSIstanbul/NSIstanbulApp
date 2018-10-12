@@ -51,6 +51,9 @@ private extension CompanyDetailViewController {
         nameLabel.text = company.name
         websiteTextView.text = company.contactURL?.absoluteString
         emailTextView.text = company.email?.absoluteString
+        if let companyLogoURL = company.logoURL {
+            companyImageView.af_setImage(withURL: companyLogoURL)
+        }
     }
     
 }

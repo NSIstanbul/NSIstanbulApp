@@ -22,7 +22,9 @@ class AppCollectionViewCell: UICollectionViewCell {
     
     // TODO: refactor
     func configure(with app: CompanyApp) {
-        // TODO: set image
+        if let iconURL = app.iconURL {
+            appImageView.af_setImage(withURL: iconURL)
+        }
     }
     
 }

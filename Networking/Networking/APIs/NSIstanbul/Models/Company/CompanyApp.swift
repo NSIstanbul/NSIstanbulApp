@@ -10,9 +10,9 @@ import Foundation
 
 // MARK: CompanyApp
 public struct CompanyApp {
-    let name: String
-    let iconURL: URL?
-    let externalURL: URL?
+    public let name: String
+    public let iconURL: URL?
+    public let externalURL: URL?
 }
 
 // MARK: CodingKeys
