@@ -8,7 +8,6 @@
 
 import Foundation
 import OHHTTPStubs
-@testable import Networking
 
 public class Stubber {
     

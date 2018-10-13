@@ -10,8 +10,8 @@ import Foundation
 
 // MARK: EventsListResult
 public struct EventsListResult {
-    let pagination: EventPagination
-    let events: [Event]
+    public let pagination: EventPagination
+    public let events: [Event]
 }
 
 // MARK: EventsListResult CodingKeys

@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C29E58E21554BCF00E3B2B0 /* UIView+RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C29E58D21554BCF00E3B2B0 /* UIView+RoundedCorner.swift */; };
+		0C38FDFF215AC92200AFD080 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C38FDFD215AC92200AFD080 /* LoadingView.xib */; };
+		0C38FE00215AC92200AFD080 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C38FDFE215AC92200AFD080 /* LoadingView.swift */; };
+		0C38FE04215ACD8B00AFD080 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C38FE02215ACD8B00AFD080 /* EmptyView.xib */; };
+		0C38FE05215ACD8B00AFD080 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C38FE03215ACD8B00AFD080 /* EmptyView.swift */; };
+		0C5C24912152D20000CB7D0E /* EventsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C24902152D20000CB7D0E /* EventsHeaderView.swift */; };
+		0C5C24932152D21400CB7D0E /* EventsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C24922152D21400CB7D0E /* EventsHeaderView.xib */; };
+		0C83C372210FBB130065249A /* MeetupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83C370210FBB130065249A /* MeetupCell.swift */; };
+		0C83C373210FBB130065249A /* MeetupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C83C371210FBB130065249A /* MeetupCell.xib */; };
+		0CB5EA7821591A96009D52D1 /* Date+EventPrintable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB5EA7721591A96009D52D1 /* Date+EventPrintable.swift */; };
+		0CB5EA7B215964C0009D52D1 /* MeetupCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB5EA7A215964C0009D52D1 /* MeetupCellViewModel.swift */; };
 		3643B8EC20CDE42F00EDD771 /* ApplicationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B8E820CDE42F00EDD771 /* ApplicationContainer.swift */; };
 		3643B8ED20CDE42F00EDD771 /* ApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B8EA20CDE42F00EDD771 /* ApplicationDelegate.swift */; };
 		3643B8EE20CDE42F00EDD771 /* ApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B8EB20CDE42F00EDD771 /* ApplicationRouter.swift */; };
@@ -105,6 +116,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C29E58D21554BCF00E3B2B0 /* UIView+RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundedCorner.swift"; sourceTree = "<group>"; };
+		0C38FDFD215AC92200AFD080 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		0C38FDFE215AC92200AFD080 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		0C38FE02215ACD8B00AFD080 /* EmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
+		0C38FE03215ACD8B00AFD080 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		0C5C24902152D20000CB7D0E /* EventsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsHeaderView.swift; sourceTree = "<group>"; };
+		0C5C24922152D21400CB7D0E /* EventsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsHeaderView.xib; sourceTree = "<group>"; };
+		0C83C370210FBB130065249A /* MeetupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupCell.swift; sourceTree = "<group>"; };
+		0C83C371210FBB130065249A /* MeetupCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeetupCell.xib; sourceTree = "<group>"; };
+		0CB5EA7721591A96009D52D1 /* Date+EventPrintable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+EventPrintable.swift"; sourceTree = "<group>"; };
+		0CB5EA7A215964C0009D52D1 /* MeetupCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupCellViewModel.swift; sourceTree = "<group>"; };
 		3643B8E820CDE42F00EDD771 /* ApplicationContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContainer.swift; sourceTree = "<group>"; };
 		3643B8EA20CDE42F00EDD771 /* ApplicationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationDelegate.swift; sourceTree = "<group>"; };
 		3643B8EB20CDE42F00EDD771 /* ApplicationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationRouter.swift; sourceTree = "<group>"; };
@@ -179,6 +201,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C38FDFA215AC8DD00AFD080 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C38FE01215ACD8B00AFD080 /* EmptyView */,
+				0C38FDFC215AC92200AFD080 /* LoadingView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0C38FDFC215AC92200AFD080 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				0C38FDFD215AC92200AFD080 /* LoadingView.xib */,
+				0C38FDFE215AC92200AFD080 /* LoadingView.swift */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		0C38FE01215ACD8B00AFD080 /* EmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				0C38FE02215ACD8B00AFD080 /* EmptyView.xib */,
+				0C38FE03215ACD8B00AFD080 /* EmptyView.swift */,
+			);
+			path = EmptyView;
+			sourceTree = "<group>";
+		};
+		0C5C248E2152D1AA00CB7D0E /* SectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				0C5C24922152D21400CB7D0E /* EventsHeaderView.xib */,
+				0C5C24902152D20000CB7D0E /* EventsHeaderView.swift */,
+			);
+			path = SectionHeader;
+			sourceTree = "<group>";
+		};
+		0C83C36C210FBAD00065249A /* EventCells */ = {
+			isa = PBXGroup;
+			children = (
+				0C5C248E2152D1AA00CB7D0E /* SectionHeader */,
+				0C83C374210FBB170065249A /* MeetupCell */,
+			);
+			path = EventCells;
+			sourceTree = "<group>";
+		};
+		0C83C374210FBB170065249A /* MeetupCell */ = {
+			isa = PBXGroup;
+			children = (
+				0C83C370210FBB130065249A /* MeetupCell.swift */,
+				0C83C371210FBB130065249A /* MeetupCell.xib */,
+				0CB5EA7A215964C0009D52D1 /* MeetupCellViewModel.swift */,
+			);
+			path = MeetupCell;
+			sourceTree = "<group>";
+		};
 		3643B8EF20CDE4AF00EDD771 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +290,7 @@
 		3643B91120CDE7CF00EDD771 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				0C83C36C210FBAD00065249A /* EventCells */,
 				3643B91620CDE8BE00EDD771 /* EventsRouter.swift */,
 				3643B91220CDE7E100EDD771 /* EventsViewController.swift */,
 				3643B91420CDE80E00EDD771 /* EventsViewController.storyboard */,
@@ -275,6 +353,7 @@
 				B23E041C20CC20280045D9B6 /* Resources */,
 				3643B8EF20CDE4AF00EDD771 /* Scenes */,
 				B246FB9920D6FD84007CC9FD /* StyleKit */,
+				0C38FDFA215AC8DD00AFD080 /* Views */,
 			);
 			path = NSIstanbul;
 			sourceTree = "<group>";
@@ -425,9 +504,11 @@
 		B2CE53BF20DD80D600354A60 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */,
 				B2CE53AE20D9DCCA00354A60 /* UINavigationBar+Customizations.swift */,
+				B2CE53C020DD80D600354A60 /* UITabBarItem+Default.swift */,
 				B276C14C20F1872E00193706 /* UITableView+ReuseIdentifier.swift */,
+				0C29E58D21554BCF00E3B2B0 /* UIView+RoundedCorner.swift */,
+				0CB5EA7721591A96009D52D1 /* Date+EventPrintable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -541,13 +622,17 @@
 			files = (
 				3643B8FD20CDE5F700EDD771 /* LaunchScreen.storyboard in Resources */,
 				B204A64A20F23CC3005D0F88 /* AboutViewController.xib in Resources */,
+				0C5C24932152D21400CB7D0E /* EventsHeaderView.xib in Resources */,
 				3643B91520CDE80E00EDD771 /* EventsViewController.storyboard in Resources */,
 				A415D72D20E2C2BF00B2B0A0 /* CompaniesViewController.storyboard in Resources */,
+				0C38FE04215ACD8B00AFD080 /* EmptyView.xib in Resources */,
 				A40C81DB20C979310034681C /* Assets.xcassets in Resources */,
+				0C83C373210FBB130065249A /* MeetupCell.xib in Resources */,
 				B204A64120F22EC8005D0F88 /* JobsViewController.xib in Resources */,
 				A46D757920F0E99A003E4475 /* CompanyDetailViewController.storyboard in Resources */,
 				A42766CE20EA91DF00363F92 /* NSIstanbulCompaniesResponse.json in Resources */,
 				B276C15F20F188AF00193706 /* NSIstanbulJobsResponse.json in Resources */,
+				0C38FDFF215AC92200AFD080 /* LoadingView.xib in Resources */,
 				B20E794720F1002300081278 /* JobCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,10 +674,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C29E58E21554BCF00E3B2B0 /* UIView+RoundedCorner.swift in Sources */,
 				B276C15620F187AE00193706 /* ViewModelState+ImageDownloadable.swift in Sources */,
 				B20E794420F1000500081278 /* JobsRouter.swift in Sources */,
 				B2CE53B620DD7FE500354A60 /* UINavigationBar+Customizations.swift in Sources */,
 				3643B91320CDE7E100EDD771 /* EventsViewController.swift in Sources */,
+				0C5C24912152D20000CB7D0E /* EventsHeaderView.swift in Sources */,
 				A415D73120E2C4AE00B2B0A0 /* CompaniesViewModel.swift in Sources */,
 				B204A64E20F23D83005D0F88 /* AboutRouter.swift in Sources */,
 				A409AEB920EAA0C7001757FE /* CompanyTableViewCell.swift in Sources */,
@@ -606,19 +693,24 @@
 				3643B91720CDE8BE00EDD771 /* EventsRouter.swift in Sources */,
 				3643B8ED20CDE42F00EDD771 /* ApplicationDelegate.swift in Sources */,
 				A46D757520F0E714003E4475 /* CompanyDetailViewModel.swift in Sources */,
+				0C83C372210FBB130065249A /* MeetupCell.swift in Sources */,
+				0C38FE00215AC92200AFD080 /* LoadingView.swift in Sources */,
 				36B28F7720CDED2000BF9C45 /* Router.swift in Sources */,
 				3643B90520CDE65B00EDD771 /* Instantiatable.swift in Sources */,
 				3643B90920CDE69B00EDD771 /* Instantiatable+UIViewController.swift in Sources */,
 				A46D757E20F11628003E4475 /* AppCollectionViewCell.swift in Sources */,
 				3643B90720CDE66F00EDD771 /* Instantiatable+UIView.swift in Sources */,
 				B20E794020F0FFC900081278 /* JobsViewModel.swift in Sources */,
+				0CB5EA7B215964C0009D52D1 /* MeetupCellViewModel.swift in Sources */,
 				36B28F7420CDEC0E00BF9C45 /* TabBarController.swift in Sources */,
 				B204A64320F22FAE005D0F88 /* JobCellViewModel.swift in Sources */,
+				0C38FE05215ACD8B00AFD080 /* EmptyView.swift in Sources */,
 				3643B8F720CDE4AF00EDD771 /* TabBarRouter.swift in Sources */,
 				B2CE53C120DD80D600354A60 /* UITabBarItem+Default.swift in Sources */,
 				B20E794920F1003A00081278 /* JobCell.swift in Sources */,
 				A415D72F20E2C3C300B2B0A0 /* CompaniesRouter.swift in Sources */,
 				B276C15A20F187D500193706 /* ImageDownloadable.swift in Sources */,
+				0CB5EA7821591A96009D52D1 /* Date+EventPrintable.swift in Sources */,
 				A415D72B20E2C2A300B2B0A0 /* CompaniesViewController.swift in Sources */,
 				A46D757720F0E81E003E4475 /* CompanyDetailViewController.swift in Sources */,
 				3643B8EC20CDE42F00EDD771 /* ApplicationContainer.swift in Sources */,

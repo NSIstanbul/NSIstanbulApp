@@ -10,8 +10,8 @@ import Foundation
 
 // MARK: EventAvailability
 public struct EventAvailability: Codable {
-    let hasAvailableTickets: Bool
-    let isSoldOut: Bool
+    public let hasAvailableTickets: Bool
+    public let isSoldOut: Bool
 }
 
 // MARK: EventAvailabilityCodingKeys

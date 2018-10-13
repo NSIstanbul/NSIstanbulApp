@@ -11,9 +11,9 @@ import CoreLocation
 
 // MARK: EventVenue
 public struct EventVenue {
-    let name: String
-    let coordinates: CLLocationCoordinate2D
-    let address: String
+    public let name: String
+    public let coordinates: CLLocationCoordinate2D
+    public let address: String
 }
 
 // MARK: EventVenue Coding Keys

@@ -10,11 +10,11 @@ import Foundation
 
 // MARK: EventLogo
 public struct EventLogo {
-    let id: String
-    let url: URL?
-    let aspectRatio: Double
-    let originalURL: URL?
-    let size: CGSize
+    public let id: String
+    public let url: URL?
+    public let aspectRatio: Double
+    public let originalURL: URL?
+    public let size: CGSize
 }
 
 // MARK: CodingKeys
