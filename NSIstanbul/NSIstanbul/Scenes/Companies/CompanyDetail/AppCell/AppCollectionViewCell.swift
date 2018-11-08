@@ -11,7 +11,7 @@ import Networking
 
 class AppCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet fileprivate weak var appImageView: UIImageView!
+    @IBOutlet private weak var appImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

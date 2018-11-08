@@ -11,57 +11,61 @@ import Networking
 
 class MeetupCell: UITableViewCell, Instantiatable, ReuseIdentifier {
 
-    @IBOutlet fileprivate weak var containerView: UIView!
-    @IBOutlet fileprivate weak var eventImageView: UIImageView!
-    @IBOutlet fileprivate weak var dayLabel: UILabel!
-    @IBOutlet fileprivate weak var monthLabel: UILabel!
-    @IBOutlet fileprivate weak var timeLabel: UILabel!
-    @IBOutlet fileprivate weak var nameLabel: UILabel!
-    @IBOutlet fileprivate weak var locationLabel: UILabel!
-    @IBOutlet fileprivate weak var numberOfGoingLabel: UILabel!
-    @IBOutlet fileprivate weak var numberOfAvailableLabel: UILabel!
-
-    // MARK: Lifecycle
+    // MARK: Properties
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var eventImageView: UIImageView!
+    @IBOutlet private weak var horizontalDivider: UIView!
+    @IBOutlet private weak var dayLabel: UILabel!
+    @IBOutlet private weak var monthLabel: UILabel!
+    @IBOutlet private weak var timeLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var locationLabel: UILabel!
+    @IBOutlet private weak var numberOfGoingLabel: UILabel!
+    @IBOutlet private weak var numberOfAvailableLabel: UILabel!
     
+    // MARK: Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
         containerView.layer.cornerRadius = 14
-        containerView.layer.shadowColor = UIColor.black.cgColor
-        containerView.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
-        containerView.layer.shadowRadius = 4.0
-        containerView.layer.shadowOpacity = 0.2
+        containerView.layer.shadowColor = UIColor.black.withAlphaComponent(0.1).cgColor
+        containerView.layer.shadowOffset = .zero
+        containerView.layer.shadowRadius = 16
+        containerView.layer.shadowOpacity = 0.75
         containerView.layer.masksToBounds = false
-
+        
         dayLabel.textColor = StyleKit.Colors.deepSkyBlue
         monthLabel.textColor = StyleKit.Colors.deepSkyBlue
-
-        eventImageView.roundCorners(corners: [.topLeft, .topRight], radius: 14)
     }
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        eventImageView.roundCorners(corners: [.topLeft, .topRight], radius: 14)
         cleanFields()
     }
 
-    func configure(with vieWModel: MeetupCellViewModel) {
-        dayLabel.text = vieWModel.day()
-        monthLabel.text = vieWModel.month()
-        timeLabel.text = vieWModel.time()
-        nameLabel.text = vieWModel.name()
-        locationLabel.text = vieWModel.location()
-        numberOfGoingLabel.text = vieWModel.numberOfGoing()
-        numberOfAvailableLabel.text = vieWModel.numberOfAvailable()
-        if vieWModel.hasImageOnEvent() {
+    func configure(with viewModel: MeetupCellViewModel) {
+        dayLabel.text = viewModel.day()
+        monthLabel.text = viewModel.month()
+        timeLabel.text = viewModel.time()
+        nameLabel.text = viewModel.name()
+        locationLabel.text = viewModel.location()
+        numberOfGoingLabel.text = viewModel.numberOfGoing()
+        numberOfAvailableLabel.text = viewModel.numberOfAvailable()
+        
+        if viewModel.hasImageOnEvent(), let url = viewModel.imageURLToDownload {
             hideImageView(false)
-            eventImageView.af_setImage(withURL: vieWModel.imageURLToDownload!)
+            eventImageView.af_setImage(withURL: url) { response in
+                DispatchQueue.main.async { [weak self] in
+                    self?.eventImageView.roundCorners(corners: [.topLeft, .topRight], radius: 14)
+                }
+            }
         } else {
             hideImageView(true)
         }
     }
 
     func hideImageView(_ hidden: Bool) {
-        eventImageView?.isHidden = hidden
+        eventImageView.isHidden = hidden
+        horizontalDivider.isHidden = hidden
         if hidden {
             eventImageView.image = nil
         }

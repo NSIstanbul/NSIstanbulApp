@@ -12,9 +12,9 @@ import AlamofireImage
 class JobCell: UITableViewCell, ReuseIdentifier {
     // MARK: IBOutlets
     @IBOutlet weak var companyLogoImageView: UIImageView!
-    @IBOutlet fileprivate weak var positionTitleLabel: UILabel!
-    @IBOutlet fileprivate weak var companyNameLabel: UILabel!
-    @IBOutlet fileprivate weak var cityNameLabel: UILabel!
+    @IBOutlet private weak var positionTitleLabel: UILabel!
+    @IBOutlet private weak var companyNameLabel: UILabel!
+    @IBOutlet private weak var cityNameLabel: UILabel!
     
     // MARK: Lifecycle
     override func awakeFromNib() {
