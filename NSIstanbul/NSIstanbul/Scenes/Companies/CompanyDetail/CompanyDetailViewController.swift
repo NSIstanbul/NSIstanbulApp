@@ -13,11 +13,11 @@ class CompanyDetailViewController: UIViewController, Instantiatable {
 
     var viewModel: CompanyDetailViewModel!
     
-    @IBOutlet fileprivate weak var companyImageView: UIImageView!
-    @IBOutlet fileprivate weak var appsCollectionView: UICollectionView!
-    @IBOutlet fileprivate weak var nameLabel: UILabel!
-    @IBOutlet fileprivate weak var websiteTextView: UITextView!
-    @IBOutlet fileprivate weak var emailTextView: UITextView!
+    @IBOutlet private weak var companyImageView: UIImageView!
+    @IBOutlet private weak var appsCollectionView: UICollectionView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var websiteTextView: UITextView!
+    @IBOutlet private weak var emailTextView: UITextView!
     
     static func instantiate(with company: Company) -> CompanyDetailViewController {
         let vc = CompanyDetailViewController.instantiate()

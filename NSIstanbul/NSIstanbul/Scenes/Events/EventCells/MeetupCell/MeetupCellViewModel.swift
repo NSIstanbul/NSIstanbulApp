@@ -33,6 +33,7 @@ final class MeetupCellViewModel {
 
     func hasImageOnEvent() -> Bool {
         return eventImageUrl != nil ? true : false
+//        return Int.random(in: 0...1) == 0 ? false : true
     }
 
     func name() -> String {
