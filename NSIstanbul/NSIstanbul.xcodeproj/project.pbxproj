@@ -867,14 +867,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YDABZ672Z5;
+				DEVELOPMENT_TEAM = Z2EVZ5Y6JY;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Vendor/Carthage/Build/iOS";
 				INFOPLIST_FILE = "$(SRCROOT)/NSIstanbul/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nsistanbul.NSIstanbul;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsistanbul.nsistanbulapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -887,14 +887,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YDABZ672Z5;
+				DEVELOPMENT_TEAM = Z2EVZ5Y6JY;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Vendor/Carthage/Build/iOS";
 				INFOPLIST_FILE = "$(SRCROOT)/NSIstanbul/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nsistanbul.NSIstanbul;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsistanbul.nsistanbulapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -907,7 +907,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YDABZ672Z5;
+				DEVELOPMENT_TEAM = Z2EVZ5Y6JY;
 				INFOPLIST_FILE = "$(SRCROOT)/NSIstanbulTests/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -928,7 +928,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YDABZ672Z5;
+				DEVELOPMENT_TEAM = Z2EVZ5Y6JY;
 				INFOPLIST_FILE = "$(SRCROOT)/NSIstanbulTests/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
