@@ -11,7 +11,7 @@ import Networking
 
 class MeetupCell: UITableViewCell, Instantiatable, ReuseIdentifier {
 
-    // MARK: Properties
+    // MARK: IBOutlets
     @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var eventImageView: UIImageView!
     @IBOutlet private weak var horizontalDivider: UIView!
@@ -23,18 +23,38 @@ class MeetupCell: UITableViewCell, Instantiatable, ReuseIdentifier {
     @IBOutlet private weak var numberOfGoingLabel: UILabel!
     @IBOutlet private weak var numberOfAvailableLabel: UILabel!
     
+    // Private Properties
+    private var shadowLayer: CAShapeLayer?
+    private var cornerRadius: CGFloat = 14.0
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if shadowLayer == nil {
+            shadowLayer = CAShapeLayer()
+            guard let shadowLayer = shadowLayer else { return }
+            
+            shadowLayer.path = UIBezierPath(roundedRect: CGRect(x: containerView.bounds.minX + 40, y: containerView.frame.minY + 20, width: containerView.bounds.width + 10, height: containerView.bounds.height - 30), cornerRadius: 14).cgPath
+            shadowLayer.fillColor = UIColor.white.withAlphaComponent(0).cgColor
+            
+            shadowLayer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
+            shadowLayer.shadowPath = shadowLayer.path
+            shadowLayer.shadowOffset = CGSize(width: 0.0, height: -0.1)
+            shadowLayer.shadowOpacity = 1
+            shadowLayer.shadowRadius = 18
+            
+            contentView.layer.insertSublayer(shadowLayer, at: 0)
+        }
+    }
+    
     // MARK: Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        containerView.layer.cornerRadius = 14
-        containerView.layer.shadowColor = UIColor.black.withAlphaComponent(0.1).cgColor
-        containerView.layer.shadowOffset = .zero
-        containerView.layer.shadowRadius = 16
-        containerView.layer.shadowOpacity = 0.75
-        containerView.layer.masksToBounds = false
-        
+
         dayLabel.textColor = StyleKit.Colors.deepSkyBlue
         monthLabel.textColor = StyleKit.Colors.deepSkyBlue
+        containerView.layer.masksToBounds = true
+        containerView.layer.cornerRadius = cornerRadius
     }
 
     override func prepareForReuse() {
