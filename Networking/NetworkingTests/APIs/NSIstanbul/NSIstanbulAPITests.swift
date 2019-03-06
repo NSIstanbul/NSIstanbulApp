@@ -13,9 +13,6 @@ class NSIstanbulAPITests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        Stubber.stubRequest(NSIstanbulAboutRequest(), withJSONFromFile: "NSIstanbulAboutResponse.json")
-        Stubber.stubRequest(NSIstanbulCompaniesRequest(), withJSONFromFile: "NSIstanbulCompaniesResponse.json")
-        Stubber.stubRequest(NSIstanbulJobsRequest(), withJSONFromFile: "NSIstanbulJobsResponse.json")
     }
     
     func testRequest<RequestToTest>(request: RequestToTest, with completion: (Response<RequestToTest.Response>) -> Void) where RequestToTest: NSIstanbulEndpoint {
@@ -60,6 +57,7 @@ class NSIstanbulAPITests: XCTestCase {
     
     func testCompaniesRequest() {
         let request = NSIstanbulCompaniesRequest()
+        Stubber.stubRequest(NSIstanbulCompaniesRequest(), withJSONFromFile: "NSIstanbulCompaniesResponse.json")
         testRequest(request: request) { (response) in
             switch response.result {
             case .success(let companies):
@@ -89,6 +87,7 @@ class NSIstanbulAPITests: XCTestCase {
     
     func testJobsRequest() {
         let request = NSIstanbulJobsRequest()
+        Stubber.stubRequest(NSIstanbulJobsRequest(), withJSONFromFile: "NSIstanbulJobsResponse.json")
         testRequest(request: request) { (response) in
             switch response.result {
             case .success(let jobs):

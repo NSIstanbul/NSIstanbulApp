@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C83C36B210FA54F0065249A /* EventbriteCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C83C36A210FA54F0065249A /* EventbriteCredentials.plist */; };
 		3618E7A51FED3C03003B5CA5 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3618E79B1FED3C03003B5CA5 /* Networking.framework */; };
 		3618E7AA1FED3C03003B5CA5 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3618E7A91FED3C03003B5CA5 /* NetworkingTests.swift */; };
 		3618E7AC1FED3C03003B5CA5 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 3618E79E1FED3C03003B5CA5 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,6 +30,40 @@
 		A46D758320F129CF003E4475 /* AlamofireImage.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A46D758120F129B8003E4475 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A46D758B20F12B0A003E4475 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46D758120F129B8003E4475 /* AlamofireImage.framework */; };
 		A46D758D20F13170003E4475 /* AlamofireImage.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A46D758120F129B8003E4475 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B218AF7221B5BB7700ABF7CB /* EventbriteCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = B218AF7121B5BB7700ABF7CB /* EventbriteCredentials.plist */; };
+		B218AF7921B5CC6E00ABF7CB /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643FA3D1FED5BEF00BE5705 /* Endpoint.swift */; };
+		B218AF7A21B5CC7600ABF7CB /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643FA3F1FED605800BE5705 /* HTTPMethod.swift */; };
+		B218AF7B21B5CC7A00ABF7CB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643FA411FED614900BE5705 /* API.swift */; };
+		B218AF7C21B5CC7D00ABF7CB /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36920F861FF6E09A0051424F /* BaseURL.swift */; };
+		B218AF7D21B5CC8200ABF7CB /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643FA431FED677300BE5705 /* Response.swift */; };
+		B218AF7E21B5CC8500ABF7CB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643FA451FED678300BE5705 /* Result.swift */; };
+		B218AF7F21B5CC8A00ABF7CB /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643FA471FED885900BE5705 /* NetworkingError.swift */; };
+		B218AF8021B5CCA300ABF7CB /* NSIstanbulEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25521AA20D68A6500121224 /* NSIstanbulEndpoint.swift */; };
+		B218AF8121B5CCA300ABF7CB /* NSIstanbulAboutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25521AC20D68A7000121224 /* NSIstanbulAboutRequest.swift */; };
+		B218AF8221B5CCA300ABF7CB /* NSIstanbulCompaniesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25521AE20D68A7900121224 /* NSIstanbulCompaniesRequest.swift */; };
+		B218AF8321B5CCA300ABF7CB /* NSIstanbulJobsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25521B020D68A8100121224 /* NSIstanbulJobsRequest.swift */; };
+		B218AF8421B5CCAD00ABF7CB /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27FA53A20D5BBAD00B46D3E /* About.swift */; };
+		B218AF8521B5CCAD00ABF7CB /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27FA53520D5BB6A00B46D3E /* Contributor.swift */; };
+		B218AF8621B5CCAD00ABF7CB /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27FA52F20D5BB3400B46D3E /* Company.swift */; };
+		B218AF8721B5CCAD00ABF7CB /* CompanyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27FA53120D5BB5700B46D3E /* CompanyApp.swift */; };
+		B218AF8821B5CCAD00ABF7CB /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27FA53320D5BB5F00B46D3E /* Job.swift */; };
+		B218AF8921B5CCFC00ABF7CB /* EventbriteEventsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FE0920CDEED800120002 /* EventbriteEventsRequest.swift */; };
+		B218AF8A21B5CD0300ABF7CB /* EventbriteEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FE0720CDEE3900120002 /* EventbriteEndpoint.swift */; };
+		B218AF8B21B5CD1500ABF7CB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC722D20D1D11000D58003 /* Event.swift */; };
+		B218AF8C21B5CD1500ABF7CB /* EventAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87BE20D1D5270020F363 /* EventAvailability.swift */; };
+		B218AF8D21B5CD1500ABF7CB /* EventPagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87CC20D1D8790020F363 /* EventPagination.swift */; };
+		B218AF8E21B5CD1500ABF7CB /* EventsListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87CE20D1DB240020F363 /* EventsListResult.swift */; };
+		B218AF8F21B5CD1500ABF7CB /* EventStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC722F20D1D25E00D58003 /* EventStatus.swift */; };
+		B218AF9021B5CD1500ABF7CB /* EventTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87BA20D1D44E0020F363 /* EventTicket.swift */; };
+		B218AF9121B5CD1500ABF7CB /* EventVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC723120D1D35700D58003 /* EventVenue.swift */; };
+		B218AF9221B5CD1E00ABF7CB /* EventLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87C420D1D6CA0020F363 /* EventLogo.swift */; };
+		B218AF9321B5CD6100ABF7CB /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643FA201FED3C9C00BE5705 /* Networking.swift */; };
+		B218AF9421B5CD6100ABF7CB /* EventbriteEndpointToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FDFE20CDEBE900120002 /* EventbriteEndpointToken.swift */; };
+		B218AF9521B5CD6B00ABF7CB /* EventbriteCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = B218AF7121B5BB7700ABF7CB /* EventbriteCredentials.plist */; };
+		B218AF9721B5CD7600ABF7CB /* DateFormatter+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87D120D1DE730020F363 /* DateFormatter+ISO8601.swift */; };
+		B218AF9821B5CD7600ABF7CB /* KeyedDecodingContainer+DecodeURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27FA54220D5D4F700B46D3E /* KeyedDecodingContainer+DecodeURL.swift */; };
+		B218AF9921B5CD7600ABF7CB /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FDF020CDEAAD00120002 /* CredentialsManager.swift */; };
+		B218AF9D21B5D07600ABF7CB /* NSIstanbulAboutResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = B25521B420D698D300121224 /* NSIstanbulAboutResponse.json */; };
 		B242FDF120CDEAAD00120002 /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FDF020CDEAAD00120002 /* CredentialsManager.swift */; };
 		B242FDFF20CDEBE900120002 /* EventbriteEndpointToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FDFE20CDEBE900120002 /* EventbriteEndpointToken.swift */; };
 		B242FE0220CDEC4600120002 /* CredentialsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242FE0120CDEC4600120002 /* CredentialsManagerTests.swift */; };
@@ -41,9 +74,9 @@
 		B25521AF20D68A7900121224 /* NSIstanbulCompaniesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25521AE20D68A7900121224 /* NSIstanbulCompaniesRequest.swift */; };
 		B25521B120D68A8100121224 /* NSIstanbulJobsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25521B020D68A8100121224 /* NSIstanbulJobsRequest.swift */; };
 		B25521B320D6949E00121224 /* NSIstanbulAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25521B220D6949E00121224 /* NSIstanbulAPITests.swift */; };
-		B25521B520D698D300121224 /* NSIstanbulAboutResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = B25521B420D698D300121224 /* NSIstanbulAboutResponse.json */; };
 		B25521B720D698DE00121224 /* NSIstanbulCompaniesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = B25521B620D698DE00121224 /* NSIstanbulCompaniesResponse.json */; };
 		B25521B920D698E800121224 /* NSIstanbulJobsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = B25521B820D698E800121224 /* NSIstanbulJobsResponse.json */; };
+		B275EB652229F3360031F7F0 /* NSIstanbulAPICredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = B275EB642229F3360031F7F0 /* NSIstanbulAPICredentials.plist */; };
 		B27FA53020D5BB3400B46D3E /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27FA52F20D5BB3400B46D3E /* Company.swift */; };
 		B27FA53220D5BB5700B46D3E /* CompanyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27FA53120D5BB5700B46D3E /* CompanyApp.swift */; };
 		B27FA53420D5BB5F00B46D3E /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27FA53320D5BB5F00B46D3E /* Job.swift */; };
@@ -53,7 +86,6 @@
 		B2AC722E20D1D11000D58003 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC722D20D1D11000D58003 /* Event.swift */; };
 		B2AC723020D1D25E00D58003 /* EventStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC722F20D1D25E00D58003 /* EventStatus.swift */; };
 		B2AC723220D1D35700D58003 /* EventVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC723120D1D35700D58003 /* EventVenue.swift */; };
-		B2B7BEF12194D9350063981D /* EventbriteCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2B7BEF02194D9350063981D /* EventbriteCredentials.plist */; };
 		B2CD87BB20D1D44E0020F363 /* EventTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87BA20D1D44E0020F363 /* EventTicket.swift */; };
 		B2CD87BF20D1D5270020F363 /* EventAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87BE20D1D5270020F363 /* EventAvailability.swift */; };
 		B2CD87C520D1D6CA0020F363 /* EventLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CD87C420D1D6CA0020F363 /* EventLogo.swift */; };
@@ -103,7 +135,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0C83C36A210FA54F0065249A /* EventbriteCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EventbriteCredentials.plist; sourceTree = "<group>"; };
 		3618E79B1FED3C03003B5CA5 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3618E79E1FED3C03003B5CA5 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		3618E79F1FED3C03003B5CA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,6 +153,7 @@
 		36920F841FF6DF1C0051424F /* Stubber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubber.swift; sourceTree = "<group>"; };
 		36920F861FF6E09A0051424F /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		A46D758120F129B8003E4475 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = ../Vendor/Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		B218AF7121B5BB7700ABF7CB /* EventbriteCredentials.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = EventbriteCredentials.plist; sourceTree = "<group>"; };
 		B242FDF020CDEAAD00120002 /* CredentialsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsManager.swift; sourceTree = "<group>"; };
 		B242FDFE20CDEBE900120002 /* EventbriteEndpointToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventbriteEndpointToken.swift; sourceTree = "<group>"; };
 		B242FE0120CDEC4600120002 /* CredentialsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsManagerTests.swift; sourceTree = "<group>"; };
@@ -135,6 +167,7 @@
 		B25521B420D698D300121224 /* NSIstanbulAboutResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NSIstanbulAboutResponse.json; sourceTree = "<group>"; };
 		B25521B620D698DE00121224 /* NSIstanbulCompaniesResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NSIstanbulCompaniesResponse.json; sourceTree = "<group>"; };
 		B25521B820D698E800121224 /* NSIstanbulJobsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NSIstanbulJobsResponse.json; sourceTree = "<group>"; };
+		B275EB642229F3360031F7F0 /* NSIstanbulAPICredentials.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NSIstanbulAPICredentials.plist; sourceTree = "<group>"; };
 		B27FA52F20D5BB3400B46D3E /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		B27FA53120D5BB5700B46D3E /* CompanyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyApp.swift; sourceTree = "<group>"; };
 		B27FA53320D5BB5F00B46D3E /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
@@ -266,9 +299,10 @@
 		B242FDE720CDE8C500120002 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0C83C36A210FA54F0065249A /* EventbriteCredentials.plist */,
-				3618E79E1FED3C03003B5CA5 /* Networking.h */,
+				B218AF7121B5BB7700ABF7CB /* EventbriteCredentials.plist */,
 				3618E79F1FED3C03003B5CA5 /* Info.plist */,
+				3618E79E1FED3C03003B5CA5 /* Networking.h */,
+				B275EB642229F3360031F7F0 /* NSIstanbulAPICredentials.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -556,7 +590,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C83C36B210FA54F0065249A /* EventbriteCredentials.plist in Resources */,
+				B218AF7221B5BB7700ABF7CB /* EventbriteCredentials.plist in Resources */,
+				B275EB652229F3360031F7F0 /* NSIstanbulAPICredentials.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,11 +599,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B218AF9D21B5D07600ABF7CB /* NSIstanbulAboutResponse.json in Resources */,
 				B25521B920D698E800121224 /* NSIstanbulJobsResponse.json in Resources */,
+				B218AF9521B5CD6B00ABF7CB /* EventbriteCredentials.plist in Resources */,
 				B2CD87D420D1F3F80020F363 /* EventsListResponse.json in Resources */,
 				B25521B720D698DE00121224 /* NSIstanbulCompaniesResponse.json in Resources */,
-				B25521B520D698D300121224 /* NSIstanbulAboutResponse.json in Resources */,
-				B2B7BEF12194D9350063981D /* EventbriteCredentials.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,11 +653,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B218AF9421B5CD6100ABF7CB /* EventbriteEndpointToken.swift in Sources */,
+				B218AF8621B5CCAD00ABF7CB /* Company.swift in Sources */,
+				B218AF8321B5CCA300ABF7CB /* NSIstanbulJobsRequest.swift in Sources */,
+				B218AF8521B5CCAD00ABF7CB /* Contributor.swift in Sources */,
 				B2CD87CB20D1D8440020F363 /* EventbriteAPITests.swift in Sources */,
+				B218AF8D21B5CD1500ABF7CB /* EventPagination.swift in Sources */,
+				B218AF9221B5CD1E00ABF7CB /* EventLogo.swift in Sources */,
+				B218AF9821B5CD7600ABF7CB /* KeyedDecodingContainer+DecodeURL.swift in Sources */,
 				B25521B320D6949E00121224 /* NSIstanbulAPITests.swift in Sources */,
+				B218AF8121B5CCA300ABF7CB /* NSIstanbulAboutRequest.swift in Sources */,
+				B218AF9021B5CD1500ABF7CB /* EventTicket.swift in Sources */,
+				B218AF7A21B5CC7600ABF7CB /* HTTPMethod.swift in Sources */,
 				3618E7AA1FED3C03003B5CA5 /* NetworkingTests.swift in Sources */,
+				B218AF8E21B5CD1500ABF7CB /* EventsListResult.swift in Sources */,
+				B218AF7D21B5CC8200ABF7CB /* Response.swift in Sources */,
+				B218AF8A21B5CD0300ABF7CB /* EventbriteEndpoint.swift in Sources */,
+				B218AF8021B5CCA300ABF7CB /* NSIstanbulEndpoint.swift in Sources */,
 				B242FE0220CDEC4600120002 /* CredentialsManagerTests.swift in Sources */,
+				B218AF8721B5CCAD00ABF7CB /* CompanyApp.swift in Sources */,
+				B218AF7921B5CC6E00ABF7CB /* Endpoint.swift in Sources */,
+				B218AF7B21B5CC7A00ABF7CB /* API.swift in Sources */,
+				B218AF9321B5CD6100ABF7CB /* Networking.swift in Sources */,
+				B218AF8C21B5CD1500ABF7CB /* EventAvailability.swift in Sources */,
 				36920F851FF6DF1C0051424F /* Stubber.swift in Sources */,
+				B218AF9721B5CD7600ABF7CB /* DateFormatter+ISO8601.swift in Sources */,
+				B218AF8B21B5CD1500ABF7CB /* Event.swift in Sources */,
+				B218AF7C21B5CC7D00ABF7CB /* BaseURL.swift in Sources */,
+				B218AF9121B5CD1500ABF7CB /* EventVenue.swift in Sources */,
+				B218AF8921B5CCFC00ABF7CB /* EventbriteEventsRequest.swift in Sources */,
+				B218AF7F21B5CC8A00ABF7CB /* NetworkingError.swift in Sources */,
+				B218AF8221B5CCA300ABF7CB /* NSIstanbulCompaniesRequest.swift in Sources */,
+				B218AF8421B5CCAD00ABF7CB /* About.swift in Sources */,
+				B218AF9921B5CD7600ABF7CB /* CredentialsManager.swift in Sources */,
+				B218AF8821B5CCAD00ABF7CB /* Job.swift in Sources */,
+				B218AF8F21B5CD1500ABF7CB /* EventStatus.swift in Sources */,
+				B218AF7E21B5CC8500ABF7CB /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

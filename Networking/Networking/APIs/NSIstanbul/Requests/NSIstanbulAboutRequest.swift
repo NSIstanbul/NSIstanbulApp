@@ -10,7 +10,7 @@ import Foundation
 
 public struct NSIstanbulAboutRequest: NSIstanbulEndpoint {
     public typealias Response = About
-    public var path: String = "/v1/about"
+    public var path: String = "/api/about/"
     public var method: HTTPMethod = .get
     
     // MARK: Lifecycle

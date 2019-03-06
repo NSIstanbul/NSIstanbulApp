@@ -9,7 +9,7 @@
 import Foundation
 
 extension KeyedDecodingContainer  {
-    func decodeURL(keyedBy: Key) throws -> URL? {
+    public func decodeURL(keyedBy: Key) throws -> URL? {
         let urlString = try decode(String.self, forKey: keyedBy)
         return URL(string: urlString)
     }

@@ -28,6 +28,7 @@ final class AboutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        populateUI()
     }
 }
 
@@ -38,7 +39,10 @@ extension AboutViewController {
                                               selectedImage: #imageLiteral(resourceName: "AboutSelected"))
     }
     
-    private func setupUI() {
+    private func setupUI() {}
+    
+    private func populateUI() {
+        viewModel.loadData()
     }
     
     private func setupViewModel() {

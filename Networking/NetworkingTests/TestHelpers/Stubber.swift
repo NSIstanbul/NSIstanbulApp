@@ -21,8 +21,7 @@ public class Stubber {
     }
     
     public static func stubRequest<Request: Endpoint>(_ request: Request, withJSONFromFile fileName: String) {
-        stub(condition: isHost(request.api.baseURL.host) && isPath(request.path)) {
-            (request: URLRequest) -> OHHTTPStubsResponse in
+        stub(condition: isHost(request.api.baseURL.host) && isPath(request.path)) { (request: URLRequest) -> OHHTTPStubsResponse in
             guard let path = OHPathForFile(fileName, Stubber.self) else {
                 fatalError("Could not find file with name \(fileName) to stub request \(request)")
             }
